@@ -1,4 +1,7 @@
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
 public class BasicZombie extends GameObject
 {
@@ -42,5 +45,7 @@ public class BasicZombie extends GameObject
     {
         g.setColor(Color.red);
         g.fillRect(x, y, 24, 24);
+
+
     }
 }
