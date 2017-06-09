@@ -10,6 +10,7 @@ public class Main extends Canvas implements Runnable
     private boolean running = false;
 
     private Handler handler;
+    private HUD hud;
 
     public Main()
     {
@@ -17,6 +18,7 @@ public class Main extends Canvas implements Runnable
         this.addKeyListener(new KeyInput(handler));
 
         new Screen(screenWidth, screenHeight, "Clicker Game", this);
+        hud = new HUD();
 
         handler.AddObject(new Player(100, 100, ID.Player));
         handler.AddObject(new BasicZombie(200, 200, ID.BasicZombie));
@@ -41,6 +43,7 @@ public class Main extends Canvas implements Runnable
 
     public void run()
     {
+        this.requestFocus();
         long lastTime = System.nanoTime();
         double amountOfTicks = 60.0;
         double ns = 1000000000 / amountOfTicks;
@@ -83,6 +86,7 @@ public class Main extends Canvas implements Runnable
     private void tick()
     {
         handler.tick();
+        hud.tick();
     }
 
     private void render()
@@ -100,7 +104,11 @@ public class Main extends Canvas implements Runnable
         g.setColor(Color.black);
         g.fillRect(0, 0, screenWidth, screenHeight);
 
+
+
         handler.render(g);
+
+        hud.render(g);
 
         g.dispose();
         bs.show();
