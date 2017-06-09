@@ -3,7 +3,7 @@ import java.awt.image.BufferStrategy;
 
 public class Main extends Canvas implements Runnable
 {
-    public static final int screenWidth = 1920;
+    public static final int screenWidth = 800;
     public static final int screenHeight = screenWidth / 12 * 9;
 
     private Thread thread;
@@ -19,6 +19,7 @@ public class Main extends Canvas implements Runnable
         new Screen(screenWidth, screenHeight, "Clicker Game", this);
 
         handler.AddObject(new Player(100, 100, ID.Player));
+        handler.AddObject(new BasicZombie(200, 200, ID.BasicZombie));
     }
 
     public synchronized void start()
