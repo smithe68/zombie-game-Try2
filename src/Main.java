@@ -3,16 +3,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Main
+public class Main extends Canvas
 {
     public static JFrame mainScreen;
     public static JButton mainButton;
 
     public static void main(String[] args)
     {
-        JPanel mainPanel;
-
-        mainPanel = new JPanel();
+        JPanel mainPanel = new JPanel();
+        JPanel scorePanel = new JPanel();
 
         mainPanel.setSize(new Dimension(400, 300));
 
