@@ -13,9 +13,9 @@ public class Main extends Canvas implements Runnable
 
     public Main()
     {
-        new Screen(screenWidth, screenHeight, "Clicker Game", this);
-
         handler = new Handler();
+
+        new Screen(screenWidth, screenHeight, "Clicker Game", this);
 
         handler.AddObject(new Player(100, 100, ID.Player));
     }
