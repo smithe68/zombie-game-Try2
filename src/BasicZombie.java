@@ -1,5 +1,4 @@
-import java.awt.Graphics;
-import java.awt.Color;
+import java.awt.*;
 
 public class BasicZombie extends GameObject
 {
@@ -11,6 +10,10 @@ public class BasicZombie extends GameObject
         velY = 5;
     }
 
+    public Rectangle getBounds()
+    {
+        return new Rectangle(x,y,16,16);
+    }
     public enum ZombieState
     {
         Wandering,
