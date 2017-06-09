@@ -20,6 +20,11 @@ public class BasicZombie extends GameObject
         {
             velY *= -1;
         }
+
+        if(x <= 0 || x >= Main.screenWidth - 32)
+        {
+            velX *= -1;
+        }
     }
 
     public void render(Graphics g)
