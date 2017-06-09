@@ -10,7 +10,7 @@ public class Button
         button.setSize(sizeX, sizeY);
         button.setAlignmentX(posX);
         button.setAlignmentY(posY);
-        // Evan if you see this then it works!
+
 
         return button;
     }
