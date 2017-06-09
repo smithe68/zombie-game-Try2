@@ -16,6 +16,8 @@ public class Main extends Canvas implements Runnable
         new Screen(screenWidth, screenHeight, "Clicker Game", this);
 
         handler = new Handler();
+
+        handler.AddObject(new Player(100, 100, ID.Player));
     }
 
     public synchronized void start()
