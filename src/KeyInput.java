@@ -14,7 +14,7 @@ public class KeyInput extends KeyAdapter
     {
         int key = e.getKeyCode();
 
-        for(int i = 0; i<handler.object.size();i++)
+        for(int i = 0; i < handler.object.size(); i++)
         {
             GameObject tempObject = handler.object.get(i);
 
@@ -22,10 +22,6 @@ public class KeyInput extends KeyAdapter
 
                 if (key == KeyEvent.VK_W) tempObject.setY(tempObject.getY() - 1);
             }
-            {
-
-            }
-
         }
 
     }

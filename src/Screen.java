@@ -1,23 +1,24 @@
-/**
- * Created by evan on 6/8/2017.
- */
 import javax.swing.*;
 import java.awt.*;
 
 public class Screen extends Canvas
-
 {
-    public Screen (int width, int height,String title, Main main){
+    public Screen (int width, int height,String title, Main main)
+    {
         JFrame frame = new JFrame(title);
+
+        // Set Frame Size
         frame.setPreferredSize(new Dimension(width,height));
         frame.setMaximumSize(new Dimension(width,height));
         frame.setMinimumSize(new Dimension(width,height));
 
+        // Set Frame Settings
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);
         frame.setLocationRelativeTo(null);
-        frame.add(main);
+        frame.setResizable(false);
         frame.setVisible(true);
+        frame.add(main);
+
         main.start();
     }
 }
