@@ -13,6 +13,7 @@ public class Main
         mainPanel = new JPanel();
 
         mainPanel.setSize(new Dimension(400, 300));
+        mainPanel.setLayout(new BorderLayout());
 
         mainScreen = Screen.CreateScreen();
         mainButton = Button.CreateButton("Click Me!");
