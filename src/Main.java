@@ -3,15 +3,19 @@ import java.awt.image.BufferStrategy;
 
 public class Main extends Canvas implements Runnable
 {
-    public static final int screenWidth = 640;
+    public static final int screenWidth = 1920;
     public static final int screenHeight = screenWidth / 12 * 9;
 
     private Thread thread;
     private boolean running = false;
 
-    public void Game()
+    private Handler handler;
+
+    public Main()
     {
         new Screen(screenWidth, screenHeight, "Clicker Game", this);
+
+        handler = new Handler();
     }
 
     public synchronized void start()
@@ -74,7 +78,7 @@ public class Main extends Canvas implements Runnable
 
     private void tick()
     {
-
+        handler.tick();
     }
 
     private void render()
@@ -92,12 +96,14 @@ public class Main extends Canvas implements Runnable
         g.setColor(Color.black);
         g.fillRect(0, 0, screenWidth, screenHeight);
 
+        handler.render(g);
+
         g.dispose();
         bs.show();
     }
 
     public static void main(String[] args)
     {
-        new Game();
+        new Main();
     }
 }
