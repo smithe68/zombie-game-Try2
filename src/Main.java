@@ -100,8 +100,8 @@ public class Main extends Canvas implements Runnable
         }
 
         Graphics g = bs.getDrawGraphics();
-
-        g.setColor(Color.black);
+        Color field = new Color (142,111,58);
+        g.setColor(field);
         g.fillRect(0, 0, screenWidth, screenHeight);
 
 

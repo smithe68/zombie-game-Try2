@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BasicZombie.java" afterPath="$PROJECT_DIR$/src/BasicZombie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObject.java" afterPath="$PROJECT_DIR$/src/GameObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.java" afterPath="$PROJECT_DIR$/src/Player.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +19,9 @@
       <file leaf-file-name="Screen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Screen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="357">
               <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-              <folding>
-                <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -34,17 +29,15 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+            <state relative-caret-position="918">
+              <caret line="108" column="26" lean-forward="true" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
               <folding>
-                <element signature="method#Main#0;class#Main#0" expanded="false" />
+                <element signature="method#start#0;class#Main#0" expanded="false" />
+                <element signature="method#stop#0;class#Main#0" expanded="false" />
                 <element signature="method#run#0;class#Main#0" expanded="false" />
                 <element signature="method#tick#0;class#Main#0" expanded="false" />
-                <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-                <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-                <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-                <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-                <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+                <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+                <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
               </folding>
             </state>
           </provider>
@@ -180,8 +173,8 @@
         <option value="$PROJECT_DIR$/src/HUD.java" />
         <option value="$PROJECT_DIR$/src/GameObject.java" />
         <option value="$PROJECT_DIR$/src/BasicZombie.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Player.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -900,11 +893,19 @@
       <option name="project" value="LOCAL" />
       <updated>1497041495400</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Changed Main">
+      <created>1497045242458</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1497045242458</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -915,7 +916,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2780127" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2780127" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.023255814" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -968,7 +969,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -982,14 +983,12 @@
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#stop#0;class#Main#0" expanded="false" />
             <element signature="method#run#0;class#Main#0" expanded="false" />
             <element signature="method#tick#0;class#Main#0" expanded="false" />
-            <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+            <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+            <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -1000,9 +999,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,9 +1007,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="28" column="40" lean-forward="true" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,14 +1017,12 @@
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#stop#0;class#Main#0" expanded="false" />
             <element signature="method#run#0;class#Main#0" expanded="false" />
             <element signature="method#tick#0;class#Main#0" expanded="false" />
-            <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+            <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+            <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -1038,9 +1031,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,14 +1040,12 @@
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#stop#0;class#Main#0" expanded="false" />
             <element signature="method#run#0;class#Main#0" expanded="false" />
             <element signature="method#tick#0;class#Main#0" expanded="false" />
-            <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+            <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+            <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -1067,9 +1056,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,14 +1065,12 @@
         <state relative-caret-position="306">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#stop#0;class#Main#0" expanded="false" />
             <element signature="method#run#0;class#Main#0" expanded="false" />
             <element signature="method#tick#0;class#Main#0" expanded="false" />
-            <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+            <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+            <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -1095,9 +1080,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,9 +1088,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1116,14 +1097,12 @@
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#stop#0;class#Main#0" expanded="false" />
             <element signature="method#run#0;class#Main#0" expanded="false" />
             <element signature="method#tick#0;class#Main#0" expanded="false" />
-            <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+            <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+            <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -1134,9 +1113,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,9 +1122,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1156,14 +1131,12 @@
         <state relative-caret-position="340">
           <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#stop#0;class#Main#0" expanded="false" />
             <element signature="method#run#0;class#Main#0" expanded="false" />
             <element signature="method#tick#0;class#Main#0" expanded="false" />
-            <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+            <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+            <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -1172,9 +1145,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1183,14 +1154,12 @@
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#stop#0;class#Main#0" expanded="false" />
             <element signature="method#run#0;class#Main#0" expanded="false" />
             <element signature="method#tick#0;class#Main#0" expanded="false" />
-            <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+            <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+            <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -1201,9 +1170,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1214,14 +1181,12 @@
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#stop#0;class#Main#0" expanded="false" />
             <element signature="method#run#0;class#Main#0" expanded="false" />
             <element signature="method#tick#0;class#Main#0" expanded="false" />
-            <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+            <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+            <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -1230,9 +1195,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,9 +1204,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,14 +1213,12 @@
         <state relative-caret-position="170">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#stop#0;class#Main#0" expanded="false" />
             <element signature="method#run#0;class#Main#0" expanded="false" />
             <element signature="method#tick#0;class#Main#0" expanded="false" />
-            <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+            <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+            <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -1268,9 +1227,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1279,14 +1236,12 @@
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#stop#0;class#Main#0" expanded="false" />
             <element signature="method#run#0;class#Main#0" expanded="false" />
             <element signature="method#tick#0;class#Main#0" expanded="false" />
-            <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+            <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+            <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -1297,9 +1252,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1309,16 +1262,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Screen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="method#Screen#0;class#Screen#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1396,19 +1339,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Screen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+        <state relative-caret-position="918">
+          <caret line="108" column="26" lean-forward="true" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" expanded="false" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#stop#0;class#Main#0" expanded="false" />
             <element signature="method#run#0;class#Main#0" expanded="false" />
             <element signature="method#tick#0;class#Main#0" expanded="false" />
-            <marker date="1497043759805" expanded="false" signature="740:830" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="872:997" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="1988:2381" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2440:2599" ph="{...}" />
-            <marker date="1497043759805" expanded="false" signature="2643:2658" ph=" { " />
+            <marker date="1497045862085" expanded="false" signature="2479:2638" ph="{...}" />
+            <marker date="1497045862085" expanded="false" signature="2682:2697" ph=" { " />
           </folding>
         </state>
       </provider>
