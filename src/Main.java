@@ -9,7 +9,7 @@ public class Main extends Canvas implements Runnable
     private Thread thread;
     private boolean running = false;
 
-    public void Game()
+    public  Main()
     {
         new Screen(screenWidth, screenHeight, "Clicker Game", this);
     }
@@ -98,6 +98,6 @@ public class Main extends Canvas implements Runnable
 
     public static void main(String[] args)
     {
-        new Game();
+        new Main();
     }
 }
