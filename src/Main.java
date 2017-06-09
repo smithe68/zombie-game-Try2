@@ -1,9 +1,15 @@
-/**
- * Created by evan on 6/8/2017.
- */
-public class Main {
-    public static void main(String[] args) {
-        Screen mainScreen = new Screen();
-        Button clickButton = new Button();
+import javax.swing.*;
+
+public class Main
+{
+    public static JFrame mainScreen;
+    public static JButton mainButton;
+
+    public static void main(String[] args)
+    {
+        mainScreen = Screen.CreateScreen();
+        mainButton = Button.CreateButton("Click Me!", 200, 200, 100, 100);
+
+        mainScreen.add(mainButton);
     }
 }

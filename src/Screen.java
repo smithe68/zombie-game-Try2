@@ -4,12 +4,25 @@
 import javax.swing.JFrame;
 
 
-public class Screen {
-    public static void main(String[] args) {
+//public class Screen {
+//    public static void main(String[] args) {
+//        JFrame mainScreen = new JFrame();
+//        mainScreen.setSize(1920,1080);
+//        mainScreen.setVisible(true);
+//        mainScreen.setTitle("Game Window");
+//
+//    }
+//}
+
+public class Screen
+{
+    public static JFrame CreateScreen()
+    {
         JFrame mainScreen = new JFrame();
         mainScreen.setSize(1920,1080);
         mainScreen.setVisible(true);
         mainScreen.setTitle("Game Window");
 
+        return mainScreen;
     }
 }
