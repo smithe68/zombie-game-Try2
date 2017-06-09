@@ -13,7 +13,9 @@ public class Main extends Canvas implements Runnable
 
     public Main()
     {
+
         handler = new Handler();
+        this.addKeyListener(new KeyInput(handler));
 
         new Screen(screenWidth, screenHeight, "Clicker Game", this);
 
