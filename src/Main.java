@@ -11,6 +11,7 @@ public class Main extends Canvas implements Runnable
 
     private Handler handler;
     private HUD hud;
+    private Spawn spawner;
 
     public Main()
     {
@@ -19,6 +20,8 @@ public class Main extends Canvas implements Runnable
 
         new Screen(screenWidth, screenHeight, "Clicker Game", this);
         hud = new HUD(handler);
+
+        spawner = new Spawn(handler, hud);
 
         handler.AddObject(new Player(100, 100, ID.Player,handler));
         handler.AddObject(new BasicZombie(200, 200, ID.BasicZombie));

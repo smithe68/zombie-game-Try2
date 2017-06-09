@@ -12,8 +12,9 @@ public class BasicZombie extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle(x,y,16,16);
+        return new Rectangle(x, y,24,24);
     }
+
     public enum ZombieState
     {
         Wandering,
