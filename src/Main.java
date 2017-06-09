@@ -8,7 +8,7 @@ public class Main
     public static void main(String[] args)
     {
         mainScreen = Screen.CreateScreen();
-        mainButton = Button.CreateButton("Click Me!", 200, 200, 100, 100);
+        mainButton = Button.CreateButton("Click Me!");
 
         mainScreen.add(mainButton);
     }

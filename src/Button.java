@@ -2,15 +2,9 @@ import javax.swing.*;
 
 public class Button
 {
-    public static JButton CreateButton(String text, int sizeX, int sizeY, float posX, float posY)
+    public static JButton CreateButton(String text)
     {
         JButton button = new JButton(text);
-
-        // Set Position and Size of Button
-        button.setSize(sizeX, sizeY);
-        button.setAlignmentX(posX);
-        button.setAlignmentY(posY);
-
 
         return button;
     }
