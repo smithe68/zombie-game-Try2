@@ -2,7 +2,8 @@
  * Created by evan on 6/8/2017.
  */
 public class Main {
-    Screen mainScreen = new Screen();
-    Button clickButton = new Button();
-
+    public static void main(String[] args) {
+        Screen mainScreen = new Screen();
+        Button clickButton = new Button();
+    }
 }
