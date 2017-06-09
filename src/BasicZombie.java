@@ -11,6 +11,13 @@ public class BasicZombie extends GameObject
         velY = 5;
     }
 
+    public enum ZombieState
+    {
+        Wandering,
+        Following,
+        Attacking
+    }
+
     public void tick()
     {
         x += velX;
@@ -30,6 +37,6 @@ public class BasicZombie extends GameObject
     public void render(Graphics g)
     {
         g.setColor(Color.red);
-        g.fillRect(x, y, 16, 16);
+        g.fillRect(x, y, 24, 24);
     }
 }

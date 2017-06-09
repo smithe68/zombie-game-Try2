@@ -18,7 +18,7 @@ public class Main extends Canvas implements Runnable
         this.addKeyListener(new KeyInput(handler));
 
         new Screen(screenWidth, screenHeight, "Clicker Game", this);
-        hud = new HUD();
+        hud = new HUD(handler);
 
         handler.AddObject(new Player(100, 100, ID.Player));
         handler.AddObject(new BasicZombie(200, 200, ID.BasicZombie));
