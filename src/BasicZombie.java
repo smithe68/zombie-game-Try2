@@ -26,7 +26,7 @@ public class BasicZombie extends GameObject
         x += velX;
         y += velY;
 
-        if(y <= 0 || y >= Main.screenHeight - 32)
+        if(y <= 0 || y >= Main.screenHeight -50 )
         {
             velY *= -1;
         }
