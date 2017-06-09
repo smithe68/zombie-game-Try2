@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Main extends Canvas
 {
@@ -14,13 +12,11 @@ public class Main extends Canvas
         JPanel scorePanel = new JPanel();
 
         mainPanel.setSize(new Dimension(400, 300));
+        mainPanel.setLayout(new BorderLayout());
 
         mainScreen = Screen.CreateScreen();
         mainButton = Button.CreateButton("Click Me!");
-        mainScoreScreen = ScoreScreen.CreateScoreScreen
         mainButton.setPreferredSize(mainPanel.getSize());
-
-
 
         mainScreen.add(mainPanel);
 
