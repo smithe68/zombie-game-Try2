@@ -11,7 +11,7 @@ public class Main extends Canvas implements Runnable
 
     private Handler handler;
     private HUD hud;
-    private Spawn spawner;
+    private Spawn spawn;
 
     public Main()
     {
@@ -19,12 +19,12 @@ public class Main extends Canvas implements Runnable
         this.addKeyListener(new KeyInput(handler));
 
         new Screen(screenWidth, screenHeight, "Clicker Game", this);
+
         hud = new HUD(handler);
+        spawn = new Spawn(handler, hud);
 
-        spawner = new Spawn(handler, hud);
-
+        // Spawn the Player
         handler.AddObject(new Player(100, 100, ID.Player,handler));
-        handler.AddObject(new BasicZombie(200, 200, ID.BasicZombie));
     }
 
     public synchronized void start()
@@ -90,6 +90,7 @@ public class Main extends Canvas implements Runnable
     {
         handler.tick();
         hud.tick();
+        spawn.tick();
     }
 
     private void render()
