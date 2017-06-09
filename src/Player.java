@@ -1,6 +1,7 @@
 import java.awt.Graphics;
 import java.awt.Color;
 
+
 public class Player extends GameObject
 {
     public Player(int x, int y, ID id)
@@ -12,6 +13,7 @@ public class Player extends GameObject
     {
         x+= velX;
         y += velY;
+        x = Main.clamp(x,0,Main.WIDTH+761);
 
     }
 
