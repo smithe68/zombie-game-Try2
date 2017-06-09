@@ -38,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -54,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KeyInput.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KeyInput.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/KeyInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="41" column="64" lean-forward="true" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+            <state relative-caret-position="599">
+              <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#181#182#0" expanded="true" />
@@ -28791,7 +28791,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496992287083</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Changed Main">
+      <created>1496995319131</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1496995319131</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -28860,7 +28867,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -29361,6 +29368,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/KeyInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -29371,18 +29390,6 @@
             <element signature="e#1776#1777#0" expanded="true" />
             <element signature="e#2225#2226#0" expanded="true" />
             <element signature="e#2251#2252#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/KeyInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="41" column="64" lean-forward="true" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#181#182#0" expanded="true" />
-            <element signature="e#219#220#0" expanded="true" />
           </folding>
         </state>
       </provider>
