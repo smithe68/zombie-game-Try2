@@ -16,52 +16,52 @@ public abstract class GameObject
     public abstract void tick();
     public abstract void render(Graphics g);
 
-    public void setX(int x)
+    public void SetX(int x)
     {
         this.x = x;
     }
 
-    public void setY(int y)
+    public void SetY(int y)
     {
         this.y = y;
     }
 
-    public int getX()
+    public int GetX()
     {
         return x;
     }
 
-    public int getY()
+    public int GetY()
     {
         return y;
     }
 
-    public void setID(ID id)
+    public void SetID(ID id)
     {
         this.id = id;
     }
 
-    public ID getId()
+    public ID GetID()
     {
         return id;
     }
 
-    public void setVelX(int velX)
+    public void SetVelX(int velX)
     {
         this.velX = velX;
     }
 
-    public void setVelY(int velY)
+    public void SetVelY(int velY)
     {
         this.velY = velY;
     }
 
-    public int getVelX()
+    public int GetVelX()
     {
         return velX;
     }
 
-    public int getVelY()
+    public int GetVelY()
     {
         return velY;
     }
