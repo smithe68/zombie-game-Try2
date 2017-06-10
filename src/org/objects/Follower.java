@@ -34,7 +34,7 @@ public class Follower extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x, (int)y,64,64);
+        return new Rectangle((int)x, (int)y,45,45);
     }
 
     public void tick()
