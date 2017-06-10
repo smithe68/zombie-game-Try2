@@ -1,18 +1,27 @@
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class BasicZombie extends GameObject
 {
-    public BasicZombie(int x , int y, ID id)
+    public ZombieState currentState = ZombieState.Wandering;
+
+    private BufferedImage image;
+    private GameObject player;
+
+    public BasicZombie(int x , int y, ID id, BufferedImage image, GameObject player)
     {
         super(x, y, id);
 
-        velX = 5;
-        velY = 5;
+        this.image = image;
+        this.player = player;
+
+        velX += 1;
+        velY += 1;
     }
 
     public Rectangle getBounds()
     {
-        return new Rectangle(x, y,24,24);
+        return new Rectangle(x, y,64,64);
     }
 
     public enum ZombieState
@@ -40,7 +49,6 @@ public class BasicZombie extends GameObject
 
     public void render(Graphics g)
     {
-        g.setColor(Color.red);
-        g.fillRect(x, y, 24, 24);
+        g.drawImage(image, x, y, 64, 64, null);
     }
 }

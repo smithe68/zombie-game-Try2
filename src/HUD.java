@@ -30,7 +30,7 @@ public class HUD
 
             if(tempObject.GetID() == ID.Player)
             {
-                healthPosX = tempObject.GetX() - 9;
+                healthPosX = tempObject.GetX() + 10;
                 healthPosY = tempObject.GetY() - 20;
             }
         }
