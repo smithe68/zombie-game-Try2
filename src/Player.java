@@ -1,7 +1,6 @@
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-
 public class Player extends GameObject
 {
     private BufferedImage image;
@@ -33,6 +32,7 @@ public class Player extends GameObject
 
         collision();
     }
+
     private void collision()
     {
         for(int i = 0; i < handler.object.size(); i++)

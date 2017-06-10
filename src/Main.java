@@ -3,6 +3,7 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.Buffer;
+import java.util.logging.Level;
 
 public class Main extends Canvas implements Runnable
 {
@@ -18,6 +19,7 @@ public class Main extends Canvas implements Runnable
     private HUD hud;
     private Spawn spawn;
     private BufferedImageLoader imageLoader;
+    private LevelGeneration levelGen;
 
     // Special GameObject
     private GameObject player;
@@ -25,6 +27,7 @@ public class Main extends Canvas implements Runnable
     // Sprites
     private BufferedImage playerImage;
     private BufferedImage zombieImage;
+    private BufferedImage stoneTile;
 
     public Main()
     {
@@ -41,6 +44,9 @@ public class Main extends Canvas implements Runnable
 
         init();
 
+        levelGen = new LevelGeneration(handler, stoneTile);
+        levelGen.CreateLevel();
+
         // Spawn the Player
         player = handler.AddObject(new Player(100, 100, ID.Player, handler, playerImage));
         handler.AddObject(new BasicZombie(200, 200, ID.BasicZombie, zombieImage, player));
@@ -52,6 +58,7 @@ public class Main extends Canvas implements Runnable
         {
             playerImage = imageLoader.loadImage("/PlayerDude.png");
             zombieImage = imageLoader.loadImage("/Zombie.png");
+            stoneTile = imageLoader.loadImage("/GrassTile.png");
         }
         catch(IOException e)
         {
