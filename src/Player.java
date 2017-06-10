@@ -1,28 +1,37 @@
 import java.awt.*;
-import java.io.File;
+import java.awt.image.BufferedImage;
 
 
 public class Player extends GameObject
 {
-    Handler handler;
-    public Player(int x, int y, ID id,Handler handler)
+    private BufferedImage image;
+
+    private int spriteWidth = 64;
+    private int spriteHeight = 64;
+
+    private Handler handler;
+
+    public Player(int x, int y, ID id,Handler handler, BufferedImage image)
     {
         super(x, y, id);
         this.handler = handler;
+        this.image = image;
     }
+
     public Rectangle getBounds()
     {
-        return new Rectangle(x,y,32,32);
+        return new Rectangle(x,y,64,64);
     }
 
     public void tick()
     {
         x+= velX;
         y += velY;
+
         x = Main.clamp(x,0,Main.WIDTH+761);
         y = Main.clamp(y,0,Main.HEIGHT+531);
-        collision();
 
+        collision();
     }
     private void collision()
     {
@@ -37,13 +46,15 @@ public class Player extends GameObject
                     HUD.HEALTH -= 2;
                 }
             }
-
         }
     }
 
     public void render(Graphics g)
     {
-        if (id == ID.Player) g.setColor(Color.white);
-        g.fillRect(x, y, 32, 32);
+        if (id == ID.Player)
+        {
+            // Draw the Player's Sprite
+            g.drawImage(image, x, y, spriteWidth, spriteHeight, null);
+        }
     }
 }

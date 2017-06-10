@@ -1,10 +1,15 @@
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.nio.Buffer;
 
 public class Main extends Canvas implements Runnable
 {
     public static final int screenWidth = 800;
     public static final int screenHeight = screenWidth / 12 * 9;
+
+    public static double deltaTime;
 
     private Thread thread;
     private boolean running = false;
@@ -12,6 +17,14 @@ public class Main extends Canvas implements Runnable
     private Handler handler;
     private HUD hud;
     private Spawn spawn;
+    private BufferedImageLoader imageLoader;
+
+    // Special GameObject
+    private GameObject player;
+
+    // Sprites
+    private BufferedImage playerImage;
+    private BufferedImage zombieImage;
 
     public Main()
     {
@@ -21,10 +34,29 @@ public class Main extends Canvas implements Runnable
         new Screen(screenWidth, screenHeight, "Clicker Game", this);
 
         hud = new HUD(handler);
-        spawn = new Spawn(handler, hud);
+
+        //spawn = new Spawn(handler, hud, zombieImage);
+
+        imageLoader = new BufferedImageLoader();
+
+        init();
 
         // Spawn the Player
-        handler.AddObject(new Player(100, 100, ID.Player,handler));
+        player = handler.AddObject(new Player(100, 100, ID.Player, handler, playerImage));
+        handler.AddObject(new BasicZombie(200, 200, ID.BasicZombie, zombieImage, player));
+    }
+
+    public void init()
+    {
+        try
+        {
+            playerImage = imageLoader.loadImage("/PlayerDude.png");
+            zombieImage = imageLoader.loadImage("/Zombie.png");
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     public synchronized void start()
@@ -72,6 +104,8 @@ public class Main extends Canvas implements Runnable
                 render();
             }
 
+            deltaTime = delta;
+
             frames++;
 
             if(System.currentTimeMillis() - timer > 1000)
@@ -90,7 +124,7 @@ public class Main extends Canvas implements Runnable
     {
         handler.tick();
         hud.tick();
-        spawn.tick();
+        //spawn.tick();
     }
 
     private void render()
@@ -107,8 +141,6 @@ public class Main extends Canvas implements Runnable
         Color field = new Color (142,111,58);
         g.setColor(field);
         g.fillRect(0, 0, screenWidth, screenHeight);
-
-
 
         handler.render(g);
 

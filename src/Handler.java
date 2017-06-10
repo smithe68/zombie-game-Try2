@@ -25,9 +25,11 @@ public class Handler
         }
     }
 
-    public void AddObject(GameObject object)
+    public GameObject AddObject(GameObject object)
     {
         this.object.add(object);
+
+        return object;
     }
 
     public void RemoveObject(GameObject object)
