@@ -17,13 +17,10 @@ public class Follower extends GameObject
         this.player = player;
         this.handler = handler;
 
-        for(int i = 0; i < handler.object.size();i++)
-        {
-            if (handler.object.get(i).GetID() == ID.Player) player = handler.object.get(i);
-        }
-
-
-
+//        for(int i = 0; i < handler.object.size();i++)
+//        {
+//            if (handler.object.get(i).GetID() == ID.Player) player = handler.object.get(i);
+//        }
     }
 
     public Rectangle getBounds()
@@ -40,16 +37,18 @@ public class Follower extends GameObject
 
     public void tick()
     {
+        float diffX = x - player.GetX();
+        float diffY = y - player.GetY();
+
+        float distance = (float)(Math.sqrt((diffX * diffX) + (diffY * diffY)));
+
+        velX = (-1.0f / distance) * diffX * 2;
+        velY = (-1.0f / distance) * diffY * 2;
+
         x += velX;
         y += velY;
 
-        float diffX = x - player.GetX() + 9;
-        float diffY = y - player.GetY() + 9;
-        float distance = (float) (Math.sqrt((x-player.GetX())*(x-player.GetX()) + (y-player.GetY()) * y-player.GetY()));
         if(y <= 0 || y >= Main.screenHeight -50 )
-
-        velX = (float) ((-1.0/distance)*diffX);
-        velY = (float) ((-1.0/distance)*diffY);
         {
             velY *= -1;
         }
