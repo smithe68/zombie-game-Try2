@@ -17,7 +17,7 @@ public class Main extends Canvas implements Runnable
 
     private Handler handler;
     private HUD hud;
-    private Spawn spawn;
+   // private Spawn spawn;
     private BufferedImageLoader imageLoader;
     private LevelGeneration levelGen;
 
@@ -51,6 +51,8 @@ public class Main extends Canvas implements Runnable
         player = handler.AddObject(new Player(100, 100, ID.Player, handler, playerImage));
         handler.AddObject(new BasicZombie(200, 200, ID.BasicZombie, zombieImage, player));
         handler.AddObject(new Follower(200, 200, ID.Follower, zombieImage,player,handler));
+        handler.AddObject(new Follower(1500, 20, ID.Follower, zombieImage,player,handler));
+        handler.AddObject(new Follower(1000, 2000, ID.Follower, zombieImage,player,handler));
     }
 
     public void init()
