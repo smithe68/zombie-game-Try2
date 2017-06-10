@@ -9,7 +9,7 @@ public class HUD
         this.handler = handler;
     }
 
-    public static int HEALTH = 100;
+    public static float HEALTH = 100;
 
     private int healthPosX;
     private int healthPosY;
@@ -21,8 +21,8 @@ public class HUD
         HEALTH = Main.clamp(HEALTH,0,100);
 
         // Change Color of Health
-        greenValue = Main.clamp(greenValue, 0, 255);
-        greenValue = HEALTH * 2;
+        greenValue = (int)Main.clamp(greenValue, 0, 255);
+        greenValue = (int)HEALTH * 2;
 
         for(int i = 0; i < handler.object.size(); i++)
         {
@@ -30,8 +30,8 @@ public class HUD
 
             if(tempObject.GetID() == ID.Player)
             {
-                healthPosX = tempObject.GetX() + 10;
-                healthPosY = tempObject.GetY() - 20;
+                healthPosX = (int)tempObject.GetX() + 10;
+                healthPosY = (int)tempObject.GetY() - 20;
             }
         }
     }
@@ -41,7 +41,7 @@ public class HUD
         g.setColor(Color.gray);
         g.fillRect(healthPosX,healthPosY,50,12);
         g.setColor(new Color(150, greenValue, 0));
-        g.fillRect(healthPosX,healthPosY,HEALTH/2 ,12);
+        g.fillRect(healthPosX,healthPosY,(int)HEALTH/2 ,12);
         g.setColor(Color.white);
         g.drawRect(healthPosX,healthPosY,50,12);
     }

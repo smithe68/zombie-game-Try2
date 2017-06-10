@@ -19,7 +19,7 @@ public class Tile extends GameObject
 
     public void render(Graphics g)
     {
-        g.drawImage(tileSprite, x, y, 96, 96, null);
+        g.drawImage(tileSprite, (int)x,(int) y, 96, 96, null);
     }
 
     @Override

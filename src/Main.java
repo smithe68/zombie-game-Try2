@@ -50,6 +50,7 @@ public class Main extends Canvas implements Runnable
         // Spawn the Player
         player = handler.AddObject(new Player(100, 100, ID.Player, handler, playerImage));
         handler.AddObject(new BasicZombie(200, 200, ID.BasicZombie, zombieImage, player));
+        handler.AddObject(new Follower(200, 200, ID.Follower, zombieImage,player,handler));
     }
 
     public void init()
@@ -156,7 +157,7 @@ public class Main extends Canvas implements Runnable
         g.dispose();
         bs.show();
     }
-    public static int clamp(int var, int min,int max)
+    public static float clamp(float var, float min,float max)
     {
         if(var>= max)
                 return var = max;

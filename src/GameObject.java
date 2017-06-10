@@ -2,11 +2,11 @@ import java.awt.*;
 
 public abstract class GameObject
 {
-    protected int x, y;
+    protected float x, y;
     protected ID id;
-    protected int velX, velY;
+    protected float velX, velY;
 
-    public GameObject(int x, int y, ID id)
+    public GameObject(float x, float y, ID id)
     {
         this.x = x;
         this.y = y;
@@ -17,22 +17,22 @@ public abstract class GameObject
     public abstract void render(Graphics g);
     public abstract Rectangle getBounds();
 
-    public void SetX(int x)
+    public void SetX(float x)
     {
         this.x = x;
     }
 
-    public void SetY(int y)
+    public void SetY(float y)
     {
         this.y = y;
     }
 
-    public int GetX()
+    public float GetX()
     {
         return x;
     }
 
-    public int GetY()
+    public float GetY()
     {
         return y;
     }
@@ -47,22 +47,22 @@ public abstract class GameObject
         return id;
     }
 
-    public void SetVelX(int velX)
+    public void SetVelX(float velX)
     {
         this.velX = velX;
     }
 
-    public void SetVelY(int velY)
+    public void SetVelY(float velY)
     {
         this.velY = velY;
     }
 
-    public int GetVelX()
+    public float GetVelX()
     {
         return velX;
     }
 
-    public int GetVelY()
+    public float GetVelY()
     {
         return velY;
     }

@@ -19,7 +19,7 @@ public class Player extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle(x,y,64,64);
+        return new Rectangle((int)x,(int)y,64,64);
     }
 
     public void tick()
@@ -54,7 +54,7 @@ public class Player extends GameObject
         if (id == ID.Player)
         {
             // Draw the Player's Sprite
-            g.drawImage(image, x, y, spriteWidth, spriteHeight, null);
+            g.drawImage(image, (int)x, (int)y, spriteWidth, spriteHeight, null);
         }
     }
 }
