@@ -1,11 +1,25 @@
+package org.engine;
+
+import org.objects.Tile;
+
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class LevelGeneration
 {
-    public LevelGeneration(Handler handler, BufferedImage stoneTile)
+    public LevelGeneration(Handler handler)
     {
         this.handler = handler;
-        this.stoneTile = stoneTile;
+
+        try
+        {
+            // Get Sprites for Generation
+            stoneTile = handler.LoadImage("/resources/sprites/StoneTile.png");
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     private Handler handler;

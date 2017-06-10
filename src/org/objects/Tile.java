@@ -1,3 +1,7 @@
+package org.objects;
+
+import org.engine.ID;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 

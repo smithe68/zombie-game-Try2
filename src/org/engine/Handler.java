@@ -1,9 +1,16 @@
+package org.engine;
+
+import org.objects.GameObject;
+
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.LinkedList;
 
 public class Handler
 {
-    LinkedList<GameObject> object = new LinkedList<GameObject>();
+    public LinkedList<GameObject> object = new LinkedList<GameObject>();
 
     public void tick()
     {
@@ -35,5 +42,14 @@ public class Handler
     public void RemoveObject(GameObject object)
     {
         this.object.remove(object);
+    }
+
+    public BufferedImage LoadImage(String path) throws IOException
+    {
+        BufferedImage image;
+
+        image = ImageIO.read(getClass().getResource(path));
+
+        return image;
     }
 }

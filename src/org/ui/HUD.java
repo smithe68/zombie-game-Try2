@@ -1,3 +1,10 @@
+package org.ui;
+
+import org.objects.GameObject;
+import org.engine.Handler;
+import org.engine.ID;
+import org.engine.Main;
+
 import java.awt.*;
 
 public class HUD

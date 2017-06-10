@@ -1,20 +1,35 @@
+package org.objects;
+
+import org.engine.Handler;
+import org.engine.ID;
+import org.engine.Main;
+import org.ui.HUD;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class Player extends GameObject
 {
     private BufferedImage image;
 
-    private int spriteWidth = 64;
-    private int spriteHeight = 64;
-
     private Handler handler;
 
-    public Player(int x, int y, ID id,Handler handler, BufferedImage image)
+    public Player(int x, int y, ID id, Handler handler)
     {
         super(x, y, id);
+
         this.handler = handler;
-        this.image = image;
+
+        try
+        {
+            // Get the Sprite for the Player
+            image = handler.LoadImage("/resources/sprites/PlayerDude.png");
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     public Rectangle getBounds()
@@ -54,7 +69,7 @@ public class Player extends GameObject
         if (id == ID.Player)
         {
             // Draw the Player's Sprite
-            g.drawImage(image, (int)x, (int)y, spriteWidth, spriteHeight, null);
+            g.drawImage(image, (int)x, (int)y, 64, 64, null);
         }
     }
 }
