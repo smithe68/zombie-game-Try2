@@ -1,6 +1,7 @@
 package org.objects;
 
 import org.engine.CustomMathf;
+import org.engine.Game;
 import org.engine.ID;
 import org.engine.Renderer;
 import org.input.Input;
@@ -17,7 +18,11 @@ public class Player extends GameObject
 {
     public static Player player;
 
+    public float playerHealth = 100f;
+
     private BufferedImage image;
+    private GameObject hudObj;
+    private HUD hud;
 
     public float speed = 1.5f;
 
@@ -41,6 +46,9 @@ public class Player extends GameObject
         {
             e.printStackTrace();
         }
+
+        HUD hud = new HUD(x, y + 15, ID.HUD);
+        hudObj = Game.Instantiate(hud);
     }
 
     public Rectangle getBounds()
@@ -50,11 +58,21 @@ public class Player extends GameObject
 
     public void tick(float deltaTime)
     {
+        // UI
+
+        if(hudObj != null)
+        {
+            hudObj.x = player.x;
+            hudObj.y = player.y - 16;
+        }
+
+        // Movement
+
         x+= velX;
         y += velY;
 
-        x = Renderer.Clamp(x,0, Renderer.gameWidth +761);
-        y = Renderer.Clamp(y,0, Renderer.gameHeight +531);
+        x = CustomMathf.Clamp(x,0, Renderer.gameWidth +761);
+        y = CustomMathf.Clamp(y,0, Renderer.gameHeight +531);
 
         horiAxis = 0;
         vertAxis = 0;

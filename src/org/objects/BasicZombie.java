@@ -1,5 +1,6 @@
 package org.objects;
 
+import org.engine.CustomMathf;
 import org.engine.ID;
 import org.engine.Renderer;
 
@@ -7,9 +8,12 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Random;
 
 public class BasicZombie extends GameObject
 {
+    public ZombieState state = ZombieState.Standing;
+
     private BufferedImage image;
 
     private GameObject player = Player.player;
@@ -18,6 +22,12 @@ public class BasicZombie extends GameObject
 
     private float horiAxis = 0;
     private float vertAxis = 0;
+
+    public enum ZombieState
+    {
+        Standing,
+        Hunting
+    }
 
     public BasicZombie(int x , int y, ID id)
     {
@@ -41,8 +51,18 @@ public class BasicZombie extends GameObject
 
     public void tick(float deltaTime)
     {
-        x = Renderer.Lerp(x, player.x, 2 * deltaTime);
-        y = Renderer.Lerp(y, player.y, 2 * deltaTime);
+        double distance = x - player.x;
+
+        if(distance < 150 && distance > -150)
+        {
+            state = ZombieState.Hunting;
+            x = CustomMathf.Lerp(x, player.x, deltaTime / 2.5f);
+            y = CustomMathf.Lerp(y, player.y, deltaTime / 2.5f);
+        }
+        else
+        {
+            state = ZombieState.Standing;
+        }
 
         Point distToPlayer = (new Point((int)player.x - (int)x, (int)player.y - (int)y));
 
@@ -58,5 +78,6 @@ public class BasicZombie extends GameObject
 
         // Draw the Player's Sprite
         g2d.drawImage(image, at, null);
+        g2d.drawString(state.toString(), x, y + 15);
     }
 }
