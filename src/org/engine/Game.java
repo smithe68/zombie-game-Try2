@@ -1,9 +1,6 @@
 package org.engine;
 
-import org.objects.Follower;
-import org.objects.Player;
-import org.objects.XSpeedFollower;
-import org.objects.YSpeedFollower;
+import org.objects.*;
 import org.ui.HUD;
 import org.world.World;
 
@@ -14,18 +11,30 @@ public class Game
         Renderer.init();
 
         World.currentWorld = new World();
-        System.out.println("Test");
 
-        World.currentWorld.gameObjects.add(new HUD(0, 0, ID.HUD));
+        LevelGeneration gen = new LevelGeneration();
+        gen.CreateLevel();
 
-        World.currentWorld.gameObjects.add(new Player(100, 100, ID.Player));
-        World.currentWorld.gameObjects.add(new Follower(100, 100, ID.BasicZombie));
-        World.currentWorld.gameObjects.add(new XSpeedFollower(100, 100, ID.BasicZombie));
-        World.currentWorld.gameObjects.add(new YSpeedFollower(100, 100, ID.BasicZombie));
+        SpawnGameObjects();
+    }
+
+    public static void Instantiate(GameObject object)
+    {
+        World.currentWorld.gameObjects.add(object);
     }
 
     public static void quit()
     {
         System.exit(1);
+    }
+
+    public static void SpawnGameObjects()
+    {
+        Instantiate(new HUD(0, 0, ID.HUD));
+
+        Instantiate(new Player(100, 100, ID.Player));
+        Instantiate(new BasicZombie(300, 150, ID.BasicZombie));
+        Instantiate(new BasicZombie(350, 200, ID.BasicZombie));
+        Instantiate(new BasicZombie(200, 300, ID.BasicZombie));
     }
 }

@@ -1,7 +1,6 @@
 package org.engine;
 
 import org.objects.Tile;
-import org.world.World;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -21,7 +20,7 @@ public class LevelGeneration
         }
     }
 
-    public int levelWidth = 10, levelHeight = 10;
+    public int levelWidth = 20, levelHeight = 20;
 
     private BufferedImage stoneTile;
 
@@ -31,7 +30,7 @@ public class LevelGeneration
         {
             for(int y = 0; y < levelHeight; y++)
             {
-
+                Game.Instantiate(new Tile(x * stoneTile.getWidth(), y * stoneTile.getHeight(), ID.Tile, stoneTile));
             }
         }
     }

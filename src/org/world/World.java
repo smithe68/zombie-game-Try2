@@ -11,7 +11,7 @@ public class World
 
     private static long lastTime = System.nanoTime();
 
-    public static ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
+    public static ArrayList<GameObject> gameObjects = new ArrayList<>();
 
     public static void update()
     {

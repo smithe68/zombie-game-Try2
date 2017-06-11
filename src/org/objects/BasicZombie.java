@@ -4,27 +4,29 @@ import org.engine.ID;
 import org.engine.Renderer;
 
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class BasicZombie extends GameObject
 {
     private BufferedImage image;
-    private GameObject player;
 
-    public BasicZombie(int x , int y, ID id, GameObject player)
+    private GameObject player = Player.player;
+
+    private float rotation = 0;
+
+    private float horiAxis = 0;
+    private float vertAxis = 0;
+
+    public BasicZombie(int x , int y, ID id)
     {
         super(x, y, id);
 
-        this.player = player;
-
-        velX += 1;
-        velY += 1;
-
         try
         {
-            // Get the Sprite for the Zombie
-            image = Renderer.LoadImage("/resources/sprites/Zombie.png");
+            // Get the Sprite for the Follower
+            image = Renderer.LoadImage("/resources/sprites/BasicZombie.png");
         }
         catch (IOException e)
         {
@@ -34,27 +36,27 @@ public class BasicZombie extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x, (int)y,64,64);
+        return new Rectangle((int)x, (int)y,image.getWidth() / 2,image.getHeight() / 2);
     }
 
     public void tick(float deltaTime)
     {
-        x += velX;
-        y += velY;
+        x = Renderer.Lerp(x, player.x, 2 * deltaTime);
+        y = Renderer.Lerp(y, player.y, 2 * deltaTime);
 
-        if(y <= 0 || y >= Renderer.gameHeight -50 )
-        {
-            velY *= -1;
-        }
+        Point distToPlayer = (new Point((int)player.x - (int)x, (int)player.y - (int)y));
 
-        if(x <= 0 || x >= Renderer.gameWidth - 32)
-        {
-            velX *= -1;
-        }
+        // Rotate toward the Player
+        rotation = (float)Math.atan2(distToPlayer.y, distToPlayer.x);
     }
 
     public void render(Graphics g)
     {
-        g.drawImage(image, (int)x, (int)y, 64, 64, null);
+        AffineTransform at = AffineTransform.getTranslateInstance(x, y);
+        at.rotate(rotation, image.getWidth() / 2, image.getHeight() / 2);
+        Graphics2D g2d = (Graphics2D) g;
+
+        // Draw the Player's Sprite
+        g2d.drawImage(image, at, null);
     }
 }
