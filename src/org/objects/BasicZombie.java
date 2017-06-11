@@ -19,9 +19,7 @@ public class BasicZombie extends GameObject
     private GameObject player = Player.player;
 
     private float rotation = 0;
-
-    private float horiAxis = 0;
-    private float vertAxis = 0;
+    private float lastRotation = 0;
 
     public enum ZombieState
     {
@@ -53,21 +51,23 @@ public class BasicZombie extends GameObject
     {
         double distance = x - player.x;
 
+        Point distToPlayer = (new Point((int)player.x - (int)x, (int)player.y - (int)y));
+
         if(distance < 150 && distance > -150)
         {
+            // Rotate toward the Player
+            rotation = (float)Math.atan2(distToPlayer.y, distToPlayer.x);
+
             state = ZombieState.Hunting;
+
             x = CustomMathf.Lerp(x, player.x, deltaTime / 2.5f);
             y = CustomMathf.Lerp(y, player.y, deltaTime / 2.5f);
         }
         else
         {
             state = ZombieState.Standing;
+            lastRotation = rotation;
         }
-
-        Point distToPlayer = (new Point((int)player.x - (int)x, (int)player.y - (int)y));
-
-        // Rotate toward the Player
-        rotation = (float)Math.atan2(distToPlayer.y, distToPlayer.x);
     }
 
     public void render(Graphics g)
@@ -77,6 +77,11 @@ public class BasicZombie extends GameObject
         if(state == ZombieState.Hunting)
         {
             at.rotate(rotation, image.getWidth() / 2, image.getHeight() / 2);
+        }
+
+        if(state == ZombieState.Standing)
+        {
+            at.rotate(lastRotation, image.getWidth() / 2, image.getHeight() / 2);
         }
 
         Graphics2D g2d = (Graphics2D) g;
