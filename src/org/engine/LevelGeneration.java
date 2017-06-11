@@ -1,13 +1,10 @@
 package org.engine;
 
-import org.objects.BasicZombie;
-import org.objects.Player;
+import org.enums.ID;
 import org.objects.Tile;
-import org.ui.HUD;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.nio.Buffer;
 
 public class LevelGeneration
 {

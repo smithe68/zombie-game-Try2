@@ -2,7 +2,7 @@ package org.objects;
 
 import org.engine.CustomMathf;
 import org.engine.Game;
-import org.engine.ID;
+import org.enums.ID;
 import org.engine.Renderer;
 import org.ui.HUD;
 
@@ -10,7 +10,6 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.Random;
 
 public class BasicZombie extends GameObject
 {

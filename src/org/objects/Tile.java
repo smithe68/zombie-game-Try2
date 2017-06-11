@@ -1,7 +1,6 @@
 package org.objects;
 
-import org.engine.ID;
-import org.engine.Renderer;
+import org.enums.ID;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

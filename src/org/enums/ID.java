@@ -1,4 +1,4 @@
-package org.engine;
+package org.enums;
 
 /**
  * Created by Jakub on 6/8/2017.
@@ -12,5 +12,6 @@ public enum ID
     BasicZombie,
     Follower,
     Tile,
-    HUD
+    HUD,
+    Pickup
 }
