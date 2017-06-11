@@ -4,6 +4,7 @@ import org.objects.Follower;
 import org.objects.Player;
 import org.objects.XSpeedFollower;
 import org.objects.YSpeedFollower;
+import org.ui.HUD;
 import org.world.World;
 
 public class Game
@@ -14,6 +15,9 @@ public class Game
 
         World.currentWorld = new World();
         System.out.println("Test");
+
+        World.currentWorld.gameObjects.add(new HUD(0, 0, ID.HUD));
+
         World.currentWorld.gameObjects.add(new Player(100, 100, ID.Player));
         World.currentWorld.gameObjects.add(new Follower(100, 100, ID.BasicZombie));
         World.currentWorld.gameObjects.add(new XSpeedFollower(100, 100, ID.BasicZombie));

@@ -11,5 +11,6 @@ public enum ID
     Speeder,
     BasicZombie,
     Follower,
-    Tile
+    Tile,
+    HUD
 }

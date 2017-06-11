@@ -6,9 +6,9 @@ import java.awt.*;
 
 public abstract class GameObject
 {
-    protected float x, y;
-    protected ID id;
-    protected float velX, velY;
+    public float x, y;
+    public ID id;
+    public float velX, velY;
 
     public GameObject(float x, float y, ID id)
     {
