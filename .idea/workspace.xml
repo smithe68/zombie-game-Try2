@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/enums/PickupTypes.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/objects/Pickup.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/PlayerNormal_S.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/engine/ID.java" afterPath="$PROJECT_DIR$/src/org/enums/ID.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/Game.java" afterPath="$PROJECT_DIR$/src/org/engine/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/LevelGeneration.java" afterPath="$PROJECT_DIR$/src/org/engine/LevelGeneration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/BasicZombie.java" afterPath="$PROJECT_DIR$/src/org/objects/BasicZombie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/GameObject.java" afterPath="$PROJECT_DIR$/src/org/objects/GameObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Player.java" afterPath="$PROJECT_DIR$/src/org/objects/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Tile.java" afterPath="$PROJECT_DIR$/src/org/objects/Tile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ui/HUD.java" afterPath="$PROJECT_DIR$/src/org/ui/HUD.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -714,13 +703,6 @@
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
     </task>
-    <task id="LOCAL-00004" summary="More Button Work">
-      <created>1496980132662</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1496980132662</updated>
-    </task>
     <task id="LOCAL-00005" summary="More Button Work">
       <created>1496980867319</created>
       <option name="number" value="00005" />
@@ -1057,7 +1039,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497210982168</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Changed Main">
+      <created>1497214007366</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1497214007366</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
