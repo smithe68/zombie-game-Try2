@@ -22,10 +22,10 @@ public class HUD
 
     public void tick()
     {
-        HEALTH = Renderer.clamp(HEALTH,0,100);
+        HEALTH = Renderer.Clamp(HEALTH,0,100);
 
         // Change Color of Health
-        greenValue = (int) Renderer.clamp(greenValue, 0, 255);
+        greenValue = (int) Renderer.Clamp(greenValue, 0, 255);
         greenValue = (int)HEALTH * 2;
 
         for(int i = 0; i < World.gameObjects.size(); i++)

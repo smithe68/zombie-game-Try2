@@ -1,33 +1,24 @@
 package org.objects;
-import org.engine.Handler;
 import org.engine.ID;
-import org.engine.Main;
+import org.engine.Renderer;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-/**
- * Created by evan on 6/10/2017.
- */
 public class XSpeedFollower extends GameObject
 {
-
-    private Handler handler;
     private BufferedImage image;
-    private GameObject player;
+    private GameObject player = Player.player;
 
-    public XSpeedFollower(int x , int y, ID id, GameObject player, Handler handler)
+    public XSpeedFollower(int x , int y, ID id)
     {
         super(x, y,id);
-
-        this.player = player;
-        this.handler = handler;
 
         try
         {
             // Get the Sprite for the Follower
-            image = handler.LoadImage("/resources/sprites/Zombie.png");
+            image = Renderer.LoadImage("/resources/sprites/Zombie.png");
         }
         catch (IOException e)
         {
@@ -40,25 +31,17 @@ public class XSpeedFollower extends GameObject
         return new Rectangle((int)x, (int)y,30,30);
     }
 
-    public void tick()
+    public void tick(float deltaTime)
     {
-        float diffX = x - player.GetX();
-        float diffY = y - player.GetY();
+        x = Renderer.Lerp(x, player.x, 3 * deltaTime);
+        y = Renderer.Lerp(y, player.y, 2 * deltaTime);
 
-        float distance = (float)(Math.sqrt((diffX * diffX) + (diffY * diffY)));
-
-        velX = (-1.0f / distance) * diffX * 5;
-        velY = (-1.0f / distance) * diffY * 3;
-
-        x += velX;
-        y += velY;
-
-        if(y <= 0 || y >= Main.screenHeight -50 )
+        if(y <= 0 || y >= Renderer.gameHeight -50 )
         {
             velY *= -1;
         }
 
-        if(x <= 0 || x >= Main.screenWidth - 32)
+        if(x <= 0 || x >= Renderer.gameHeight - 32)
         {
             velX *= -1;
         }

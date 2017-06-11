@@ -46,8 +46,8 @@ public class Player extends GameObject
         x+= velX;
         y += velY;
 
-        x = Renderer.clamp(x,0, Renderer.gameWidth +761);
-        y = Renderer.clamp(y,0, Renderer.gameHeight +531);
+        x = Renderer.Clamp(x,0, Renderer.gameWidth +761);
+        y = Renderer.Clamp(y,0, Renderer.gameHeight +531);
 
         // Move Player Left
         if(Input.GetKey(KeyEvent.VK_A))

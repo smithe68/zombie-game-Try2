@@ -35,16 +35,8 @@ public class Follower extends GameObject
 
     public void tick(float deltaTime)
     {
-        float diffX = x - player.GetX();
-        float diffY = y - player.GetY();
-
-        float distance = (float)(Math.sqrt((diffX * diffX) + (diffY * diffY)));
-
-        velX = (-1.0f / distance) * diffX * 2 ;
-        velY = (-1.0f / distance) * diffY * 2;
-
-        x += velX;
-        y += velY;
+        x = Renderer.Lerp(x, player.x, 2 * deltaTime);
+        y = Renderer.Lerp(y, player.y, 2 * deltaTime);
 
         if(y <= 0 || y >= Renderer.gameHeight -50 )
         {
