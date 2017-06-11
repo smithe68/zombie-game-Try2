@@ -3,21 +3,26 @@ package org.ui;
 import org.engine.CustomMathf;
 import org.objects.GameObject;
 import org.engine.ID;
-import org.engine.Renderer;
-import org.objects.Player;
 
 import java.awt.*;
 
 public class HUD extends GameObject
 {
-    private GameObject player = Player.player;
+    private int sizeX;
+    private int sizeY;
+    private int healthBarX;
 
-    public HUD (float x, float y, ID id)
+    public HUD (float x, float y, ID id, int sizeX, int sizeY)
     {
         super(x, y, id);
+
+        this.sizeX = sizeX;
+        this.sizeY = sizeY;
+
+        healthBarX = (int)(HEALTH / sizeX);
     }
 
-    public static float HEALTH = 100;
+    public float HEALTH = 100;
 
     private int greenValue = 255;
 
@@ -35,11 +40,11 @@ public class HUD extends GameObject
     public void render(Graphics g)
     {
         g.setColor(Color.gray);
-        g.fillRect((int)x,(int)y,30,8);
+        g.fillRect((int)x,(int)y,sizeX,sizeY);
         g.setColor(new Color(150, greenValue, 0));
-        g.fillRect((int)x,(int)y,(int)(HEALTH/3.34f) ,8);
+        g.fillRect((int)x,(int)y,(int)(HEALTH/healthBarX) ,sizeY);
         g.setColor(Color.white);
-        g.drawRect((int)x,(int)y,30,8);
+        g.drawRect((int)x,(int)y,sizeX,sizeY);
     }
 
     @Override

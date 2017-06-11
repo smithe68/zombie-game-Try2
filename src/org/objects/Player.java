@@ -1,9 +1,6 @@
 package org.objects;
 
-import org.engine.CustomMathf;
-import org.engine.Game;
-import org.engine.ID;
-import org.engine.Renderer;
+import org.engine.*;
 import org.input.Input;
 import org.ui.HUD;
 import org.world.World;
@@ -45,7 +42,7 @@ public class Player extends GameObject
             e.printStackTrace();
         }
 
-        hud = new HUD(x, y + 15, ID.HUD);
+        hud = new HUD(x, y + 15, ID.HUD, 25, 8);
         hudObj = Game.Instantiate(hud);
     }
 
@@ -60,6 +57,7 @@ public class Player extends GameObject
 
         if(hudObj != null)
         {
+            // Make Health float above Player
             hudObj.x = player.x;
             hudObj.y = player.y - 16;
         }
@@ -103,13 +101,6 @@ public class Player extends GameObject
             vertAxis = -1;
         }
 
-        // Test Linecast
-        if(Input.GetKeyDown(KeyEvent.VK_E))
-        {
-            Point thisPos = new Point((int)x, (int)y);
-            Point endPos = new Point((int)x + 15, (int)y);
-        }
-
         rotation = CustomMathf.NineAxisRotation(rotation, horiAxis, vertAxis, 3, deltaTime);
 
         collision();
@@ -125,7 +116,7 @@ public class Player extends GameObject
             {
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
-                    hud.HEALTH -= 1;
+                    hud.HEALTH -= 0.5f;
                 }
             }
         }

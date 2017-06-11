@@ -4,7 +4,9 @@ import org.objects.GameObject;
 import org.world.World;
 
 import java.awt.*;
+import java.awt.geom.Point2D;
 import java.util.Random;
+import java.util.Vector;
 
 public class CustomMathf
 {
@@ -153,5 +155,79 @@ public class CustomMathf
         }
 
         return null;
+    }
+
+    public static Vector2D Normalize(Vector2D a)
+    {
+        float length = (float)(Math.sqrt((a.x * a.x) + (a.y * a.y)));
+
+        a.x = a.x/Math.abs(length);
+        a.y = a.y/Math.abs(length);
+
+        return a;
+    }
+
+    public static double CalculateAngle(double x1, double y1, double x2, double y2)
+    {
+        double angle = Math.toDegrees(Math.atan2(x2 - x1, y2 - y1));
+        // Keep angle between 0 and 360
+        angle = angle + Math.ceil( -angle / 360 ) * 360;
+
+        return angle;
+    }
+
+    public double AngleInRelation(int x1, int y1, int x2, int y2)
+    {
+        // Point 1 in relation to point 2
+        Point point1 = new Point(x1, y1);
+        Point point2 = new Point(x2, y2);
+
+        int xdiff = Math.abs(point2.x - point1.x);
+        int ydiff = Math.abs(point2.y - point1.y);
+
+        double deg = 361;
+
+        if ( (point2.x > point1.x) && (point2.y < point1.y) )
+        {
+            // Quadrant 1
+            deg = -Math.toDegrees(Math.atan(Math.toRadians(ydiff) / Math.toRadians(xdiff)));
+        }
+        else if ( (point2.x > point1.x) && (point2.y > point1.y) )
+        {
+            // Quadrant 2
+            deg = Math.toDegrees(Math.atan(Math.toRadians(ydiff) / Math.toRadians(xdiff)));
+        }
+        else if ( (point2.x < point1.x) && (point2.y > point1.y) )
+        {
+            // Quadrant 3
+            deg = 90 + Math.toDegrees(Math.atan(Math.toRadians(xdiff) / Math.toRadians(ydiff)));
+        }
+        else if ( (point2.x < point1.x) && (point2.y < point1.y) )
+        {
+            // Quadrant 4
+            deg = 180 + Math.toDegrees(Math.atan(Math.toRadians(ydiff) / Math.toRadians(xdiff)));
+        }
+        else if ((point2.x == point1.x) && (point2.y < point1.y))
+        {
+            deg = -90;
+        }
+        else if ((point2.x == point1.x) && (point2.y > point1.y))
+        {
+            deg = 90;
+        }
+        else if ((point2.y == point1.y) && (point2.x > point1.x))
+        {
+            deg = 0;
+        }
+        else if ((point2.y == point2.y) && (point2.x < point1.x))
+        {
+            deg = 180;
+        }
+        if (deg == 361)
+        {
+            deg = 0;
+        }
+
+        return deg;
     }
 }

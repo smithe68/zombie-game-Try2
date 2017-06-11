@@ -27,9 +27,6 @@ public class Tile extends GameObject
         g.drawImage(tileSprite, (int)x,(int)y, 96, 96, null);
     }
 
-
-
-
     @Override
     public Rectangle getBounds() {
         return null;

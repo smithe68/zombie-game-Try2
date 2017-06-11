@@ -1,8 +1,10 @@
 package org.objects;
 
 import org.engine.CustomMathf;
+import org.engine.Game;
 import org.engine.ID;
 import org.engine.Renderer;
+import org.ui.HUD;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -17,6 +19,9 @@ public class BasicZombie extends GameObject
     private BufferedImage image;
 
     private GameObject player = Player.player;
+
+    private GameObject hudObj;
+    private HUD hud;
 
     private float rotation = 0;
     private float lastRotation = 0;
@@ -40,6 +45,9 @@ public class BasicZombie extends GameObject
         {
             e.printStackTrace();
         }
+
+        hud = new HUD(x, y, ID.HUD, 20, 5);
+        hudObj = Game.Instantiate(hud);
     }
 
     public Rectangle getBounds()
@@ -49,19 +57,29 @@ public class BasicZombie extends GameObject
 
     public void tick(float deltaTime)
     {
+        // UI
+
+        if(hudObj != null)
+        {
+            hudObj.x = x + 5;
+            hudObj.y = y - 10;
+        }
+
+        // Movement
+
         double distance = x - player.x;
 
-        Point distToPlayer = (new Point((int)player.x - (int)x, (int)player.y - (int)y));
+        Point posDiff = (new Point((int)(player.x - x), (int)(player.y - y)));
 
         if(distance < 150 && distance > -150)
         {
             // Rotate toward the Player
-            rotation = (float)Math.atan2(distToPlayer.y, distToPlayer.x);
+            rotation = (float)Math.atan2(posDiff.y, posDiff.x);
 
             state = ZombieState.Hunting;
 
-            x = CustomMathf.Lerp(x, player.x, deltaTime / 2.5f);
-            y = CustomMathf.Lerp(y, player.y, deltaTime / 2.5f);
+            x = CustomMathf.Lerp(x, player.x, deltaTime / 2);
+            y = CustomMathf.Lerp(y, player.y, deltaTime / 2);
         }
         else
         {
