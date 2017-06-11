@@ -1,19 +1,16 @@
 package org.ui;
 
 import org.objects.GameObject;
-import org.engine.Handler;
 import org.engine.ID;
-import org.engine.Main;
+import org.engine.Renderer;
+import org.world.World;
 
 import java.awt.*;
 
 public class HUD
 {
-    public Handler handler;
 
-    public HUD (Handler handler)
-    {
-        this.handler = handler;
+    public HUD (){
     }
 
     public static float HEALTH = 100;
@@ -25,15 +22,15 @@ public class HUD
 
     public void tick()
     {
-        HEALTH = Main.clamp(HEALTH,0,100);
+        HEALTH = Renderer.clamp(HEALTH,0,100);
 
         // Change Color of Health
-        greenValue = (int)Main.clamp(greenValue, 0, 255);
+        greenValue = (int) Renderer.clamp(greenValue, 0, 255);
         greenValue = (int)HEALTH * 2;
 
-        for(int i = 0; i < handler.object.size(); i++)
+        for(int i = 0; i < World.gameObjects.size(); i++)
         {
-            GameObject tempObject = handler.object.get(i);
+            GameObject tempObject = World.gameObjects.get(i);
 
             if(tempObject.GetID() == ID.Player)
             {

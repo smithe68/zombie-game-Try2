@@ -16,7 +16,7 @@ public class Tile extends GameObject
 
     public BufferedImage tileSprite;
 
-    public void tick()
+    public void tick(float deltaTime)
     {
 
     }

@@ -17,7 +17,7 @@ public abstract class GameObject
         this.id = id;
     }
 
-    public abstract void tick();
+    public abstract void tick(float deltaTime);
     public abstract void render(Graphics g);
     public abstract Rectangle getBounds();
 

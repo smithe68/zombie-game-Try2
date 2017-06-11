@@ -1,30 +1,34 @@
 package org.objects;
 
-import org.engine.Handler;
 import org.engine.ID;
-import org.engine.Main;
+import org.engine.Renderer;
+import org.input.Input;
 import org.ui.HUD;
+import org.world.World;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Player extends GameObject
 {
+    public static Player player;
+
     private BufferedImage image;
 
-    private Handler handler;
+    public float speed = 2;
 
-    public Player(int x, int y, ID id, Handler handler)
+    public Player(int x, int y, ID id)
     {
         super(x, y, id);
 
-        this.handler = handler;
+        player = this;
 
         try
         {
             // Get the Sprite for the Player
-            image = handler.LoadImage("/resources/sprites/PlayerDude.png");
+            image = Renderer.LoadImage("/resources/sprites/PlayerDude.png");
         }
         catch (IOException e)
         {
@@ -37,22 +41,46 @@ public class Player extends GameObject
         return new Rectangle((int)x,(int)y,64,64);
     }
 
-    public void tick()
+    public void tick(float deltaTime)
     {
         x+= velX;
         y += velY;
 
-        x = Main.clamp(x,0,Main.WIDTH+761);
-        y = Main.clamp(y,0,Main.HEIGHT+531);
+        x = Renderer.clamp(x,0, Renderer.gameWidth +761);
+        y = Renderer.clamp(y,0, Renderer.gameHeight +531);
+
+        // Move Player Left
+        if(Input.GetKey(KeyEvent.VK_A))
+        {
+            x -= speed;
+        }
+
+        // Move Player Right
+        if(Input.GetKey(KeyEvent.VK_D))
+        {
+            x += speed;
+        }
+
+        // Move Player Up
+        if(Input.GetKey(KeyEvent.VK_W))
+        {
+            y -= speed;
+        }
+
+        // Move Player Down
+        if(Input.GetKey(KeyEvent.VK_S))
+        {
+            y += speed;
+        }
 
         collision();
     }
 
     private void collision()
     {
-        for(int i = 0; i < handler.object.size(); i++)
+        for(int i = 0; i < World.gameObjects.size(); i++)
         {
-            GameObject tempObject = handler.object.get(i);
+            GameObject tempObject = World.gameObjects.get(i);
 
             if (tempObject.GetID() == ID.BasicZombie || tempObject.GetID() == ID.Follower)
             {
@@ -69,7 +97,7 @@ public class Player extends GameObject
         if (id == ID.Player)
         {
             // Draw the Player's Sprite
-            g.drawImage(image, (int)x, (int)y, 64, 64, null);
+            g.drawImage(image, (int)x, (int)y, 32, 32, null);
         }
     }
 }

@@ -1,28 +1,25 @@
 package org.engine;
 
 import org.objects.Tile;
+import org.world.World;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class LevelGeneration
 {
-    public LevelGeneration(Handler handler)
+    public LevelGeneration()
     {
-        this.handler = handler;
-
         try
         {
             // Get Sprites for Generation
-            stoneTile = handler.LoadImage("/resources/sprites/StoneTile.png");
+            stoneTile = Renderer.LoadImage("/resources/sprites/StoneTile.png");
         }
         catch (IOException e)
         {
             e.printStackTrace();
         }
     }
-
-    private Handler handler;
 
     public int levelWidth = 10, levelHeight = 10;
 
@@ -34,7 +31,7 @@ public class LevelGeneration
         {
             for(int y = 0; y < levelHeight; y++)
             {
-                handler.AddObject(new Tile(x * 96, y * 96, ID.Tile, stoneTile));
+
             }
         }
     }
