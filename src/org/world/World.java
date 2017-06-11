@@ -18,17 +18,17 @@ public class World
         float deltaTime = (System.nanoTime() - lastTime) / 1000000000.0f;
         lastTime = System.nanoTime();
 
-        for(GameObject gameObject : currentWorld.gameObjects)
+        for(int i = 0; i < gameObjects.size(); i++)
         {
-            gameObject.tick(deltaTime);
+            gameObjects.get(i).tick(deltaTime);
         }
     }
 
     public static void render(Graphics g)
     {
-        for(GameObject gameObject : currentWorld.gameObjects)
+        for(int i = 0; i < gameObjects.size(); i++)
         {
-            gameObject.render(g);
+            gameObjects.get(i).render(g);
         }
     }
 }

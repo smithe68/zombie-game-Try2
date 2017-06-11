@@ -12,10 +12,13 @@ public class Game
 
         World.currentWorld = new World();
 
-        LevelGeneration gen = new LevelGeneration();
-        gen.CreateLevel();
+        Game.Instantiate(new HUD(0, 0, ID.HUD));
 
-        SpawnGameObjects();
+        Game.Instantiate(new Player(100, 100, ID.Player));
+
+        Game.Instantiate(new BasicZombie(300, 150, ID.BasicZombie));
+        Game.Instantiate(new BasicZombie(350, 200, ID.BasicZombie));
+        Game.Instantiate(new BasicZombie(200, 300, ID.BasicZombie));
     }
 
     public static void Instantiate(GameObject object)
@@ -28,13 +31,4 @@ public class Game
         System.exit(1);
     }
 
-    public static void SpawnGameObjects()
-    {
-        Instantiate(new HUD(0, 0, ID.HUD));
-
-        Instantiate(new Player(100, 100, ID.Player));
-        Instantiate(new BasicZombie(300, 150, ID.BasicZombie));
-        Instantiate(new BasicZombie(350, 200, ID.BasicZombie));
-        Instantiate(new BasicZombie(200, 300, ID.BasicZombie));
-    }
 }
