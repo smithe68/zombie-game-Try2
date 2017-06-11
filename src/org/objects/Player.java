@@ -18,8 +18,6 @@ public class Player extends GameObject
 {
     public static Player player;
 
-    public float playerHealth = 100f;
-
     private BufferedImage image;
     private GameObject hudObj;
     private HUD hud;
@@ -47,7 +45,7 @@ public class Player extends GameObject
             e.printStackTrace();
         }
 
-        HUD hud = new HUD(x, y + 15, ID.HUD);
+        hud = new HUD(x, y + 15, ID.HUD);
         hudObj = Game.Instantiate(hud);
     }
 
@@ -116,13 +114,18 @@ public class Player extends GameObject
         {
             GameObject tempObject = World.gameObjects.get(i);
 
-            if (tempObject.GetID() == ID.BasicZombie || tempObject.GetID() == ID.Follower ||tempObject.GetID() == ID.XSpeedFollower ||tempObject.GetID() == ID.YSpeedFollower || tempObject.GetID() == ID.Speeder )
+            if (tempObject.GetID() == ID.BasicZombie)
             {
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
-                    HUD.HEALTH -= 1;
+                    hud.HEALTH -= 1;
                 }
             }
+        }
+
+        if(hud.HEALTH == 0)
+        {
+            System.exit(1);
         }
     }
 

@@ -73,7 +73,12 @@ public class BasicZombie extends GameObject
     public void render(Graphics g)
     {
         AffineTransform at = AffineTransform.getTranslateInstance(x, y);
-        at.rotate(rotation, image.getWidth() / 2, image.getHeight() / 2);
+
+        if(state == ZombieState.Hunting)
+        {
+            at.rotate(rotation, image.getWidth() / 2, image.getHeight() / 2);
+        }
+
         Graphics2D g2d = (Graphics2D) g;
 
         // Draw the Player's Sprite
