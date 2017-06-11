@@ -38,7 +38,7 @@ public class Player extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x,(int)y,64,64);
+        return new Rectangle((int)x,(int)y,45,45);
     }
 
     public void tick(float deltaTime)
@@ -82,11 +82,13 @@ public class Player extends GameObject
         {
             GameObject tempObject = World.gameObjects.get(i);
 
-            if (tempObject.GetID() == ID.BasicZombie || tempObject.GetID() == ID.Follower)
+            if (tempObject.GetID() == ID.BasicZombie || tempObject.GetID() == ID.Follower ||tempObject.GetID() == ID.XSpeedFollower ||tempObject.GetID() == ID.YSpeedFollower || tempObject.GetID() == ID.Speeder )
             {
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
-                    HUD.HEALTH -= 2;
+                    HUD.HEALTH -= 1;
+
+
                 }
             }
         }

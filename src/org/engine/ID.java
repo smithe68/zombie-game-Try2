@@ -6,6 +6,9 @@ package org.engine;
 public enum ID
 {
     Player,
+    XSpeedFollower,
+    YSpeedFollower,
+    Speeder,
     BasicZombie,
     Follower,
     Tile
