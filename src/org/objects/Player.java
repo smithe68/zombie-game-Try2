@@ -58,7 +58,7 @@ public class Player extends GameObject
             {
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
-                    HUD.HEALTH -= 2;
+                    HUD.HEALTH -= 1;
 
 
                 }

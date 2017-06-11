@@ -39,10 +39,11 @@ public class Main extends Canvas implements Runnable
 
         // Spawn the Player
         player = handler.AddObject(new Player(100, 100, ID.Player, handler));
-        handler.AddObject(new BasicZombie(200, 200, ID.BasicZombie, player, handler));
-        handler.AddObject(new Follower(200, 200, ID.Follower, player, handler));
-        handler.AddObject(new XSpeedFollower(400, 400, ID.XSpeedFollower, player, handler));
+        handler.AddObject(new BasicZombie(400, 400, ID.BasicZombie, player, handler));
+        handler.AddObject(new Follower(1000, 200, ID.Follower, player, handler));
+        handler.AddObject(new XSpeedFollower(400, 1900, ID.XSpeedFollower, player, handler));
         handler.AddObject(new YSpeedFollower(700, 4000, ID.YSpeedFollower, player, handler));
+        handler.AddObject(new BasicZombie(600, 300, ID.BasicZombie, player, handler));
     }
 
     public synchronized void start()
