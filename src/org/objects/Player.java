@@ -103,6 +103,13 @@ public class Player extends GameObject
             vertAxis = -1;
         }
 
+        // Test Linecast
+        if(Input.GetKeyDown(KeyEvent.VK_E))
+        {
+            Point thisPos = new Point((int)x, (int)y);
+            Point endPos = new Point((int)x + 15, (int)y);
+        }
+
         rotation = CustomMathf.NineAxisRotation(rotation, horiAxis, vertAxis, 3, deltaTime);
 
         collision();

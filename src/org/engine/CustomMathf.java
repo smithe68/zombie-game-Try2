@@ -1,5 +1,9 @@
 package org.engine;
 
+import org.objects.GameObject;
+import org.world.World;
+
+import java.awt.*;
 import java.util.Random;
 
 public class CustomMathf
@@ -119,5 +123,35 @@ public class CustomMathf
         float relative = b - a * dot;
         float normalized = (relative - (-1))/((-1)-1);
         return (float)((a * Math.cos(theta)) + ((normalized * Math.sin(theta))));
+    }
+
+    public static GameObject Linecast(Point start, Point end)
+    {
+        Point diff = new Point(end.x - start.x, end.y - start.y);
+
+        float lineX;
+        float lineY;
+
+        for(int x = 0; x < diff.x; x++)
+        {
+            lineX = start.x + x;
+
+            for(int y = 0; y < diff.x; y++)
+            {
+                lineY = start.y + y;
+
+                Rectangle rect = new Rectangle((int)lineX, (int)lineY, 1, 1);
+
+                for(int i = 0; i < World.gameObjects.size(); i++)
+                {
+                    if(rect.intersects(World.gameObjects.get(i).getBounds()))
+                    {
+                        return World.gameObjects.get(i);
+                    }
+                }
+            }
+        }
+
+        return null;
     }
 }
