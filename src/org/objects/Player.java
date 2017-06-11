@@ -34,7 +34,7 @@ public class Player extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x,(int)y,64,64);
+        return new Rectangle((int)x,(int)y,45,45);
     }
 
     public void tick()
@@ -59,6 +59,8 @@ public class Player extends GameObject
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
                     HUD.HEALTH -= 2;
+
+
                 }
             }
         }

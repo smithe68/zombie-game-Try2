@@ -37,7 +37,7 @@ public class XSpeedFollower extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x, (int)y,45,45);
+        return new Rectangle((int)x, (int)y,30,30);
     }
 
     public void tick()

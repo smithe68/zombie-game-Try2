@@ -20,7 +20,7 @@ public class Screen extends Canvas
         frame.setResizable(false);
         frame.setVisible(true);
         frame.add(main);
-
         main.start();
+
     }
 }
