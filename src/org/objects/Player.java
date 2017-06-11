@@ -54,7 +54,7 @@ public class Player extends GameObject
         {
             GameObject tempObject = handler.object.get(i);
 
-            if (tempObject.GetID() == ID.BasicZombie || tempObject.GetID() == ID.Follower)
+            if (tempObject.GetID() == ID.BasicZombie || tempObject.GetID() == ID.Follower ||tempObject.GetID() == ID.XSpeedFollower ||tempObject.GetID() == ID.YSpeedFollower || tempObject.GetID() == ID.Speeder )
             {
                 if( getBounds().intersects(tempObject.getBounds()))
                 {

@@ -1,5 +1,4 @@
 package org.objects;
-
 import org.engine.Handler;
 import org.engine.ID;
 import org.engine.Main;
@@ -8,15 +7,19 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class Follower extends GameObject
+/**
+ * Created by evan on 6/10/2017.
+ */
+public class XSpeedFollower extends GameObject
 {
+
     private Handler handler;
     private BufferedImage image;
     private GameObject player;
 
-    public Follower(int x , int y, ID id, GameObject player, Handler handler)
+    public XSpeedFollower(int x , int y, ID id, GameObject player, Handler handler)
     {
-        super(x, y, id);
+        super(x, y,id);
 
         this.player = player;
         this.handler = handler;
@@ -44,8 +47,8 @@ public class Follower extends GameObject
 
         float distance = (float)(Math.sqrt((diffX * diffX) + (diffY * diffY)));
 
-        velX = (-1.0f / distance) * diffX * 2 ;
-        velY = (-1.0f / distance) * diffY * 2;
+        velX = (-1.0f / distance) * diffX * 5;
+        velY = (-1.0f / distance) * diffY * 3;
 
         x += velX;
         y += velY;
