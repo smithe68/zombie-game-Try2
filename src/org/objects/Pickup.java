@@ -23,6 +23,7 @@ public class Pickup extends GameObject
     private BufferedImage currentImage;
 
     private BufferedImage pistol;
+    private BufferedImage pack;
 
     public PickupTypes type;
 
@@ -42,6 +43,7 @@ public class Pickup extends GameObject
         try
         {
             pistol = Renderer.LoadImage("/resources/sprites/Pistol_Side.png");
+            pack = Renderer.LoadImage("/resources/sprites/HealthPack.png");
         }
         catch(IOException e)
         {
@@ -90,6 +92,10 @@ public class Pickup extends GameObject
                 currentItem = data.pistol;
                 pickupSoundPath = "/resources/sounds/Pickup_04.wav";
                 break;
+            case HealthPack:
+                currentImage = pack;
+                currentItem = data.pack;
+                //pickupSoundPath = "";
         }
     }
 

@@ -4,5 +4,6 @@ public enum PickupTypes
 {
     Nothing,
     Pistol,
+    HealthPack,
     PistolAmmo
 }

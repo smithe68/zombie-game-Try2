@@ -10,6 +10,7 @@ public class Database
 {
     public Item empty;
     public Item pistol;
+    public Item pack;
 
     public ArrayList<BufferedImage> itemImages = new ArrayList<>();
 
@@ -47,6 +48,19 @@ public class Database
                 0.0f,
                 infoData.pistol
         );
+        pack = new Item(
+
+                "HealthPack",
+                "a health pack",
+                2,
+                2,
+                itemImages.get(2),
+                Item.ItemType.Special,
+                Item.ItemEffect.Heal,
+                50.0f,
+                infoData.empty
+
+        );
     }
 
     public void GetImages()
@@ -55,6 +69,7 @@ public class Database
         {
             itemImages.add(Renderer.LoadImage("/resources/sprites/Blank.png"));
             itemImages.add(Renderer.LoadImage("/resources/sprites/Pistol_Side.png"));
+            itemImages.add(Renderer.LoadImage("/resources/sprites/HealthPack.png"));
         }
         catch (IOException e)
         {
