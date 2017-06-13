@@ -49,10 +49,5 @@ public class Inventory
                 break;
             }
         }
-
-        for(int i = 0; i < inventorySize; i++)
-        {
-            System.out.println(items.get(i).itemName + ", " + itemAmounts.get(i).toString());
-        }
     }
 }
