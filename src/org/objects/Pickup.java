@@ -95,7 +95,7 @@ public class Pickup extends GameObject
             case HealthPack:
                 currentImage = pack;
                 currentItem = data.pack;
-                //pickupSoundPath = "";
+                pickupSoundPath = "/resources/sounds/Pickup_03.wav";
         }
     }
 
