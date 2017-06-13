@@ -26,6 +26,8 @@ public class Pickup extends GameObject
 
     public PickupTypes type;
 
+    public Database data = Player.data;
+
     private float rotation = 0;
     private float scale = 1;
     private float setScale = 1;
@@ -46,6 +48,7 @@ public class Pickup extends GameObject
             e.printStackTrace();
         }
 
+        data.CreateItems();
         ChooseType();
     }
 
@@ -84,7 +87,7 @@ public class Pickup extends GameObject
         {
             case Pistol:
                 currentImage = pistol;
-                currentItem = Database.pistol;
+                currentItem = data.pistol;
                 pickupSoundPath = "/resources/sounds/Pickup_04.wav";
                 break;
         }

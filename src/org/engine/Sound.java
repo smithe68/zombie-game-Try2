@@ -3,9 +3,6 @@ package org.engine;
 import javax.sound.sampled.*;
 import java.net.URL;
 
-/**
- * Created by evan on 6/12/2017.
- */
 public class Sound {
 
    public static void PlaySound(String path, float volume, boolean loop)

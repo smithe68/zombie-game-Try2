@@ -4,6 +4,8 @@ import javafx.scene.transform.Affine;
 import org.engine.*;
 import org.enums.ID;
 import org.input.Input;
+import org.ui.ActionBar;
+import org.ui.Database;
 import org.ui.HUD;
 import org.ui.Inventory;
 import org.world.World;
@@ -24,7 +26,7 @@ public class Player extends GameObject
     private GameObject hudObj;
     private HUD hud;
 
-    public Inventory inv;
+    public ActionBar action;
 
     public float speed = 1.5f;
 
@@ -34,6 +36,9 @@ public class Player extends GameObject
     private float vertAxis = 0;
 
     private Point mouse = new Point(0, 0);
+
+    public static Inventory inv;
+    public static Database data;
 
     public Player(int x, int y, ID id)
     {
@@ -54,8 +59,14 @@ public class Player extends GameObject
         hud = new HUD(x, y + 15, ID.HUD, 25, 8);
         hudObj = Game.Instantiate(hud);
 
+        data = new Database();
+        data.CreateItems();
+
         inv = new Inventory();
         inv.Initialize();
+
+        action = new ActionBar(0, 0, ID.HUD);
+        Game.Instantiate(action);
     }
 
     public Rectangle getBounds()

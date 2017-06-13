@@ -15,18 +15,20 @@ public class Inventory
     public ArrayList<Item> items = new ArrayList<>();
     public ArrayList<Integer> itemAmounts = new ArrayList<>();
 
+    public Database data = player.data;
+
     public void Initialize()
     {
         for(int i = 0; i < inventorySize; i++)
         {
-            items.add(Database.empty);
+            items.add(data.empty);
             itemAmounts.add(0);
         }
     }
 
     public void AddToInventory(Item item, int amount, GameObject object)
     {
-        for(int i = 0; i < items.size(); i++)
+        for(int i = 0; i < inventorySize; i++)
         {
             if(item.itemID == items.get(i).itemID)
             {
@@ -50,7 +52,7 @@ public class Inventory
 
         for(int i = 0; i < inventorySize; i++)
         {
-            System.out.println(items.get(i).itemName);
+            System.out.println(items.get(i).itemName + ", " + itemAmounts.get(i).toString());
         }
     }
 }

@@ -3,6 +3,7 @@ package org.ui;
 import org.engine.CustomMathf;
 import org.objects.GameObject;
 import org.enums.ID;
+import org.objects.Player;
 
 import java.awt.*;
 
@@ -33,12 +34,11 @@ public class HUD extends GameObject
         // Change Color of Health
         greenValue = (int) CustomMathf.Clamp(greenValue, 0, 255);
         greenValue = (int)HEALTH * 2;
-
-
     }
 
     public void render(Graphics g)
     {
+        // Draw Health Bar
         g.setColor(Color.gray);
         g.fillRect((int)x,(int)y,sizeX,sizeY);
         g.setColor(new Color(150, greenValue, 0));

@@ -23,6 +23,8 @@ public class Game
         //Game.Instantiate(new BasicZombie(200, 300, ID.BasicZombie));
 
         Game.Instantiate(new Pickup(300, 100, ID.Pickup, PickupTypes.Pistol, 1));
+        Game.Instantiate(new Pickup(300, 200, ID.Pickup, PickupTypes.Pistol, 1));
+
         Sound.PlaySound("/resources/sounds/bg.wav", -20.0f,true);
     }
 
