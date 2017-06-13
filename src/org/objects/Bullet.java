@@ -28,8 +28,8 @@ public class Bullet extends GameObject
 
     public void tick(float deltaTime)
     {
-        x += (xDiff) / 30;
-        y += (yDiff) / 30;
+        x += (xDiff) / 20;
+        y += (yDiff) / 20;
     }
 
     public void render(Graphics g)
