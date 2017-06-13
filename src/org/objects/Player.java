@@ -140,18 +140,20 @@ public class Player extends GameObject
         AffineTransform transform = g2.getTransform();
 
         mouse = MouseInfo.getPointerInfo().getLocation();
+        mouse.x /= 4.8;
+        mouse.y /= 4.32;
 
         int centerX = (int)x + image.getWidth() / 2;
         int centerY = (int)y + image.getHeight() / 2;
 
-        double xDiff = mouse.x - x;
-        double yDiff = mouse.y - y;
+        double xDiff = mouse.x - Math.abs(centerX);
+        double yDiff = mouse.y - Math.abs(centerY);
 
         double angle = Math.toDegrees(Math.atan2(yDiff, xDiff));
 
         g2.rotate(Math.toRadians(angle), centerX, centerY);
         g2.drawImage(image, at, null);
         g2.setTransform(transform);
-        g2.drawString(String.valueOf(Math.round(mouse.x)), (int) x, (int) (y));
+        g2.drawString(String.valueOf(Math.round(xDiff)), (int) x, (int) (y));
     }
 }
