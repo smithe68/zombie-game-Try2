@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/Game.java" afterPath="$PROJECT_DIR$/src/org/engine/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Bullet.java" afterPath="$PROJECT_DIR$/src/org/objects/Bullet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Pickup.java" afterPath="$PROJECT_DIR$/src/org/objects/Pickup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Player.java" afterPath="$PROJECT_DIR$/src/org/objects/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ui/ActionBar.java" afterPath="$PROJECT_DIR$/src/org/ui/ActionBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ui/Database.java" afterPath="$PROJECT_DIR$/src/org/ui/Database.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ui/Inventory.java" afterPath="$PROJECT_DIR$/src/org/ui/Inventory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ui/Item.java" afterPath="$PROJECT_DIR$/src/org/ui/Item.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +72,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
-              <folding />
+              <folding>
+                <marker date="1497395781306" expanded="true" signature="2709:2893" ph="{...}" />
+                <marker date="1497395781306" expanded="false" signature="2925:2940" ph=" { " />
+                <marker date="1497395781306" expanded="false" signature="2988:2994" ph=" }" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1515,13 +1511,6 @@
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
     </task>
-    <task id="LOCAL-00025" summary="Changed Main">
-      <created>1497039654434</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1497039654434</updated>
-    </task>
     <task id="LOCAL-00026" summary="Changed Main">
       <created>1497040390405</created>
       <option name="number" value="00026" />
@@ -1858,7 +1847,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497393778922</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Changed Main">
+      <created>1497395767428</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1497395767428</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2134,7 +2130,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
-          <folding />
+          <folding>
+            <marker date="1497395781306" expanded="true" signature="2709:2893" ph="{...}" />
+            <marker date="1497395781306" expanded="false" signature="2925:2940" ph=" { " />
+            <marker date="1497395781306" expanded="false" signature="2988:2994" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
