@@ -97,10 +97,12 @@ public class ActionBar extends GameObject
         switch(effect)
         {
             case Heal:
+                player.equip = inv.items.get(itemID).itemSprite;
                 break;
 
-            case Hurt:
 
+            case Hurt:
+                player.equip = inv.items.get(itemID).itemSprite;
                 break;
 
             case Equip:

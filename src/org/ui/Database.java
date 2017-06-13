@@ -76,7 +76,7 @@ public class Database
         {
             itemImages.add(Renderer.LoadImage("/resources/sprites/Blank.png"));
             itemImages.add(Renderer.LoadImage("/resources/sprites/Pistol_Side.png"));
-            itemImages.add(Renderer.LoadImage("/resources/sprites/HealthPack.png"));
+            itemImages.add(Renderer.LoadImage("/resources/sprites/healthPack.png"));
         }
         catch (IOException e)
         {

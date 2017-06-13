@@ -114,7 +114,6 @@ public class Player extends GameObject
         // Drop Item
         if(Input.GetKeyDown(KeyEvent.VK_G))
         {
-            if(action.selectedItem == null) return;
             Drop(action.selectedIndex, action.selectedAmount, true);
         }
 
@@ -134,7 +133,6 @@ public class Player extends GameObject
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
                     hud.HEALTH -= 0.5f;
-
                 }
             }
         }
@@ -177,8 +175,6 @@ public class Player extends GameObject
 
     public void Drop(int itemIndex, int amount, boolean drop)
     {
-        if(useItem == null) return;
-
         if(inv.items.get(itemIndex).pickup == PickupTypes.Nothing) return;
 
         System.out.println(inv.items.get(itemIndex).itemName);
