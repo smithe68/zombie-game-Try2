@@ -23,8 +23,8 @@ public class Bullet extends GameObject
 
     public void tick(float deltaTime)
     {
-        x += xDiff / 50;
-        y += yDiff / 50;
+        x += (xDiff) / 30;
+        y += (yDiff) / 30;
     }
 
     public void render(Graphics g)
@@ -35,7 +35,7 @@ public class Bullet extends GameObject
 
         // Draw the Player's Sprite
         //g2d.rotate(angle, (int)x, (int)y);
-        g2d.fillRect((int)x, (int)y, 2, 2);
+        g2d.fillRect((int) (x-6), (int)(y+36), 2, 2);
         g2d.setTransform(transform);
     }
 
