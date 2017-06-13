@@ -97,7 +97,6 @@ public class ActionBar extends GameObject
         switch(effect)
         {
             case Heal:
-
                 break;
 
             case Hurt:
