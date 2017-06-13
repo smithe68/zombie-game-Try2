@@ -141,7 +141,7 @@ public class Player extends GameObject
 
         mouse = MouseInfo.getPointerInfo().getLocation();
         mouse.x /= 4.8;
-        mouse.y /= 4.32;
+        mouse.y /= 4.4;
 
         int centerX = (int)x + image.getWidth() / 2;
         int centerY = (int)y + image.getHeight() / 2;
