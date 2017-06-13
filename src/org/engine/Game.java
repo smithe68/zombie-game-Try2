@@ -18,9 +18,9 @@ public class Game
 
         Game.Instantiate(new Player(100, 100, ID.Player));
 
-        Game.Instantiate(new BasicZombie(300, 150, ID.BasicZombie));
-        Game.Instantiate(new BasicZombie(350, 200, ID.BasicZombie));
-        Game.Instantiate(new BasicZombie(200, 300, ID.BasicZombie));
+        //Game.Instantiate(new BasicZombie(300, 150, ID.BasicZombie));
+        //Game.Instantiate(new BasicZombie(350, 200, ID.BasicZombie));
+        //Game.Instantiate(new BasicZombie(200, 300, ID.BasicZombie));
 
         Game.Instantiate(new Pickup(300, 100, ID.Pickup, PickupTypes.Pistol));
     }

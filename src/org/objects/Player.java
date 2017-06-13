@@ -1,5 +1,6 @@
 package org.objects;
 
+import javafx.scene.transform.Affine;
 import org.engine.*;
 import org.enums.ID;
 import org.input.Input;
@@ -8,6 +9,8 @@ import org.world.World;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -22,10 +25,12 @@ public class Player extends GameObject
 
     public float speed = 1.5f;
 
-    private float rotation = 0;
+    private double rotation = 0;
 
     private float horiAxis = 0;
     private float vertAxis = 0;
+
+    private Point mouse = new Point(0, 0);
 
     public Player(int x, int y, ID id)
     {
@@ -102,7 +107,7 @@ public class Player extends GameObject
             vertAxis = -1;
         }
 
-        rotation = CustomMathf.NineAxisRotation(rotation, horiAxis, vertAxis, 3, deltaTime);
+//      rotation = CustomMathf.NineAxisRotation(rotation, horiAxis, vertAxis, 3, deltaTime);
 
         collision();
     }
@@ -130,14 +135,23 @@ public class Player extends GameObject
 
     public void render(Graphics g)
     {
-        if (id == ID.Player)
-        {
-            AffineTransform at = AffineTransform.getTranslateInstance(x, y);
-            at.rotate(Math.toRadians(rotation), image.getWidth() / 2, image.getHeight() / 2);
-            Graphics2D g2d = (Graphics2D) g;
+        Graphics2D g2 = (Graphics2D)g;
+        AffineTransform at = AffineTransform.getTranslateInstance(x, y);
+        AffineTransform transform = g2.getTransform();
 
-            // Draw the Player's Sprite
-            g2d.drawImage(image, at, null);
-        }
+        mouse = MouseInfo.getPointerInfo().getLocation();
+
+        int centerX = (int)x + image.getWidth() / 2;
+        int centerY = (int)y + image.getHeight() / 2;
+
+        double xDiff = mouse.x - centerX;
+        double yDiff = mouse.y - centerY;
+
+        double angle = Math.toDegrees(Math.atan2(yDiff, xDiff));
+
+        g2.rotate(Math.toRadians(angle), centerX, centerY);
+        g2.drawImage(image, at, null);
+        g2.setTransform(transform);
+        g2.drawString(String.valueOf(Math.round(angle)), (int)x, (int)(y + 15));
     }
 }

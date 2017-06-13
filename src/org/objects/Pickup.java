@@ -46,7 +46,6 @@ public class Pickup extends GameObject
 
         if(scale >= 1.4f) setScale = 1f;
         if(scale <= 1.1) setScale = 1.5f;
-        System.out.println(scale);
         scale = CustomMathf.Lerp(scale, setScale, deltaTime);
     }
 
@@ -58,7 +57,6 @@ public class Pickup extends GameObject
 
         at.rotate(rotation, currentImage.getWidth() / 2,
                 currentImage.getHeight() / 2);
-
 
         // Draw the Player's Sprite
         g2d.drawImage(currentImage, at, null);
