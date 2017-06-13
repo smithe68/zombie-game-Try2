@@ -49,8 +49,8 @@
       <file leaf-file-name="Bullet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/objects/Bullet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+            <state relative-caret-position="822">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1344#1345#0" expanded="true" />
@@ -99,7 +99,7 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/ui/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
+            <state relative-caret-position="516">
               <caret line="78" column="67" lean-forward="false" selection-start-line="78" selection-start-column="67" selection-end-line="78" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -122,22 +122,10 @@
         <entry file="file://$PROJECT_DIR$/src/org/objects/BasicZombie.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="89" column="20" lean-forward="true" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+              <caret line="104" column="49" lean-forward="true" selection-start-line="104" selection-start-column="49" selection-end-line="104" selection-end-column="49" />
               <folding>
                 <element signature="e#1118#1119#0" expanded="true" />
-                <element signature="e#1213#1214#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/ui/Item.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-573">
-              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1205#1206#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -28853,13 +28841,6 @@
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
     </task>
-    <task id="LOCAL-00029" summary="Changed Main">
-      <created>1497045242458</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1497045242458</updated>
-    </task>
     <task id="LOCAL-00030" summary="Changed Main">
       <created>1497045880093</created>
       <option name="number" value="00030" />
@@ -29196,7 +29177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497396972326</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Changed Main">
+      <created>1497397146131</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1497397146131</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -29368,7 +29356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../GitHub/PixelGame/src/org/object/Player.java" />
     <entry file="file://$PROJECT_DIR$/../../../GitHub/PixelGame/src/org/object/Sprite.java" />
     <entry file="file://$PROJECT_DIR$/src/org/enums/ID.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -29498,18 +29485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1399#1400#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/enums/PickupTypes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -29523,28 +29498,6 @@
         <state relative-caret-position="320">
           <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ui/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="78" column="67" lean-forward="false" selection-start-line="78" selection-start-column="67" selection-end-line="78" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ui/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1314#1315#0" expanded="true" />
-            <element signature="e#1358#1359#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -29564,13 +29517,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../GitHub/PixelGame/src/org/object/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="107" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/objects/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="822">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ui/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ui/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="78" column="67" lean-forward="false" selection-start-line="78" selection-start-column="67" selection-end-line="78" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/objects/BasicZombie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="89" column="20" lean-forward="true" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+          <caret line="104" column="49" lean-forward="true" selection-start-line="104" selection-start-column="49" selection-end-line="104" selection-end-column="49" />
           <folding>
             <element signature="e#1118#1119#0" expanded="true" />
-            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
           </folding>
         </state>
       </provider>

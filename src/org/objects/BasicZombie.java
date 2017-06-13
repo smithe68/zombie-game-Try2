@@ -52,7 +52,7 @@ public class BasicZombie extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x, (int)y,image.getWidth() / 2,image.getHeight() / 2);
+        return new Rectangle((int)x, (int)y,image.getWidth(),image.getHeight());
     }
 
     public void tick(float deltaTime)
@@ -107,6 +107,7 @@ public class BasicZombie extends GameObject
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
                     hud.HEALTH -= 10f;
+                    Game.Destroy(tempObject);
                 }
             }
         }
