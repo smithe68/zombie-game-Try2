@@ -44,7 +44,7 @@ public class Player extends GameObject
         {
             // Get the Sprite for the Player
             image = Renderer.LoadImage("/resources/sprites/PlayerDude.png");
-            equip = Renderer.LoadImage("/resources/sprites/SmallShadow.png");
+            equip = Renderer.LoadImage("/resources/sprites/Blank.png");
         }
         catch (IOException e)
         {
@@ -132,12 +132,15 @@ public class Player extends GameObject
 
     public void Use(Item useItem)
     {
+        if(useItem == null) return;
+
         if(useItem.weaponInfo.type == WeaponInfo.AttackType.Shoot)
         {
             if(useItem.weaponInfo.ammo == WeaponInfo.AmmoType.PistolAmmo)
             {
+                Sound.PlaySound("/resources/sounds/Shoot_01.wav", -20, false);
                 Game.Instantiate(new Bullet((int)(x + 10), (int)(y - 10),
-                        ID.Speeder, useItem.weaponInfo, xDiff, yDiff, double angle));
+                        ID.Speeder, useItem.weaponInfo, xDiff, yDiff, angle));
             }
         }
 

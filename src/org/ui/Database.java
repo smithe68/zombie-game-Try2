@@ -53,7 +53,7 @@ public class Database
     {
         try
         {
-            itemImages.add(Renderer.LoadImage("/resources/sprites/SmallShadow.png"));
+            itemImages.add(Renderer.LoadImage("/resources/sprites/Blank.png"));
             itemImages.add(Renderer.LoadImage("/resources/sprites/Pistol_Side.png"));
         }
         catch (IOException e)
