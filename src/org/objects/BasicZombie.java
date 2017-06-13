@@ -88,6 +88,12 @@ public class BasicZombie extends GameObject
         }
 
         Collision();
+
+        if(hud.HEALTH <= 0)
+        {
+            Game.Destroy(hud);
+            Game.Destroy(this);
+        }
     }
 
     public void Collision()
@@ -100,7 +106,7 @@ public class BasicZombie extends GameObject
             {
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
-                    hud.HEALTH -= 0.5f;
+                    hud.HEALTH -= 10f;
                 }
             }
         }
