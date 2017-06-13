@@ -1,17 +1,8 @@
 package org.engine;
 
-import sun.audio.AudioData;
-import sun.audio.AudioPlayer;
-import sun.audio.AudioStream;
-import sun.audio.ContinuousAudioDataStream;
-
-import javax.print.attribute.standard.Media;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.lang.reflect.Executable;
 
 /**
  * Created by evan on 6/12/2017.
@@ -22,7 +13,7 @@ public class sounds {
    {
 
         try {
-           File file = new File("/org/resources/sounds/backgroundMusic.mp3");
+           File file = new File("");
            Clip clip = AudioSystem.getClip();
            clip.open(AudioSystem.getAudioInputStream(file));
            clip.start();
