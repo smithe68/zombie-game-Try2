@@ -146,12 +146,27 @@ public class Player extends GameObject
 
         double xDiff = mouse.x - centerX;
         double yDiff = mouse.y - centerY;
+            {
+                if((xDiff>90 && yDiff<0)|| (xDiff>90 && yDiff>0))
+                {
+                    double angle = Math.toDegrees(Math.atan(yDiff / xDiff));
 
-            double angle = Math.toDegrees(Math.tan(yDiff/xDiff));
+                    g2.rotate(Math.toRadians(angle), centerX, centerY);
+                    g2.drawImage(image, at, null);
+                    g2.setTransform(transform);
+                    g2.drawString(String.valueOf(Math.round(angle)), (int) x, (int) (y));
+                }
+                else if ((xDiff<90 && yDiff>0)|| (xDiff<90&& yDiff<0))
+                {
+                    double angle = -(Math.toDegrees(Math.atan(yDiff / xDiff)));
 
-        g2.rotate(Math.toRadians(angle), centerX, centerY);
-        g2.drawImage(image, at, null);
-        g2.setTransform(transform);
-        g2.drawString(String.valueOf(Math.round(angle)), (int)x, (int)(y));
+                    g2.rotate(Math.toRadians(angle), centerX, centerY);
+                    g2.drawImage(image, at, null);
+                    g2.setTransform(transform);
+                    g2.drawString(String.valueOf(Math.round(xDiff)), (int) x, (int) (y));
+
+                }
+
+            }
     }
 }

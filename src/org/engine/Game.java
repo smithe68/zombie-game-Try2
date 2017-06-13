@@ -16,7 +16,7 @@ public class Game
         LevelGeneration gen = new LevelGeneration();
         gen.CreateLevel();
 
-        Game.Instantiate(new Player(100, 100, ID.Player));
+        Game.Instantiate(new Player(220, 100, ID.Player));
 
         //Game.Instantiate(new BasicZombie(300, 150, ID.BasicZombie));
         //Game.Instantiate(new BasicZombie(350, 200, ID.BasicZombie));
