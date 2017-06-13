@@ -5,6 +5,7 @@ import org.engine.*;
 import org.enums.ID;
 import org.input.Input;
 import org.ui.HUD;
+import org.ui.Inventory;
 import org.world.World;
 
 import java.awt.*;
@@ -22,6 +23,8 @@ public class Player extends GameObject
     private BufferedImage image;
     private GameObject hudObj;
     private HUD hud;
+
+    public Inventory inv;
 
     public float speed = 1.5f;
 
@@ -50,6 +53,9 @@ public class Player extends GameObject
 
         hud = new HUD(x, y + 15, ID.HUD, 25, 8);
         hudObj = Game.Instantiate(hud);
+
+        inv = new Inventory();
+        inv.Initialize();
     }
 
     public Rectangle getBounds()
@@ -107,8 +113,6 @@ public class Player extends GameObject
             vertAxis = -1;
         }
 
-//      rotation = CustomMathf.NineAxisRotation(rotation, horiAxis, vertAxis, 3, deltaTime);
-
         collision();
     }
 
@@ -154,6 +158,5 @@ public class Player extends GameObject
         g2.rotate(Math.toRadians(angle), centerX, centerY);
         g2.drawImage(image, at, null);
         g2.setTransform(transform);
-        g2.drawString(String.valueOf(Math.round(xDiff)), (int) x, (int) (y));
     }
 }

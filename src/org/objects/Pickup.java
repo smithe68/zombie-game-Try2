@@ -2,8 +2,11 @@ package org.objects;
 
 import org.engine.CustomMathf;
 import org.engine.Renderer;
+import org.engine.Sound;
 import org.enums.ID;
 import org.enums.PickupTypes;
+import org.ui.Database;
+import org.ui.Item;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -12,6 +15,11 @@ import java.io.IOException;
 
 public class Pickup extends GameObject
 {
+    private Player player = Player.player;
+
+    private Item currentItem;
+    private int currentAmount = 1;
+    private String pickupSoundPath;
     private BufferedImage currentImage;
 
     private BufferedImage pistol;
@@ -22,11 +30,12 @@ public class Pickup extends GameObject
     private float scale = 1;
     private float setScale = 1;
 
-    public Pickup(int x, int y, ID id, PickupTypes type)
+    public Pickup(int x, int y, ID id, PickupTypes type, int amount)
     {
         super(x, y, id);
 
         this.type = type;
+        currentAmount = amount;
 
         try
         {
@@ -47,6 +56,8 @@ public class Pickup extends GameObject
         if(scale >= 1.4f) setScale = 1f;
         if(scale <= 1.1) setScale = 1.5f;
         scale = CustomMathf.Lerp(scale, setScale, deltaTime);
+
+        collision();
     }
 
     public void render(Graphics g)
@@ -64,7 +75,7 @@ public class Pickup extends GameObject
 
     public Rectangle getBounds()
     {
-        return null;
+        return new Rectangle((int)x,(int)y,currentImage.getWidth(),currentImage.getHeight());
     }
 
     public void ChooseType()
@@ -73,8 +84,24 @@ public class Pickup extends GameObject
         {
             case Pistol:
                 currentImage = pistol;
+                currentItem = Database.pistol;
+                pickupSoundPath = "/resources/sounds/Pickup_04.wav";
                 break;
         }
+    }
+
+    public void collision()
+    {
+        if( getBounds().intersects(player.getBounds()))
+        {
+            CollectSound();
+            player.inv.AddToInventory(currentItem, currentAmount, this);
+        }
+    }
+
+    public void CollectSound()
+    {
+        Sound.PlaySound(pickupSoundPath, -20.0f, false);
     }
 }
 
