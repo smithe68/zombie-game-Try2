@@ -1,7 +1,6 @@
 package org.ui;
 
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
+import java.awt.event.KeyEvent;
 import org.enums.ID;
 import org.input.Input;
 import org.objects.GameObject;
@@ -11,6 +10,7 @@ import java.awt.*;
 
 public class ActionBar extends GameObject
 {
+    public Player player = Player.player;
     public Inventory inv = Player.inv;
 
     public ActionBar(int x, int y, ID id)
@@ -20,7 +20,30 @@ public class ActionBar extends GameObject
 
     public void tick(float deltaTime)
     {
+        if(Input.GetKeyDown(KeyEvent.VK_1))
+        {
+            ItemAction(0, inv.items.get(0).itemEffect);
+        }
 
+        if(Input.GetKeyDown(KeyEvent.VK_2))
+        {
+            ItemAction(1, inv.items.get(1).itemEffect);
+        }
+
+        if(Input.GetKeyDown(KeyEvent.VK_3))
+        {
+            ItemAction(2, inv.items.get(2).itemEffect);
+        }
+
+        if(Input.GetKeyDown(KeyEvent.VK_4))
+        {
+            ItemAction(3, inv.items.get(3).itemEffect);
+        }
+
+        if(Input.GetKeyDown(KeyEvent.VK_5))
+        {
+            ItemAction(4, inv.items.get(4).itemEffect);
+        }
     }
 
     public void render(Graphics g)
@@ -48,5 +71,27 @@ public class ActionBar extends GameObject
     public Rectangle getBounds()
     {
         return null;
+    }
+
+    public void ItemAction(int itemID, Item.ItemEffect effect)
+    {
+        switch(effect)
+        {
+            case Heal:
+
+                break;
+
+            case Hurt:
+
+                break;
+
+            case Equip:
+                player.equip = inv.items.get(itemID).itemSprite;
+                break;
+
+            case Nothing:
+                System.out.println("Cannot use this Item");
+                break;
+        }
     }
 }

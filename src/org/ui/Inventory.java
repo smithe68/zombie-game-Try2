@@ -10,7 +10,7 @@ public class Inventory
 {
     public Player player = Player.player;
 
-    public int inventorySize = 10;
+    public int inventorySize = 5;
 
     public ArrayList<Item> items = new ArrayList<>();
     public ArrayList<Integer> itemAmounts = new ArrayList<>();

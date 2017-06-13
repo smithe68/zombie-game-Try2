@@ -1,6 +1,5 @@
 package org.objects;
 
-import javafx.scene.transform.Affine;
 import org.engine.*;
 import org.enums.ID;
 import org.input.Input;
@@ -12,8 +11,6 @@ import org.world.World;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -22,7 +19,9 @@ public class Player extends GameObject
 {
     public static Player player;
 
-    private BufferedImage image;
+    public BufferedImage image;
+    public BufferedImage equip;
+
     private GameObject hudObj;
     private HUD hud;
 
@@ -50,6 +49,7 @@ public class Player extends GameObject
         {
             // Get the Sprite for the Player
             image = Renderer.LoadImage("/resources/sprites/PlayerDude.png");
+            equip = Renderer.LoadImage("/resources/sprites/SmallShadow.png");
         }
         catch (IOException e)
         {
@@ -168,6 +168,7 @@ public class Player extends GameObject
 
         g2.rotate(Math.toRadians(angle), centerX, centerY);
         g2.drawImage(image, at, null);
+        g2.drawImage(equip, (int)(x + 10), (int)(y - 10), null);
         g2.setTransform(transform);
     }
 }

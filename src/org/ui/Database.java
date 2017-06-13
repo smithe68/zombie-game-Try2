@@ -25,7 +25,7 @@ public class Database
                 0,
                 itemImages.get(0),
                 Item.ItemType.Misc,
-                Item.ItemEffect.Nothing,
+                Item.ItemEffect.Equip,
                 0.0f
         );
 
@@ -37,7 +37,7 @@ public class Database
                 1,
                 itemImages.get(1),
                 Item.ItemType.Weapon,
-                Item.ItemEffect.Nothing,
+                Item.ItemEffect.Equip,
                 0.0f
         );
     }
