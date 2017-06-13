@@ -137,7 +137,7 @@ public class Player extends GameObject
             if(useItem.weaponInfo.ammo == WeaponInfo.AmmoType.PistolAmmo)
             {
                 Game.Instantiate(new Bullet((int)(x + 10), (int)(y - 10),
-                        ID.Speeder, useItem.weaponInfo, xDiff, yDiff));
+                        ID.Speeder, useItem.weaponInfo, xDiff, yDiff, double angle));
             }
         }
 
