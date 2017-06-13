@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/sprites/healthPack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/objects/HealthPack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Bullet.java" afterPath="$PROJECT_DIR$/src/org/objects/Bullet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,6 +35,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicZombie.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/objects/BasicZombie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="103" column="40" lean-forward="true" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HealthPack.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/objects/HealthPack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,27 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeaponInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/ui/WeaponInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/ui/Item.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bullet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bullet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/objects/Bullet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
@@ -147,7 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/BasicZOmbie.java" />
         <option value="$PROJECT_DIR$/src/BufferedImageLoader.java" />
         <option value="$PROJECT_DIR$/src/Handler.java" />
         <option value="$PROJECT_DIR$/src/Spawn.java" />
@@ -198,6 +198,7 @@
         <option value="$PROJECT_DIR$/src/org/engine/Renderer.java" />
         <option value="$PROJECT_DIR$/src/org/objects/Player.java" />
         <option value="$PROJECT_DIR$/src/org/objects/Bullet.java" />
+        <option value="$PROJECT_DIR$/src/org/objects/HealthPack.java" />
       </list>
     </option>
   </component>
@@ -266,6 +267,10 @@
               <option name="myItemId" value="org" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="world" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -328,6 +333,24 @@
               <option name="myItemId" value="org" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IdleGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IdleGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="engine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -345,19 +368,19 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Jakub/IdeaProjects/IdleGame/src/KeyInput.java" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\evan\IdeaProjects\IdleGame\src\resources\sprites" />
+      <recent name="C:\Users\Jakub\Documents\Java Projects\IdleGame\IdleGame\src\resources\sounds" />
+      <recent name="C:\Users\evan\IdeaProjects\IdleGame\src\org\engine" />
+      <recent name="C:\Users\evan\IdeaProjects\IdleGame\src\resources\sounds" />
+      <recent name="C:\Users\Jakub\Documents\Java Projects\IdleGame\IdleGame\src\resources\sprites" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.engine" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\evan\IdeaProjects\IdleGame\src\org\engine" />
       <recent name="C:\Users\evan\IdeaProjects\IdleGame\src\resources\sprites" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jakub\Documents\Java Projects\IdleGame\IdleGame\src\resources\sounds" />
-      <recent name="C:\Users\evan\IdeaProjects\IdleGame\src\org\engine" />
-      <recent name="C:\Users\evan\IdeaProjects\IdleGame\src\resources\sounds" />
-      <recent name="C:\Users\Jakub\Documents\Java Projects\IdleGame\IdleGame\src\resources\sprites" />
-      <recent name="C:\Users\Jakub\IdeaProjects\IdleGame\src" />
     </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
@@ -829,13 +852,6 @@
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
     </task>
-    <task id="LOCAL-00022" summary="Changed Main">
-      <created>1496995541448</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1496995541448</updated>
-    </task>
     <task id="LOCAL-00023" summary="Changed Main">
       <created>1496996198278</created>
       <option name="number" value="00023" />
@@ -1172,7 +1188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497392000841</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Changed Main">
+      <created>1497392427598</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1497392427599</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1271,7 +1294,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1280,7 +1303,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/engine/Screen.java" />
     <entry file="file://$PROJECT_DIR$/src/Button.java" />
     <entry file="file://$PROJECT_DIR$/IdleGame.iml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1411,14 +1433,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/weapons/InfoPistol.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/objects/BasicZombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/ui/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-528">
@@ -1516,6 +1530,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/objects/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1524,13 +1548,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Bullet.java">
+    <entry file="file://$PROJECT_DIR$/src/org/objects/HealthPack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/objects/BasicZombie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="103" column="40" lean-forward="true" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
