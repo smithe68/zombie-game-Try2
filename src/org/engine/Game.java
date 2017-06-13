@@ -27,9 +27,9 @@ public class Game
         //Game.Instantiate(new BasicZombie(350, 200, ID.BasicZombie));
         //Game.Instantiate(new BasicZombie(200, 300, ID.BasicZombie));
 
-        Game.Instantiate(new Pickup(300, 100, ID.Pickup, PickupTypes.Pistol, 1));
-        Game.Instantiate(new Pickup(300, 200, ID.Pickup, PickupTypes.Pistol, 1));
-        Game.Instantiate(new Pickup(200, 200, ID.Pickup, PickupTypes.HealthPack, 1));
+        Game.Instantiate(new Pickup(300, 100, ID.Pickup, PickupTypes.Pistol, 1, true));
+        Game.Instantiate(new Pickup(300, 200, ID.Pickup, PickupTypes.Pistol, 1, true));
+        Game.Instantiate(new Pickup(200, 200, ID.Pickup, PickupTypes.HealthPack, 1, false));
 
         // Start Background Music
         Sound.PlaySound("/resources/sounds/bg.wav", -20.0f,true);

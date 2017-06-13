@@ -1,5 +1,7 @@
 package org.ui;
 
+import org.enums.PickupTypes;
+
 import java.awt.image.BufferedImage;
 
 public class Item
@@ -11,11 +13,13 @@ public class Item
     public BufferedImage itemSprite;
     public ItemType itemType;
     public ItemEffect itemEffect;
-    public float effectAmount;
+    public int effectAmount;
     public WeaponInfo weaponInfo;
+    public PickupTypes pickup;
+    public boolean canRotate;
 
     public Item(String s, String s1, int i, int i1, BufferedImage sP, ItemType misc
-            , ItemEffect nothing, float v, WeaponInfo info)
+            , ItemEffect nothing, int v, WeaponInfo info, PickupTypes pickup, boolean rotate)
     {
         itemName = s;
         itemDesc = s1;
@@ -26,6 +30,8 @@ public class Item
         itemEffect = nothing;
         effectAmount = v;
         weaponInfo = info;
+        this.pickup = pickup;
+        canRotate = rotate;
     }
 
     public enum ItemType

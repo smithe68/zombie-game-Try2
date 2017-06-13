@@ -1,6 +1,7 @@
 package org.ui;
 
 import org.engine.Renderer;
+import org.enums.PickupTypes;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -25,41 +26,47 @@ public class Database
 
         empty = new Item
         (
-                "Empty",
-                "Nothing",
-                0,
-                0,
-                itemImages.get(0),
-                Item.ItemType.Misc,
-                Item.ItemEffect.Equip,
-                0.0f,
-                infoData.empty
+            "Empty",
+            "Nothing",
+            0,
+            0,
+            itemImages.get(0),
+            Item.ItemType.Misc,
+            Item.ItemEffect.Equip,
+            0,
+            infoData.empty,
+            PickupTypes.Nothing,
+            true
         );
 
         pistol = new Item
         (
-                "Pistol",
-                "A Small Weapon",
-                1,
-                1,
-                itemImages.get(1),
-                Item.ItemType.Weapon,
-                Item.ItemEffect.Equip,
-                0.0f,
-                infoData.pistol
+            "Pistol",
+            "A Small Weapon",
+            1,
+            1,
+            itemImages.get(1),
+            Item.ItemType.Weapon,
+            Item.ItemEffect.Equip,
+            0,
+            infoData.pistol,
+            PickupTypes.Pistol,
+            true
         );
-        pack = new Item(
 
-                "HealthPack",
-                "a health pack",
-                2,
-                2,
-                itemImages.get(2),
-                Item.ItemType.Special,
-                Item.ItemEffect.Heal,
-                50.0f,
-                infoData.empty
-
+        pack = new Item
+        (
+            "HealthPack",
+            "a health pack",
+            2,
+            2,
+            itemImages.get(2),
+            Item.ItemType.Special,
+            Item.ItemEffect.Heal,
+            50,
+            infoData.empty,
+            PickupTypes.HealthPack,
+            false
         );
     }
 

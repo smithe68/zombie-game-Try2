@@ -50,4 +50,9 @@ public class Inventory
             }
         }
     }
+
+    public void RemoveItem(int index)
+    {
+        items.set(index, data.empty);
+    }
 }

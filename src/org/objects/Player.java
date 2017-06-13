@@ -2,6 +2,7 @@ package org.objects;
 
 import org.engine.*;
 import org.enums.ID;
+import org.enums.PickupTypes;
 import org.input.Input;
 import org.ui.*;
 import org.world.World;
@@ -25,6 +26,7 @@ public class Player extends GameObject
 
     public ActionBar action;
 
+    private Item useItem;
     private GameObject hudObj;
     private HUD hud;
 
@@ -100,8 +102,21 @@ public class Player extends GameObject
         // Move Player Down
         if(Input.GetKey(KeyEvent.VK_S)) { y += speed; }
 
-        // Use
-        if(Input.GetKeyDown(KeyEvent.VK_F)) { Use(action.selectedItem); }
+        // Use Item
+        if(Input.GetKeyDown(KeyEvent.VK_F))
+        {
+            if(action.selectedItem != null)
+            {
+                Use(action.selectedItem, action.selectedItem.effectAmount);
+            }
+        }
+
+        // Drop Item
+        if(Input.GetKeyDown(KeyEvent.VK_G))
+        {
+            if(action.selectedItem == null) return;
+            Drop(action.selectedIndex, action.selectedAmount, true);
+        }
 
         Collision();
     }
@@ -119,6 +134,7 @@ public class Player extends GameObject
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
                     hud.HEALTH -= 0.5f;
+
                 }
             }
         }
@@ -130,10 +146,12 @@ public class Player extends GameObject
         }
     }
 
-    public void Use(Item useItem)
+    public void Use(Item item, int amount)
     {
-        if(useItem == null) return;
+        if(item == null) return;
         // Evan Please
+
+        useItem = item;
 
         if(useItem.weaponInfo.type == WeaponInfo.AttackType.Shoot)
         {
@@ -149,6 +167,34 @@ public class Player extends GameObject
         {
             System.out.println("test");
         }
+
+        if(useItem.itemEffect == Item.ItemEffect.Heal)
+        {
+            hud.HEALTH += amount;
+            Drop(action.selectedIndex, action.selectedAmount, false);
+        }
+    }
+
+    public void Drop(int itemIndex, int amount, boolean drop)
+    {
+        if(useItem == null) return;
+
+        if(inv.items.get(itemIndex).pickup == PickupTypes.Nothing) return;
+
+        System.out.println(inv.items.get(itemIndex).itemName);
+
+        if(drop)
+        {
+            Game.Instantiate(new Pickup((int)(x + 64), (int)y, ID.Pickup,
+                    inv.items.get(itemIndex).pickup, amount,
+                    inv.items.get(itemIndex).canRotate));
+        }
+
+        inv.RemoveItem(itemIndex);
+        action.ItemAction(itemIndex, inv.items.get(itemIndex).itemEffect);
+
+        useItem = null;
+        action.selectedItem = null;
     }
 
     public void render(Graphics g)

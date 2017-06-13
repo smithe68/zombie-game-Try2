@@ -38,26 +38,17 @@ public class Bullet extends GameObject
 
         AffineTransform transform = g2d.getTransform();
 
-        // Draw the Player's Sprite
-        //g2d.rotate(angle, (int)x, (int)y);
-
-        //bullet fire positions
-
-        //  bottom left
+        // Bottom Left
         if (angle > 90 && angle < 180) {g2d.fillRect((int) (x+15), (int)(y+36), 2, 2);}
 
-        //bottom right
+        // Bottom Right
         if (angle > 0 && angle < 90) {g2d.fillRect((int) (x+15), (int)(y+15), 2, 2);}
 
-        // top left
+        // Top Left
         if (angle < -90) {g2d.fillRect((int) (x-6), (int)(y+36), 2, 2);}
 
-        //top right
+        // Top Right
         if (angle <= 0 && angle > -90 ) {g2d.fillRect((int) (x+-2), (int)(y+15), 2, 2);}
-
-
-
-
 
         g2d.setTransform(transform);
     }

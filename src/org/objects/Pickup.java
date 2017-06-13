@@ -33,12 +33,15 @@ public class Pickup extends GameObject
     private float scale = 1;
     private float setScale = 1;
 
-    public Pickup(int x, int y, ID id, PickupTypes type, int amount)
+    private boolean canRotate = false;
+
+    public Pickup(int x, int y, ID id, PickupTypes type, int amount, boolean rotate)
     {
         super(x, y, id);
 
         this.type = type;
         currentAmount = amount;
+        canRotate = rotate;
 
         try
         {
@@ -71,8 +74,11 @@ public class Pickup extends GameObject
         AffineTransform at = AffineTransform.getTranslateInstance(x, y);
         at.scale(scale * 1.1, scale * 1.1);
 
-        at.rotate(rotation, currentImage.getWidth() / 2,
-                currentImage.getHeight() / 2);
+        if(canRotate)
+        {
+            at.rotate(rotation, currentImage.getWidth() / 2,
+                    currentImage.getHeight() / 2);
+        }
 
         // Draw the Player's Sprite
         g2d.drawImage(currentImage, at, null);
@@ -92,10 +98,12 @@ public class Pickup extends GameObject
                 currentItem = data.pistol;
                 pickupSoundPath = "/resources/sounds/Pickup_04.wav";
                 break;
+
             case HealthPack:
                 currentImage = pack;
                 currentItem = data.pack;
-                //pickupSoundPath = "";
+                pickupSoundPath = "/resources/sounds/Pickup_04.wav";
+                break;
         }
     }
 
