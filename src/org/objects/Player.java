@@ -72,7 +72,7 @@ public class Player extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x,(int)y,45,45);
+        return new Rectangle((int)x,(int)y,image.getWidth(),image.getHeight());
     }
 
     // This Updates Every Frame

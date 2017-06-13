@@ -5,6 +5,7 @@ import org.engine.Game;
 import org.enums.ID;
 import org.engine.Renderer;
 import org.ui.HUD;
+import org.world.World;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -84,6 +85,24 @@ public class BasicZombie extends GameObject
         {
             state = ZombieState.Standing;
             lastRotation = rotation;
+        }
+
+        Collision();
+    }
+
+    public void Collision()
+    {
+        for(int i = 0; i < World.gameObjects.size(); i++)
+        {
+            GameObject tempObject = World.gameObjects.get(i);
+
+            if (tempObject.GetID() == ID.Speeder)
+            {
+                if( getBounds().intersects(tempObject.getBounds()))
+                {
+                    hud.HEALTH -= 0.5f;
+                }
+            }
         }
     }
 

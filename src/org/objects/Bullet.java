@@ -2,6 +2,7 @@ package org.objects;
 
 import org.enums.ID;
 import org.ui.WeaponInfo;
+import org.world.World;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -55,6 +56,6 @@ public class Bullet extends GameObject
 
     public Rectangle getBounds()
     {
-        return null;
+        return new Rectangle((int)x,(int)y,2,2);
     }
 }

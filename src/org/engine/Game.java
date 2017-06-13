@@ -23,7 +23,7 @@ public class Game
 
         Game.Instantiate(new Player(220, 100, ID.Player));
 
-        //Game.Instantiate(new BasicZombie(300, 150, ID.BasicZombie));
+        Game.Instantiate(new BasicZombie(300, 150, ID.BasicZombie));
         //Game.Instantiate(new BasicZombie(350, 200, ID.BasicZombie));
         //Game.Instantiate(new BasicZombie(200, 300, ID.BasicZombie));
 
