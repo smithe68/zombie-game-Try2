@@ -13,12 +13,15 @@ public class Bullet extends GameObject
     private double xDiff;
     private double yDiff;
 
-    public Bullet(int x, int y, ID id, WeaponInfo info, double xDiff, double yDiff)
+    private Player player;
+
+    public Bullet(int x, int y, ID id, WeaponInfo info, double xDiff, double yDiff, Player player)
     {
         super(x, y, id);
         this.info = info;
         this.xDiff = xDiff;
         this.yDiff = yDiff;
+        this.player = player;
     }
 
     public void tick(float deltaTime)
