@@ -5,6 +5,8 @@ import org.enums.PickupTypes;
 import org.objects.*;
 import org.world.World;
 
+import static org.engine.sounds.music;
+
 public class Game
 {
     public static void main(String[] args)
@@ -23,6 +25,7 @@ public class Game
         //Game.Instantiate(new BasicZombie(200, 300, ID.BasicZombie));
 
         Game.Instantiate(new Pickup(300, 100, ID.Pickup, PickupTypes.Pistol));
+        music();
     }
 
     public static GameObject Instantiate(GameObject object)
