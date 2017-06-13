@@ -12,8 +12,10 @@ public class Item
     public ItemType itemType;
     public ItemEffect itemEffect;
     public float effectAmount;
+    public WeaponInfo weaponInfo;
 
-    public Item(String s, String s1, int i, int i1, BufferedImage sP, ItemType misc, ItemEffect nothing, float v)
+    public Item(String s, String s1, int i, int i1, BufferedImage sP, ItemType misc
+            , ItemEffect nothing, float v, WeaponInfo info)
     {
         itemName = s;
         itemDesc = s1;
@@ -23,6 +25,7 @@ public class Item
         itemType = misc;
         itemEffect = nothing;
         effectAmount = v;
+        weaponInfo = info;
     }
 
     public enum ItemType

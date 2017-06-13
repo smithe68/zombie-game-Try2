@@ -3,10 +3,7 @@ package org.objects;
 import org.engine.*;
 import org.enums.ID;
 import org.input.Input;
-import org.ui.ActionBar;
-import org.ui.Database;
-import org.ui.HUD;
-import org.ui.Inventory;
+import org.ui.*;
 import org.world.World;
 
 import java.awt.*;
@@ -32,6 +29,10 @@ public class Player extends GameObject
     private HUD hud;
 
     private Point mouse = new Point(0, 0);
+
+    private double angle;
+    private double xDiff;
+    private double yDiff;
 
     public Player(int x, int y, ID id)
     {
@@ -99,6 +100,9 @@ public class Player extends GameObject
         // Move Player Down
         if(Input.GetKey(KeyEvent.VK_S)) { y += speed; }
 
+        // Use
+        if(Input.GetKeyDown(KeyEvent.VK_F)) { Use(action.selectedItem); }
+
         Collision();
     }
 
@@ -126,6 +130,23 @@ public class Player extends GameObject
         }
     }
 
+    public void Use(Item useItem)
+    {
+        if(useItem.weaponInfo.type == WeaponInfo.AttackType.Shoot)
+        {
+            if(useItem.weaponInfo.ammo == WeaponInfo.AmmoType.PistolAmmo)
+            {
+                Game.Instantiate(new Bullet((int)(x + 10), (int)(y - 10),
+                        ID.Speeder, useItem.weaponInfo, xDiff, yDiff));
+            }
+        }
+
+        if(useItem.weaponInfo.type == WeaponInfo.AttackType.Melee)
+        {
+            System.out.println("test");
+        }
+    }
+
     public void render(Graphics g)
     {
         // Set the Transform for the Player
@@ -141,11 +162,11 @@ public class Player extends GameObject
         int centerX = (int)x + image.getWidth() / 2;
         int centerY = (int)y + image.getHeight() / 2;
 
-        double xDiff = mouse.x - Math.abs(centerX);
-        double yDiff = mouse.y - Math.abs(centerY);
+        xDiff = mouse.x - Math.abs(centerX);
+        yDiff = mouse.y - Math.abs(centerY);
 
         // Get Rotation to Mouse
-        double angle = Math.toDegrees(Math.atan2(yDiff, xDiff));
+        angle = Math.toDegrees(Math.atan2(yDiff, xDiff));
 
         // Rotate the Player to Mouse Cursor
         g2.rotate(Math.toRadians(angle), centerX, centerY);

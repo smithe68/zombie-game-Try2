@@ -13,6 +13,8 @@ public class ActionBar extends GameObject
     public Player player = Player.player;
     public Inventory inv = Player.inv;
 
+    public Item selectedItem;
+
     public ActionBar(int x, int y, ID id)
     {
         super(x, y, id);
@@ -23,26 +25,31 @@ public class ActionBar extends GameObject
         if(Input.GetKeyDown(KeyEvent.VK_1))
         {
             ItemAction(0, inv.items.get(0).itemEffect);
+            selectedItem = inv.items.get(0);
         }
 
         if(Input.GetKeyDown(KeyEvent.VK_2))
         {
             ItemAction(1, inv.items.get(1).itemEffect);
+            selectedItem = inv.items.get(1);
         }
 
         if(Input.GetKeyDown(KeyEvent.VK_3))
         {
             ItemAction(2, inv.items.get(2).itemEffect);
+            selectedItem = inv.items.get(2);
         }
 
         if(Input.GetKeyDown(KeyEvent.VK_4))
         {
             ItemAction(3, inv.items.get(3).itemEffect);
+            selectedItem = inv.items.get(3);
         }
 
         if(Input.GetKeyDown(KeyEvent.VK_5))
         {
             ItemAction(4, inv.items.get(4).itemEffect);
+            selectedItem = inv.items.get(4);
         }
     }
 

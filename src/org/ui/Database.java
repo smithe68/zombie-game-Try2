@@ -13,8 +13,13 @@ public class Database
 
     public ArrayList<BufferedImage> itemImages = new ArrayList<>();
 
+    public WeaponDatabase infoData;
+
     public void CreateItems()
     {
+        infoData = new WeaponDatabase();
+        infoData.CreateWeaponData();
+
         GetImages();
 
         empty = new Item
@@ -26,7 +31,8 @@ public class Database
                 itemImages.get(0),
                 Item.ItemType.Misc,
                 Item.ItemEffect.Equip,
-                0.0f
+                0.0f,
+                infoData.empty
         );
 
         pistol = new Item
@@ -38,7 +44,8 @@ public class Database
                 itemImages.get(1),
                 Item.ItemType.Weapon,
                 Item.ItemEffect.Equip,
-                0.0f
+                0.0f,
+                infoData.pistol
         );
     }
 

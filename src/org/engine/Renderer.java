@@ -145,6 +145,7 @@ public class Renderer
 
                 // Update Stuff
                 World.update();
+                Input.FinishInput();
 
                 // Render Stuff
                 World.render(g);
