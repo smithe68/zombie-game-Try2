@@ -35,7 +35,7 @@ public class Bullet extends GameObject
 
         // Draw the Player's Sprite
         //g2d.rotate(angle, (int)x, (int)y);
-        g2d.fillRect((int) (x-6), (int)(y+35), 2, 2);
+        g2d.fillRect((int) (x-6), (int)(y+36), 2, 2);
         g2d.setTransform(transform);
     }
 
