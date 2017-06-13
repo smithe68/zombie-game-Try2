@@ -6,6 +6,8 @@ import org.ui.WeaponInfo;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 
+import static org.objects.Player.player;
+
 public class Bullet extends GameObject
 {
     public WeaponInfo info;
@@ -38,7 +40,25 @@ public class Bullet extends GameObject
 
         // Draw the Player's Sprite
         //g2d.rotate(angle, (int)x, (int)y);
-        g2d.fillRect((int) (x-6), (int)(y+36), 2, 2);
+
+        //bullet fire positions
+
+        //  bottom left
+        if (angle > 90 && angle < 180) {g2d.fillRect((int) (x+15), (int)(y+36), 2, 2);}
+
+        //bottom right
+        if (angle > 0 && angle < 90) {g2d.fillRect((int) (x+15), (int)(y+15), 2, 2);}
+
+        // top left
+        if (angle < -90) {g2d.fillRect((int) (x-6), (int)(y+36), 2, 2);}
+
+        //top right
+        if (angle < 0 && angle > -90 ) {g2d.fillRect((int) (x+15), (int)(y+15), 2, 2);}
+
+
+
+
+
         g2d.setTransform(transform);
     }
 
