@@ -122,6 +122,9 @@ public class Player extends GameObject
         }
 
         Collision();
+
+        Renderer.camX = x;
+        Renderer.camY = y;
     }
 
     private void Collision()

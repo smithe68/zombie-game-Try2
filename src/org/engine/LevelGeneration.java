@@ -5,6 +5,7 @@ import org.objects.Tile;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Random;
 
 public class LevelGeneration
 {
@@ -29,11 +30,23 @@ public class LevelGeneration
 
     public void CreateLevel()
     {
-        for(int x = 0; x < levelWidth; x++)
+        for(int x = -10; x < levelWidth + 10; x++)
         {
-            for(int y = 0; y < levelHeight; y++)
+            for(int y = -10; y < levelHeight + 10; y++)
             {
-                Game.Instantiate(new Tile(x * stoneTile.getWidth(), y * stoneTile.getHeight(), ID.Tile, grassTile));
+                Random ran = new Random();
+                int random = ran.nextInt(6);
+
+                if(random > 3)
+                {
+                    Game.Instantiate(new Tile(x * stoneTile.getWidth(),
+                            y * stoneTile.getHeight(), ID.Tile, grassTile));
+                }
+                else
+                {
+                    Game.Instantiate(new Tile(x * stoneTile.getWidth(),
+                            y * stoneTile.getHeight(), ID.Tile, stoneTile));
+                }
             }
         }
     }

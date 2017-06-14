@@ -17,6 +17,8 @@ public class ActionBar extends GameObject
     public int selectedIndex;
     public int selectedAmount;
 
+    public int selectedSlot;
+
     public ActionBar(int x, int y, ID id)
     {
         super(x, y, id);
@@ -30,6 +32,7 @@ public class ActionBar extends GameObject
             selectedItem = inv.items.get(0);
             selectedIndex = 0;
             selectedAmount = inv.itemAmounts.get(0);
+            selectedSlot = 1;
         }
 
         if(Input.GetKeyDown(KeyEvent.VK_2))
@@ -38,6 +41,7 @@ public class ActionBar extends GameObject
             selectedItem = inv.items.get(1);
             selectedIndex = 1;
             selectedAmount = inv.itemAmounts.get(1);
+            selectedSlot = 2;
         }
 
         if(Input.GetKeyDown(KeyEvent.VK_3))
@@ -46,6 +50,7 @@ public class ActionBar extends GameObject
             selectedItem = inv.items.get(2);
             selectedIndex = 2;
             selectedAmount = inv.itemAmounts.get(2);
+            selectedSlot = 3;
         }
 
         if(Input.GetKeyDown(KeyEvent.VK_4))
@@ -54,6 +59,7 @@ public class ActionBar extends GameObject
             selectedItem = inv.items.get(3);
             selectedIndex = 3;
             selectedAmount = inv.itemAmounts.get(3);
+            selectedSlot = 4;
         }
 
         if(Input.GetKeyDown(KeyEvent.VK_5))
@@ -62,6 +68,7 @@ public class ActionBar extends GameObject
             selectedItem = inv.items.get(4);
             selectedIndex = 4;
             selectedAmount = inv.itemAmounts.get(4);
+            selectedSlot = 5;
         }
     }
 
@@ -71,20 +78,30 @@ public class ActionBar extends GameObject
 
         g2.setColor(Color.red);
 
+        if(selectedSlot == 1) { g2.setColor(Color.green); }
         g2.drawRect(20, 220, 20, 20);
         g2.drawImage(inv.items.get(0).itemSprite, 14, 215, null);
+        g2.setColor(Color.red);
 
+        if(selectedSlot == 2) { g2.setColor(Color.green); }
         g2.drawRect(50, 220, 20, 20);
         g2.drawImage(inv.items.get(1).itemSprite, 44, 215, null);
+        g2.setColor(Color.red);
 
+        if(selectedSlot == 3) { g2.setColor(Color.green); }
         g2.drawRect(80, 220, 20, 20);
         g2.drawImage(inv.items.get(2).itemSprite, 74, 215, null);
+        g2.setColor(Color.red);
 
+        if(selectedSlot == 4) { g2.setColor(Color.green); }
         g2.drawRect(110, 220, 20, 20);
         g2.drawImage(inv.items.get(3).itemSprite, 104, 215, null);
+        g2.setColor(Color.red);
 
+        if(selectedSlot == 5) { g2.setColor(Color.green); }
         g2.drawRect(140, 220, 20, 20);
         g2.drawImage(inv.items.get(4).itemSprite, 134, 215, null);
+        g2.setColor(Color.red);
     }
 
     public Rectangle getBounds()

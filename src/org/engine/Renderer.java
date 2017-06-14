@@ -35,6 +35,9 @@ public class Renderer
     public static float camX = 0;
     public static float camY = 0;
 
+    public static float camPosX = 0;
+    public static float camPosY = 0;
+
     // Find Size of Screen and Scale to it
     private static void GetBestSize()
     {

@@ -35,6 +35,9 @@ public class Pickup extends GameObject
 
     private boolean canRotate = false;
 
+    private float centerX = 0;
+    private float centerY = 0;
+
     public Pickup(int x, int y, ID id, PickupTypes type, int amount, boolean rotate)
     {
         super(x, y, id);
@@ -71,7 +74,15 @@ public class Pickup extends GameObject
     public void render(Graphics g)
     {
         Graphics2D g2d = (Graphics2D) g;
-        AffineTransform at = AffineTransform.getTranslateInstance(x, y);
+
+        centerX = x - currentImage.getWidth() / 2;
+        centerY = y - currentImage.getHeight() / 2;
+
+        int posX = (int)(centerX - Renderer.camPosX);
+        int posY = (int)(centerY - Renderer.camPosY);
+
+        AffineTransform at = AffineTransform.getTranslateInstance(posX, posY);
+
         at.scale(scale * 1.1, scale * 1.1);
 
         if(canRotate)
@@ -87,8 +98,8 @@ public class Pickup extends GameObject
     public Rectangle getBounds()
     {
         AffineTransform transform = new AffineTransform();
-        Rectangle rect = new Rectangle((int)x,
-                (int)y - currentImage.getHeight(), currentImage.getWidth(), currentImage.getHeight());
+        Rectangle rect = new Rectangle((int)(centerX - Renderer.camPosX),
+                (int)(centerY - Renderer.camPosY), currentImage.getWidth(), currentImage.getHeight());
         transform.rotate(rotation, rect.width / 2, rect.height / 2);
         return rect;
     }

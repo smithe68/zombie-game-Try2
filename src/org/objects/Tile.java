@@ -1,5 +1,6 @@
 package org.objects;
 
+import org.engine.Renderer;
 import org.enums.ID;
 
 import java.awt.*;
@@ -23,7 +24,8 @@ public class Tile extends GameObject
 
     public void render(Graphics g)
     {
-        g.drawImage(tileSprite, (int)x,(int)y, 96, 96, null);
+        g.drawImage(tileSprite, (int)(x - tileSprite.getWidth() / 2) - (int)Renderer.camPosX,
+        (int)(y - tileSprite.getHeight() / 2) - (int)Renderer.camPosY, 96, 96, null);
     }
 
     @Override
