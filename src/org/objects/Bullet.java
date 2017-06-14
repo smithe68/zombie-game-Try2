@@ -39,6 +39,8 @@ public class Bullet extends GameObject
 
         AffineTransform transform = g2d.getTransform();
 
+        g2d.setColor(Color.yellow);
+
         // Bottom Left
         if (angle > 90 && angle < 180) {g2d.fillRect((int) (x+15), (int)(y+36), 2, 2);}
 

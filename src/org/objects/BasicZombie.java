@@ -17,6 +17,7 @@ public class BasicZombie extends GameObject
     public ZombieState state = ZombieState.Standing;
 
     private BufferedImage image;
+    private BufferedImage hit;
 
     private GameObject player = Player.player;
 
@@ -25,6 +26,11 @@ public class BasicZombie extends GameObject
 
     private float rotation = 0;
     private float lastRotation = 0;
+
+    private boolean isHit;
+
+    private double centerX = 0;
+    private double centerY = 0;
 
     public enum ZombieState
     {
@@ -40,6 +46,7 @@ public class BasicZombie extends GameObject
         {
             // Get the Sprite for the Follower
             image = Renderer.LoadImage("/resources/sprites/BasicZombie.png");
+            hit = Renderer.LoadImage("/resources/sprites/BasicZombie_Hit.png");
         }
         catch (IOException e)
         {
@@ -52,7 +59,7 @@ public class BasicZombie extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x, (int)y,image.getWidth(),image.getHeight());
+        return new Rectangle((int)x, (int)y, 32, 32);
     }
 
     public void tick(float deltaTime)
@@ -106,6 +113,7 @@ public class BasicZombie extends GameObject
             {
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
+                    isHit = true;
                     hud.HEALTH -= 10f;
                     Game.Destroy(tempObject);
                 }
@@ -116,21 +124,35 @@ public class BasicZombie extends GameObject
     public void render(Graphics g)
     {
         AffineTransform at = AffineTransform.getTranslateInstance(x, y);
+        Graphics2D g2d = (Graphics2D) g;
+        AffineTransform transform = g2d.getTransform();
+
+        centerX = (int)x + image.getWidth() / 2;
+        centerY = (int)y + image.getHeight() / 2;
 
         if(state == ZombieState.Hunting)
         {
-            at.rotate(rotation, image.getWidth() / 2, image.getHeight() / 2);
+            g2d.rotate(rotation, centerX, centerY);
         }
 
         if(state == ZombieState.Standing)
         {
-            at.rotate(lastRotation, image.getWidth() / 2, image.getHeight() / 2);
+            g2d.rotate(lastRotation, centerX, centerY);
         }
 
-        Graphics2D g2d = (Graphics2D) g;
+        // Draw the Sprite
+        if(isHit)
+        {
+            g2d.drawImage(hit, at, null);
+            isHit = false;
+        }
+        else
+        {
+            g2d.drawImage(image, at, null);
+        }
 
-        // Draw the Player's Sprite
-        g2d.drawImage(image, at, null);
-        g2d.drawString(state.toString(), x, y + 15);
+        g2d.setTransform(transform);
+
+        g2d.drawRect((int)x, (int)y, 32, 32);
     }
 }
