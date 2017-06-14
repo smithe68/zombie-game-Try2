@@ -48,10 +48,7 @@ public class Player extends GameObject
             image = Renderer.LoadImage("/resources/sprites/PlayerDude.png");
             equip = Renderer.LoadImage("/resources/sprites/Blank.png");
         }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
+        catch (IOException e) {e.printStackTrace();}
 
         // Create the HUD
         hud = new HUD(x, y + 15, ID.HUD, 25, 8);
@@ -154,7 +151,6 @@ public class Player extends GameObject
     public void Use(Item item, int amount)
     {
         if(item == null) return;
-        // Evan Please
 
         useItem = item;
 
@@ -167,7 +163,7 @@ public class Player extends GameObject
                         ID.Bullet, useItem.weaponInfo, xDiff, yDiff, angle));
             }
         }
-
+        // TODO set up melee system
         if(useItem.weaponInfo.type == WeaponInfo.AttackType.Melee)
         {
             System.out.println("test");
@@ -219,6 +215,7 @@ public class Player extends GameObject
         yDiff = mouse.y - Math.abs(centerY);
 
         // Get Rotation to Mouse
+        // angle is publicly stored in degrees
         angle = Math.toDegrees(Math.atan2(yDiff, xDiff));
 
         // Rotate the Player to Mouse Cursor

@@ -7,16 +7,11 @@ public class Sound {
 
    public static void PlaySound(String path, float volume, boolean loop)
    {
-       int loopInt = 0;
+       int loopInt;
 
-       if(loop)
-       {
-           loopInt = -1;
-       }
-       else
-       {
-           loopInt = 0;
-       }
+       if(loop) {loopInt = -1;}
+
+       else {loopInt = 0;}
 
         try
         {
@@ -38,10 +33,7 @@ public class Sound {
             clip.start();
             clip.loop(loopInt);
         }
-        catch (Exception e)
-        {
-            System.err.println(e.getMessage());
-        }
+        catch (Exception e) {System.err.println(e.getMessage());}
    }
 
 }
