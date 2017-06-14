@@ -1,11 +1,8 @@
 package org.objects;
 
 import org.engine.*;
-import org.enums.ID;
-import org.enums.PickupTypes;
-import org.input.Input;
+import org.enums.*;
 import org.ui.*;
-import org.world.World;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -15,7 +12,7 @@ import java.io.IOException;
 
 public class Player extends GameObject
 {
-    public float speed = 1.5f;
+    public float speed = 60;
 
     public static Player player;
     public static Inventory inv;
@@ -91,17 +88,11 @@ public class Player extends GameObject
         x = CustomMath.Clamp(x,0, Renderer.gameWidth +761);
         y = CustomMath.Clamp(y,0, Renderer.gameHeight +531);
 
-        // Move Player Left
-        if(Input.GetKey(KeyEvent.VK_A)) { x -= speed; }
+        float horiAxis = Input.Horizontal;
+        float vertAxis = Input.Vertical;
 
-        // Move Player Right
-        if(Input.GetKey(KeyEvent.VK_D)) { x += speed; }
-
-        // Move Player Up
-        if(Input.GetKey(KeyEvent.VK_W)) { y -= speed; }
-
-        // Move Player Down
-        if(Input.GetKey(KeyEvent.VK_S)) { y += speed; }
+        x += horiAxis * speed * deltaTime;
+        y += vertAxis * speed * deltaTime;
 
         // Use Item
         if(Input.GetKeyDown(KeyEvent.VK_F))
@@ -128,9 +119,9 @@ public class Player extends GameObject
     {
         // Check for Collision with Zombies
         // TODO Change how this works
-        for(int i = 0; i < World.gameObjects.size(); i++)
+        for(int i = 0; i < Level.gameObjects.size(); i++)
         {
-            GameObject tempObject = World.gameObjects.get(i);
+            GameObject tempObject = Level.gameObjects.get(i);
 
             if (tempObject.GetID() == ID.BasicZombie)
             {

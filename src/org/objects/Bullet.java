@@ -1,13 +1,11 @@
 package org.objects;
 
+import org.engine.GameObject;
 import org.enums.ID;
 import org.ui.WeaponInfo;
-import org.world.World;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
-
-import static org.objects.Player.player;
 
 public class Bullet extends GameObject
 {

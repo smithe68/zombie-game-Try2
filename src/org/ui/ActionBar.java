@@ -2,8 +2,8 @@ package org.ui;
 
 import java.awt.event.KeyEvent;
 import org.enums.ID;
-import org.input.Input;
-import org.objects.GameObject;
+import org.engine.Input;
+import org.engine.GameObject;
 import org.objects.Player;
 
 import java.awt.*;

@@ -1,8 +1,5 @@
 package org.engine;
 
-import org.input.Input;
-import org.world.World;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -105,63 +102,63 @@ public class Renderer
     private static void StartRendering()
     {
         Thread thread = new Thread(() ->
-    {
-        GraphicsConfiguration gc = canvas.getGraphicsConfiguration();
-        VolatileImage vImage = gc.createCompatibleVolatileImage(gameWidth, gameHeight);
-
-        while(true)
         {
-            long startTime = System.nanoTime();
+            GraphicsConfiguration gc = canvas.getGraphicsConfiguration();
+            VolatileImage vImage = gc.createCompatibleVolatileImage(gameWidth, gameHeight);
 
-            // FPS Counter
-            totalFrames++;
-            if(System.nanoTime() > lastFpsCheck + 1000000000)
+            while(true)
             {
-                lastFpsCheck = System.nanoTime();
-                currentFPS = totalFrames;
-                totalFrames = 0;
-            }
+                long startTime = System.nanoTime();
 
-            if(vImage.validate(gc) == VolatileImage.IMAGE_INCOMPATIBLE)
-            {
-                vImage = gc.createCompatibleVolatileImage(gameWidth, gameHeight);
-            }
-
-            Graphics g = vImage.getGraphics();
-
-            // Clear the Screen
-            g.setColor(Color.black);
-            g.fillRect(0, 0, gameWidth, gameHeight);
-
-            // Render Stuff
-            World.render(g);
-
-            // Draw FPS Counter
-            g.setColor(Color.LIGHT_GRAY);
-            g.drawString(String.valueOf(currentFPS), 2, gameHeight - 10);
-
-            g.dispose();
-
-            g = canvas.getGraphics();
-            g.drawImage(vImage, 0, 0, canvasWidth, canvasHeight, null);
-
-            g.dispose();
-
-            long totalTime = System.nanoTime() - startTime;
-
-            if(totalTime < targetTime)
-            {
-                try
+                // FPS Counter
+                totalFrames++;
+                if(System.nanoTime() > lastFpsCheck + 1000000000)
                 {
-                    Thread.sleep((targetTime - totalTime) / 1000000);
+                    lastFpsCheck = System.nanoTime();
+                    currentFPS = totalFrames;
+                    totalFrames = 0;
                 }
-                catch (InterruptedException e)
+
+                if(vImage.validate(gc) == VolatileImage.IMAGE_INCOMPATIBLE)
                 {
-                    e.printStackTrace();
+                    vImage = gc.createCompatibleVolatileImage(gameWidth, gameHeight);
+                }
+
+                Graphics g = vImage.getGraphics();
+
+                // Clear the Screen
+                g.setColor(Color.black);
+                g.fillRect(0, 0, gameWidth, gameHeight);
+
+                // Render Stuff
+                Level.render(g);
+
+                // Draw FPS Counter
+                g.setColor(Color.LIGHT_GRAY);
+                g.drawString(String.valueOf(currentFPS), 2, gameHeight - 10);
+
+                g.dispose();
+
+                g = canvas.getGraphics();
+                g.drawImage(vImage, 0, 0, canvasWidth, canvasHeight, null);
+
+                g.dispose();
+
+                long totalTime = System.nanoTime() - startTime;
+
+                if(totalTime < targetTime)
+                {
+                    try
+                    {
+                        Thread.sleep((targetTime - totalTime) / 1000000);
+                    }
+                    catch (InterruptedException e)
+                    {
+                        e.printStackTrace();
+                    }
                 }
             }
-        }
-    });
+        });
 
         thread.setName("Rendering Thread");
         thread.start();
@@ -176,8 +173,8 @@ public class Renderer
                 long startTime = System.nanoTime();
 
                 // Update Stuff
-                World.update();
-                Input.FinishInput();
+                Level.update();
+                Input.UpdateInput();
 
                 long totalTime = System.nanoTime() - startTime;
 

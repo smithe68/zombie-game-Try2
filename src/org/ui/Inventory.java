@@ -1,7 +1,7 @@
 package org.ui;
 
 import org.engine.Game;
-import org.objects.GameObject;
+import org.engine.GameObject;
 import org.objects.Player;
 
 import java.util.ArrayList;

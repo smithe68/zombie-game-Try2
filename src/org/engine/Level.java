@@ -1,15 +1,11 @@
-package org.world;
-
-import org.engine.Renderer;
-import org.objects.GameObject;
-import org.objects.Player;
+package org.engine;
 
 import java.awt.*;
 import java.util.ArrayList;
 
-public class World
+public class Level
 {
-    public static World currentWorld = null;
+    public static Level currentWorld = null;
 
     private static long lastTime = System.nanoTime();
 

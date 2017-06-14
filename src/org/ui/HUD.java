@@ -1,7 +1,7 @@
 package org.ui;
 
 import org.engine.CustomMath;
-import org.objects.GameObject;
+import org.engine.GameObject;
 import org.enums.ID;
 
 import java.awt.*;

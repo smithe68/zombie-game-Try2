@@ -1,6 +1,7 @@
 package org.objects;
 
 import org.engine.CustomMath;
+import org.engine.GameObject;
 import org.engine.Renderer;
 import org.engine.Sound;
 import org.enums.ID;

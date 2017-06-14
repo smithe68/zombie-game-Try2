@@ -1,12 +1,8 @@
 package org.objects;
 
-import org.engine.CustomMath;
-import org.engine.Game;
-import org.engine.Sound;
+import org.engine.*;
 import org.enums.ID;
-import org.engine.Renderer;
 import org.ui.HUD;
-import org.world.World;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -110,9 +106,9 @@ public class BasicZombie extends GameObject
 
     public void Collision()
     {
-        for(int i = 0; i < World.gameObjects.size(); i++)
+        for(int i = 0; i < Level.gameObjects.size(); i++)
         {
-            GameObject tempObject = World.gameObjects.get(i);
+            GameObject tempObject = Level.gameObjects.get(i);
 
             if (tempObject.GetID() == ID.Bullet)
             {

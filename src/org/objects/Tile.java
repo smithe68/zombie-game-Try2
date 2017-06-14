@@ -1,5 +1,6 @@
 package org.objects;
 
+import org.engine.GameObject;
 import org.engine.Renderer;
 import org.enums.ID;
 

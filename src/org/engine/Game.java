@@ -3,7 +3,6 @@ package org.engine;
 import org.enums.ID;
 import org.enums.PickupTypes;
 import org.objects.*;
-import org.world.World;
 
 public class Game
 {
@@ -13,7 +12,7 @@ public class Game
         Renderer.init();
 
         // Create the Level
-        World.currentWorld = new World();
+        Level.currentWorld = new Level();
 
         // Generate Background
         LevelGeneration gen = new LevelGeneration();
@@ -23,8 +22,8 @@ public class Game
 
         Game.Instantiate(new BasicZombie(300, 150, ID.BasicZombie));
 
-        Spawn.SpawnPickup(200, 100, PickupTypes.Pistol, 1, true);
-        Spawn.SpawnPickup(150, 150, PickupTypes.HealthPack, 1, false);
+        //Spawn.SpawnPickup(200, 100, PickupTypes.Pistol, 1, true);
+        //Spawn.SpawnPickup(150, 150, PickupTypes.HealthPack, 1, false);
 
         // Start Background Music
         Sound.PlaySound("/resources/sounds/bg.wav", -20.0f,true);
@@ -33,7 +32,7 @@ public class Game
     // This Creates a GameObject in the Level
     public static GameObject Instantiate(GameObject object)
     {
-        World.currentWorld.gameObjects.add(object);
+        Level.currentWorld.gameObjects.add(object);
 
         return object;
     }
@@ -41,8 +40,8 @@ public class Game
     // This Destroy a GameObject in the Level
     public static void Destroy(GameObject object)
     {
-        int objIndex = World.currentWorld.gameObjects.indexOf(object);
-        World.gameObjects.remove(objIndex);
+        int objIndex = Level.currentWorld.gameObjects.indexOf(object);
+        Level.gameObjects.remove(objIndex);
     }
 
     // This Quits the Game
