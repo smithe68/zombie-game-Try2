@@ -56,7 +56,7 @@ public class Renderer
             {
                 canvasWidth -= GAME_WIDTH;
                 canvasHeight -= GAME_HEIGHT;
-                done = true;
+                break;
             }
         }
 
@@ -71,18 +71,6 @@ public class Renderer
         canvasHeight = gameHeight * factor;
     }
 
-    private static void MakeFullscreen()
-    {
-        GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice gd = env.getDefaultScreenDevice();
-
-        if(gd.isFullScreenSupported())
-        {
-            frame.setUndecorated(true);
-            gd.setFullScreenWindow(frame);
-        }
-    }
-
     public static void init()
     {
         GetBestSize();
@@ -93,8 +81,6 @@ public class Renderer
         canvas.setPreferredSize(new Dimension(canvasWidth, canvasHeight));
 
         frame.add(canvas);
-
-        //MakeFullscreen();
 
         frame.pack();
         frame.setResizable(false);
