@@ -1,6 +1,6 @@
 package org.objects;
 
-import org.engine.CustomMathf;
+import org.engine.CustomMath;
 import org.engine.Game;
 import org.engine.Sound;
 import org.enums.ID;
@@ -90,8 +90,8 @@ public class BasicZombie extends GameObject
 
             state = ZombieState.Hunting;
 
-            x = CustomMathf.Lerp(x, player.x, deltaTime / 2);
-            y = CustomMathf.Lerp(y, player.y, deltaTime / 2);
+            x = CustomMath.Lerp(x, player.x, deltaTime / 2);
+            y = CustomMath.Lerp(y, player.y, deltaTime / 2);
         }
         else
         {
@@ -114,7 +114,7 @@ public class BasicZombie extends GameObject
         {
             GameObject tempObject = World.gameObjects.get(i);
 
-            if (tempObject.GetID() == ID.Speeder)
+            if (tempObject.GetID() == ID.Bullet)
             {
                 if( getBounds().intersects(tempObject.getBounds()))
                 {

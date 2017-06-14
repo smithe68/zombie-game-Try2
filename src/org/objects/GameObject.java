@@ -21,53 +21,8 @@ public abstract class GameObject
     public abstract void render(Graphics g);
     public abstract Rectangle getBounds();
 
-    public void SetX(float x)
-    {
-        this.x = x;
-    }
-
-    public void SetY(float y)
-    {
-        this.y = y;
-    }
-
-    public float GetX()
-    {
-        return x;
-    }
-
-    public float GetY()
-    {
-        return y;
-    }
-
-    public void SetID(ID id)
-    {
-        this.id = id;
-    }
-
     public ID GetID()
     {
         return id;
-    }
-
-    public void SetVelX(float velX)
-    {
-        this.velX = velX;
-    }
-
-    public void SetVelY(float velY)
-    {
-        this.velY = velY;
-    }
-
-    public float GetVelX()
-    {
-        return velX;
-    }
-
-    public float GetVelY()
-    {
-        return velY;
     }
 }

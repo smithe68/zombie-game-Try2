@@ -1,6 +1,6 @@
 package org.objects;
 
-import org.engine.CustomMathf;
+import org.engine.CustomMath;
 import org.engine.Renderer;
 import org.engine.Sound;
 import org.enums.ID;
@@ -63,7 +63,7 @@ public class Pickup extends GameObject
 
         if(scale >= 1.4f) setScale = 1f;
         if(scale <= 1.1) setScale = 1.5f;
-        scale = CustomMathf.Lerp(scale, setScale, deltaTime);
+        scale = CustomMath.Lerp(scale, setScale, deltaTime);
 
         collision();
     }

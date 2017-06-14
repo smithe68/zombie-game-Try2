@@ -6,11 +6,8 @@ package org.enums;
 public enum ID
 {
     Player,
-    XSpeedFollower,
-    YSpeedFollower,
-    Speeder,
+    Bullet,
     BasicZombie,
-    Follower,
     Tile,
     HUD,
     Pickup

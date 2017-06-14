@@ -19,17 +19,12 @@ public class Game
         LevelGeneration gen = new LevelGeneration();
         gen.CreateLevel();
 
-        // INSTANTIATE GAMEOBJECTS
-
         Game.Instantiate(new Player(220, 100, ID.Player));
 
         Game.Instantiate(new BasicZombie(300, 150, ID.BasicZombie));
-        //Game.Instantiate(new BasicZombie(350, 200, ID.BasicZombie));
-        //Game.Instantiate(new BasicZombie(200, 300, ID.BasicZombie));
 
-        Game.Instantiate(new Pickup(300, 100, ID.Pickup, PickupTypes.Pistol, 1, true));
-        Game.Instantiate(new Pickup(300, 200, ID.Pickup, PickupTypes.Pistol, 1, true));
-        Game.Instantiate(new Pickup(200, 200, ID.Pickup, PickupTypes.HealthPack, 1, false));
+        Spawn.SpawnPickup(200, 100, PickupTypes.Pistol, 1, true);
+        Spawn.SpawnPickup(100, 200, PickupTypes.HealthPack, 1, false);
 
         // Start Background Music
         Sound.PlaySound("/resources/sounds/bg.wav", -20.0f,true);

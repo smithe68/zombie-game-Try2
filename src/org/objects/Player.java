@@ -91,8 +91,8 @@ public class Player extends GameObject
         }
 
         // Lock player to Window Bounds
-        x = CustomMathf.Clamp(x,0, Renderer.gameWidth +761);
-        y = CustomMathf.Clamp(y,0, Renderer.gameHeight +531);
+        x = CustomMath.Clamp(x,0, Renderer.gameWidth +761);
+        y = CustomMath.Clamp(y,0, Renderer.gameHeight +531);
 
         // Move Player Left
         if(Input.GetKey(KeyEvent.VK_A)) { x -= speed; }
@@ -161,7 +161,7 @@ public class Player extends GameObject
             {
                 Sound.PlaySound("/resources/sounds/Shoot_01.wav", -20, false);
                 Game.Instantiate(new Bullet((int)(x + 10), (int)(y - 10),
-                        ID.Speeder, useItem.weaponInfo, xDiff, yDiff, angle));
+                        ID.Bullet, useItem.weaponInfo, xDiff, yDiff, angle));
             }
         }
 

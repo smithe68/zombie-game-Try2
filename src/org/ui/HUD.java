@@ -1,9 +1,8 @@
 package org.ui;
 
-import org.engine.CustomMathf;
+import org.engine.CustomMath;
 import org.objects.GameObject;
 import org.enums.ID;
-import org.objects.Player;
 
 import java.awt.*;
 
@@ -29,10 +28,10 @@ public class HUD extends GameObject
 
     public void tick(float deltaTime)
     {
-        HEALTH = CustomMathf.Clamp(HEALTH,0,100);
+        HEALTH = CustomMath.Clamp(HEALTH,0,100);
 
         // Change Color of Health
-        greenValue = (int) CustomMathf.Clamp(greenValue, 0, 255);
+        greenValue = (int) CustomMath.Clamp(greenValue, 0, 255);
         greenValue = (int)HEALTH * 2;
     }
 
