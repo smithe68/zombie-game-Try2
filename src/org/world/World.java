@@ -2,6 +2,7 @@ package org.world;
 
 import org.engine.Renderer;
 import org.objects.GameObject;
+import org.objects.Player;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -19,8 +20,8 @@ public class World
         float deltaTime = (System.nanoTime() - lastTime) / 1000000000.0f;
         lastTime = System.nanoTime();
 
-        Renderer.camPosX = (Renderer.camX + Renderer.gameWidth / 2) / 4.8f;
-        Renderer.camPosY = (Renderer.camY + Renderer.gameHeight / 2) / 4.32f;
+        Renderer.camPosX = ((Renderer.camX ));
+        Renderer.camPosY = ((Renderer.camY ));
 
         for(int i = 0; i < gameObjects.size(); i++)
         {
