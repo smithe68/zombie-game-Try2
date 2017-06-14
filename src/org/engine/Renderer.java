@@ -118,67 +118,67 @@ public class Renderer
     private static void StartRendering()
     {
         Thread thread = new Thread(() ->
+    {
+        GraphicsConfiguration gc = canvas.getGraphicsConfiguration();
+        VolatileImage vImage = gc.createCompatibleVolatileImage(gameWidth, gameHeight);
+
+        while(true)
         {
-            GraphicsConfiguration gc = canvas.getGraphicsConfiguration();
-            VolatileImage vImage = gc.createCompatibleVolatileImage(gameWidth, gameHeight);
+            long startTime = System.nanoTime();
 
-            while(true)
+            // FPS Counter
+            totalFrames++;
+            if(System.nanoTime() > lastFpsCheck + 1000000000)
             {
-                long startTime = System.nanoTime();
+                lastFpsCheck = System.nanoTime();
+                currentFPS = totalFrames;
+                totalFrames = 0;
+            }
 
-                // FPS Counter
-                totalFrames++;
-                if(System.nanoTime() > lastFpsCheck + 1000000000)
+            if(vImage.validate(gc) == VolatileImage.IMAGE_INCOMPATIBLE)
+            {
+                vImage = gc.createCompatibleVolatileImage(gameWidth, gameHeight);
+            }
+
+            Graphics g = vImage.getGraphics();
+
+            // Clear the Screen
+            g.setColor(Color.black);
+            g.fillRect(0, 0, gameWidth, gameHeight);
+
+            // Update Stuff
+            World.update();
+            Input.FinishInput();
+
+            // Render Stuff
+            World.render(g);
+
+            // Draw FPS Counter
+            g.setColor(Color.LIGHT_GRAY);
+            g.drawString(String.valueOf(currentFPS), 2, gameHeight - 10);
+
+            g.dispose();
+
+            g = canvas.getGraphics();
+            g.drawImage(vImage, 0, 0, canvasWidth, canvasHeight, null);
+
+            g.dispose();
+
+            long totalTime = System.nanoTime() - startTime;
+
+            if(totalTime < targetTime)
+            {
+                try
                 {
-                    lastFpsCheck = System.nanoTime();
-                    currentFPS = totalFrames;
-                    totalFrames = 0;
+                    Thread.sleep((targetTime - totalTime) / 1000000);
                 }
-
-                if(vImage.validate(gc) == VolatileImage.IMAGE_INCOMPATIBLE)
+                catch (InterruptedException e)
                 {
-                    vImage = gc.createCompatibleVolatileImage(gameWidth, gameHeight);
-                }
-
-                Graphics g = vImage.getGraphics();
-
-                // Clear the Screen
-                g.setColor(Color.black);
-                g.fillRect(0, 0, gameWidth, gameHeight);
-
-                // Update Stuff
-                World.update();
-                Input.FinishInput();
-
-                // Render Stuff
-                World.render(g);
-
-                // Draw FPS Counter
-                g.setColor(Color.LIGHT_GRAY);
-                g.drawString(String.valueOf(currentFPS), 2, gameHeight - 10);
-
-                g.dispose();
-
-                g = canvas.getGraphics();
-                g.drawImage(vImage, 0, 0, canvasWidth, canvasHeight, null);
-
-                g.dispose();
-
-                long totalTime = System.nanoTime() - startTime;
-
-                if(totalTime < targetTime)
-                {
-                    try
-                    {
-                        Thread.sleep((targetTime - totalTime) / 1000000);
-                    }
-                    catch (InterruptedException e)
-                    {
-                        e.printStackTrace();
-                    }
+                    e.printStackTrace();
                 }
             }
-        });
+        }
+    });
 
         thread.setName("Rendering Thread");
         thread.start();
