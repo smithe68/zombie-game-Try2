@@ -51,7 +51,7 @@ public class Bullet extends GameObject
         if (angle < -90) {g2d.fillRect((int) (x-6), (int)(y+36), 2, 2);}
 
         // Top Right
-        if (angle <= 0 && angle > -90 ) {g2d.fillRect((int) (x+-2), (int)(y+15), 2, 2);}
+        if (angle <= 0 && angle > -90 ) {g2d.fillRect((int) (x-2), (int)(y+15), 2, 2);}
 
         g2d.setTransform(transform);
     }
