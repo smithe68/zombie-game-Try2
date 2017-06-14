@@ -99,6 +99,7 @@ public class Renderer
         canvas.addKeyListener(new Input());
 
         StartRendering();
+        StartUpdate();
     }
 
     private static void StartRendering()
@@ -131,10 +132,6 @@ public class Renderer
             // Clear the Screen
             g.setColor(Color.black);
             g.fillRect(0, 0, gameWidth, gameHeight);
-
-            // Update Stuff
-            World.update();
-            Input.FinishInput();
 
             // Render Stuff
             World.render(g);
@@ -170,13 +167,47 @@ public class Renderer
         thread.start();
     }
 
+    public static void StartUpdate()
+    {
+        Thread thread = new Thread(() ->
+        {
+            while(true)
+            {
+                long startTime = System.nanoTime();
+
+                // Update Stuff
+                World.update();
+                Input.FinishInput();
+
+                long totalTime = System.nanoTime() - startTime;
+
+                if(totalTime < targetTime)
+                {
+                    try
+                    {
+                        Thread.sleep((targetTime - totalTime) / 1000000);
+                    }
+                    catch (InterruptedException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+        thread.setName("Update Thread");
+        thread.start();
+    }
+
     public static BufferedImage LoadImage(String path) throws IOException
     {
         BufferedImage rawImage = ImageIO.read(Renderer.class.getResource(path));
         BufferedImage finalImage = canvas.getGraphicsConfiguration()
-                .createCompatibleImage(rawImage.getWidth(), rawImage.getHeight(), rawImage.getTransparency());
+                .createCompatibleImage(rawImage.getWidth(),
+                        rawImage.getHeight(), rawImage.getTransparency());
 
-        finalImage.getGraphics().drawImage(rawImage, 0, 0, rawImage.getWidth(), rawImage.getHeight(), null);
+        finalImage.getGraphics().drawImage(rawImage, 0, 0, rawImage.getWidth(),
+                rawImage.getHeight(), null);
 
         return finalImage;
     }
