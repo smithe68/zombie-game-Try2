@@ -72,7 +72,11 @@ public class Player extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x,(int)y,image.getWidth(),image.getHeight());
+        AffineTransform transform = new AffineTransform();
+        Rectangle rect = new Rectangle((int)x,
+                (int)y - image.getHeight(), image.getWidth(), image.getHeight());
+        transform.rotate(Math.toRadians(angle), rect.width / 2, rect.height / 2);
+        return rect;
     }
 
     // This Updates Every Frame

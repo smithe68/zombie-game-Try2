@@ -86,7 +86,11 @@ public class Pickup extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x,(int)y,currentImage.getWidth(),currentImage.getHeight());
+        AffineTransform transform = new AffineTransform();
+        Rectangle rect = new Rectangle((int)x,
+                (int)y - currentImage.getHeight(), currentImage.getWidth(), currentImage.getHeight());
+        transform.rotate(rotation, rect.width / 2, rect.height / 2);
+        return rect;
     }
 
     public void ChooseType()

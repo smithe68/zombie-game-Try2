@@ -2,6 +2,7 @@ package org.objects;
 
 import org.engine.CustomMathf;
 import org.engine.Game;
+import org.engine.Sound;
 import org.enums.ID;
 import org.engine.Renderer;
 import org.ui.HUD;
@@ -59,7 +60,11 @@ public class BasicZombie extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x, (int)y, 32, 32);
+        AffineTransform transform = new AffineTransform();
+        Rectangle rect = new Rectangle((int)x,
+                (int)y - image.getHeight(), image.getWidth(), image.getHeight());
+        transform.rotate(rotation, rect.width / 2, rect.height / 2);
+        return rect;
     }
 
     public void tick(float deltaTime)
@@ -113,6 +118,7 @@ public class BasicZombie extends GameObject
             {
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
+                    Sound.PlaySound("/resources/sounds/Hit_01.wav", -20, false);
                     isHit = true;
                     hud.HEALTH -= 10f;
                     Game.Destroy(tempObject);
@@ -129,6 +135,8 @@ public class BasicZombie extends GameObject
 
         centerX = (int)x + image.getWidth() / 2;
         centerY = (int)y + image.getHeight() / 2;
+
+        g2d.drawRect((int)x, (int)y, 32, 32);
 
         if(state == ZombieState.Hunting)
         {
@@ -152,7 +160,5 @@ public class BasicZombie extends GameObject
         }
 
         g2d.setTransform(transform);
-
-        g2d.drawRect((int)x, (int)y, 32, 32);
     }
 }
