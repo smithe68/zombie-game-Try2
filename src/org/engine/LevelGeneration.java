@@ -17,10 +17,7 @@ public class LevelGeneration
             stoneTile = Renderer.LoadImage("/resources/sprites/StoneTile.png");
             grassTile = Renderer.LoadImage("/resources/sprites/GrassTile.png");
         }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
+        catch (IOException e) {e.printStackTrace();}
     }
 
     public int levelWidth = 20, levelHeight = 20;
