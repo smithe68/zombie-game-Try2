@@ -19,7 +19,7 @@ public class Tile extends GameObject
 
     public void tick(float deltaTime)
     {
-
+        //KEK
     }
 
     public void render(Graphics g)
