@@ -25,7 +25,7 @@ public class Bullet extends GameObject
         this.angle = angle;
     }
 
-    public void tick(float deltaTime)
+    public void Update()
     {
         posX += (xDiff) / 20;
         posY += (yDiff) / 20;
@@ -56,6 +56,9 @@ public class Bullet extends GameObject
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int) posX,(int) posY,2,2);
+        int centerX = (int)(posX - image.getWidth() / 2);
+        int centerY = (int)(posY - image.getHeight() / 2);
+
+        return new Rectangle(centerX, centerY,2,2);
     }
 }

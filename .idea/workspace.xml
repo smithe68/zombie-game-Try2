@@ -3,19 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/CustomMath.java" afterPath="$PROJECT_DIR$/src/org/engine/CustomMath.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/Game.java" afterPath="$PROJECT_DIR$/src/org/engine/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/GameObject.java" afterPath="$PROJECT_DIR$/src/org/engine/GameObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/Level.java" afterPath="$PROJECT_DIR$/src/org/engine/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/LevelGeneration.java" afterPath="$PROJECT_DIR$/src/org/engine/LevelGeneration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/Renderer.java" afterPath="$PROJECT_DIR$/src/org/engine/Renderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/Sound.java" afterPath="$PROJECT_DIR$/src/org/engine/Sound.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/BasicZombie.java" afterPath="$PROJECT_DIR$/src/org/objects/BasicZombie.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Bullet.java" afterPath="$PROJECT_DIR$/src/org/objects/Bullet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Pickup.java" afterPath="$PROJECT_DIR$/src/org/objects/Pickup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Player.java" afterPath="$PROJECT_DIR$/src/org/objects/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Tile.java" afterPath="$PROJECT_DIR$/src/org/objects/Tile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ui/ActionBar.java" afterPath="$PROJECT_DIR$/src/org/ui/ActionBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ui/HUD.java" afterPath="$PROJECT_DIR$/src/org/ui/HUD.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,19 +23,58 @@
       <file leaf-file-name="BasicZombie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/objects/BasicZombie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+            <state relative-caret-position="1716">
+              <caret line="122" column="38" lean-forward="false" selection-start-line="122" selection-start-column="38" selection-end-line="122" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LevelGeneration.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/engine/LevelGeneration.java">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+            <state relative-caret-position="2778">
+              <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bullet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/objects/Bullet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/engine/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pickup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/objects/Pickup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="868">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="method#Pickup#0;class#Pickup#0" expanded="false" />
+                <element signature="method#Update#0;class#Pickup#0" expanded="false" />
+                <element signature="method#Render#0;class#Pickup#0" expanded="false" />
+                <element signature="method#getBounds#0;class#Pickup#0" expanded="false" />
+                <element signature="method#ChooseType#0;class#Pickup#0" expanded="false" />
+                <marker date="1497486606676" expanded="false" signature="3265:3449" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,19 +144,19 @@
         <option value="$PROJECT_DIR$/src/org/objects/GameObject.java" />
         <option value="$PROJECT_DIR$/src/org/ui/ActionBar.java" />
         <option value="$PROJECT_DIR$/src/org/objects/Tile.java" />
-        <option value="$PROJECT_DIR$/src/org/objects/Pickup.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/Sound.java" />
-        <option value="$PROJECT_DIR$/src/org/objects/Bullet.java" />
         <option value="$PROJECT_DIR$/src/org/world/World.java" />
         <option value="$PROJECT_DIR$/src/org/input/Input.java" />
         <option value="$PROJECT_DIR$/src/org/engine/Renderer.java" />
         <option value="$PROJECT_DIR$/src/org/engine/CustomMath.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/Game.java" />
         <option value="$PROJECT_DIR$/src/org/engine/GameObject.java" />
         <option value="$PROJECT_DIR$/src/org/engine/Level.java" />
-        <option value="$PROJECT_DIR$/src/org/objects/BasicZombie.java" />
         <option value="$PROJECT_DIR$/src/org/objects/Player.java" />
         <option value="$PROJECT_DIR$/src/org/engine/LevelGeneration.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/Sound.java" />
+        <option value="$PROJECT_DIR$/src/org/objects/BasicZombie.java" />
+        <option value="$PROJECT_DIR$/src/org/objects/Bullet.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/Game.java" />
+        <option value="$PROJECT_DIR$/src/org/objects/Pickup.java" />
       </list>
     </option>
   </component>
@@ -588,13 +619,6 @@
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
     </task>
-    <task id="LOCAL-00041" summary="Changed Main">
-      <created>1497142294277</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1497142294277</updated>
-    </task>
     <task id="LOCAL-00042" summary="Changed Main">
       <created>1497142673273</created>
       <option name="number" value="00042" />
@@ -931,7 +955,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497484107775</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Changed Main">
+      <created>1497485717449</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1497485717449</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1109,16 +1140,6 @@
     <entry file="file://$PROJECT_DIR$/../../../GitHub/PixelGame/src/org/object/Sprite.java" />
     <entry file="file://$PROJECT_DIR$/../../../GitHub/PixelGame/src/org/object/Player.java" />
     <entry file="file://$PROJECT_DIR$/../../../GitHub/PixelGame/src/org/object/Platform.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/engine/Sound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/Spawn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1149,26 +1170,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1617">
-          <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Pickup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2178">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="78" selection-end-column="51" />
-          <folding>
-            <element signature="method#ChooseType#0;class#Pickup#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,16 +1190,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/Renderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2544">
-          <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
-          <folding>
-            <element signature="method#StartRendering#0;class#Renderer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/CustomMath.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
@@ -1206,14 +1198,6 @@
             <element signature="e#478#479#0" expanded="true" />
             <element signature="e#516#517#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,26 +1236,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/org/engine/LevelGeneration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1460">
-          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
+        <state relative-caret-position="1188">
+          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/Renderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2376">
+          <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+          <folding>
+            <element signature="method#StartRendering#0;class#Renderer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/objects/BasicZombie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+        <state relative-caret-position="1716">
+          <caret line="122" column="38" lean-forward="false" selection-start-line="122" selection-start-column="38" selection-end-line="122" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/LevelGeneration.java">
+    <entry file="file://$PROJECT_DIR$/src/org/objects/Pickup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        <state relative-caret-position="868">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="method#Pickup#0;class#Pickup#0" expanded="false" />
+            <element signature="method#Update#0;class#Pickup#0" expanded="false" />
+            <element signature="method#Render#0;class#Pickup#0" expanded="false" />
+            <element signature="method#getBounds#0;class#Pickup#0" expanded="false" />
+            <element signature="method#ChooseType#0;class#Pickup#0" expanded="false" />
+            <marker date="1497486606676" expanded="false" signature="3265:3449" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/objects/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2778">
+          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
           <folding />
         </state>
       </provider>

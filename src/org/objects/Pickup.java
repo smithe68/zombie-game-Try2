@@ -61,15 +61,16 @@ public class Pickup extends GameObject
         ChooseType();
     }
 
-    public void tick(float deltaTime)
+    public void Update()
     {
-        rotation += 2 * deltaTime;
+        rotation += 2 * Renderer.deltaTime;
 
         if(scale >= 1.4f) setScale = 1f;
         if(scale <= 1.1) setScale = 1.5f;
-        scale = CustomMath.Lerp(scale, setScale, deltaTime);
 
-        collision();
+        scale = CustomMath.Lerp(scale, setScale, Renderer.deltaTime);
+
+        Collision();
     }
 
     public void Render(Graphics g)
@@ -123,7 +124,7 @@ public class Pickup extends GameObject
         }
     }
 
-    public void collision()
+    public void Collision()
     {
         if( getBounds().intersects(player.getBounds()))
         {
@@ -134,6 +135,7 @@ public class Pickup extends GameObject
 
     public void CollectSound()
     {
+        // Play Sound if Collected
         Sound.PlaySound(pickupSoundPath, -20.0f, false);
     }
 }

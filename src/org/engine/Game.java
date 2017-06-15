@@ -1,6 +1,7 @@
 package org.engine;
 
 import org.enums.ID;
+import org.enums.PickupTypes;
 import org.objects.*;
 
 public class Game
@@ -20,6 +21,7 @@ public class Game
 
         Game.Instantiate(new Player(100, 100, ID.Player));
         Game.Instantiate(new BasicZombie(300, 150, ID.BasicZombie));
+        Game.Instantiate(new Pickup(100, 200, ID.Pickup, PickupTypes.Pistol, 1, true));
 
         // Start Background Music
         Sound.PlaySound("/resources/sounds/bg.wav", -20.0f,true);
