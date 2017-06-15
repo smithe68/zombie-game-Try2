@@ -9,6 +9,14 @@ import java.util.Random;
 
 public class LevelGeneration
 {
+    // Generation Settings
+    public int levelWidth = 20;
+    public int levelHeight = 20;
+
+    // Images for Generation
+    private BufferedImage stoneTile;
+    private BufferedImage grassTile;
+
     public LevelGeneration()
     {
         try
@@ -20,24 +28,21 @@ public class LevelGeneration
         catch (IOException e) {e.printStackTrace();}
     }
 
-    public int levelWidth = 20, levelHeight = 20;
-
-    private BufferedImage stoneTile;
-    private BufferedImage grassTile;
-
     public void CreateLevel()
     {
         for(int x = -10; x < levelWidth + 10; x++)
         {
             for(int y = -10; y < levelHeight + 10; y++)
             {
+                // Make Gen Random
                 Random ran = new Random();
                 int random = ran.nextInt(6);
 
+                // Generate Tiles
                 if(random > 3)
                 {
-                    Game.Instantiate(new Tile(x * stoneTile.getWidth(),
-                            y * stoneTile.getHeight(), ID.Tile, grassTile));
+                    Game.Instantiate(new Tile(x * grassTile.getWidth(),
+                            y * grassTile.getHeight(), ID.Tile, grassTile));
                 }
                 else
                 {

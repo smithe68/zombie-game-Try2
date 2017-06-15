@@ -27,11 +27,11 @@ public class Bullet extends GameObject
 
     public void tick(float deltaTime)
     {
-        x += (xDiff) / 20;
-        y += (yDiff) / 20;
+        posX += (xDiff) / 20;
+        posY += (yDiff) / 20;
     }
 
-    public void render(Graphics g)
+    public void Render(Graphics g)
     {
         Graphics2D g2d = (Graphics2D) g;
 
@@ -40,22 +40,22 @@ public class Bullet extends GameObject
         g2d.setColor(Color.yellow);
 
         // Bottom Left
-        if (angle > 90 && angle < 180) {g2d.fillRect((int) (x+15), (int)(y+36), 2, 2);}
+        if (angle > 90 && angle < 180) {g2d.fillRect((int) (posX +15), (int)(posY +36), 2, 2);}
 
         // Bottom Right
-        if (angle > 0 && angle < 90) {g2d.fillRect((int) (x+15), (int)(y+15), 2, 2);}
+        if (angle > 0 && angle < 90) {g2d.fillRect((int) (posX +15), (int)(posY +15), 2, 2);}
 
         // Top Left
-        if (angle < -90) {g2d.fillRect((int) (x-6), (int)(y+36), 2, 2);}
+        if (angle < -90) {g2d.fillRect((int) (posX -6), (int)(posY +36), 2, 2);}
 
         // Top Right
-        if (angle <= 0 && angle > -90 ) {g2d.fillRect((int) (x-2), (int)(y+15), 2, 2);}
+        if (angle <= 0 && angle > -90 ) {g2d.fillRect((int) (posX -2), (int)(posY +15), 2, 2);}
 
         g2d.setTransform(transform);
     }
 
     public Rectangle getBounds()
     {
-        return new Rectangle((int)x,(int)y,2,2);
+        return new Rectangle((int) posX,(int) posY,2,2);
     }
 }

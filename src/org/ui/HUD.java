@@ -35,15 +35,15 @@ public class HUD extends GameObject
         greenValue = (int)HEALTH * 2;
     }
 
-    public void render(Graphics g)
+    public void Render(Graphics g)
     {
         // Draw Health Bar
         g.setColor(Color.gray);
-        g.fillRect((int)x,(int)y,sizeX,sizeY);
+        g.fillRect((int) posX,(int) posY,sizeX,sizeY);
         g.setColor(new Color(150, greenValue, 0));
-        g.fillRect((int)x,(int)y,(int)(HEALTH/healthBarX) ,sizeY);
+        g.fillRect((int) posX,(int) posY,(int)(HEALTH/healthBarX) ,sizeY);
         g.setColor(Color.white);
-        g.drawRect((int)x,(int)y,sizeX,sizeY);
+        g.drawRect((int) posX,(int) posY,sizeX,sizeY);
     }
 
     @Override

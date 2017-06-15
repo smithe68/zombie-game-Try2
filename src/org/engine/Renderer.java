@@ -28,6 +28,9 @@ public class Renderer
 
     private static int targetFPS = 60;
     private static int targetTime = 1000000000 / targetFPS;
+    private static long lastTime = System.nanoTime();
+
+    public static float deltaTime = 0;
 
     public static float camX = 0;
     public static float camY = 0;
@@ -131,7 +134,7 @@ public class Renderer
                 g.fillRect(0, 0, gameWidth, gameHeight);
 
                 // Render Stuff
-                Level.render(g);
+                Level.Render(g);
 
                 // Draw FPS Counter
                 g.setColor(Color.LIGHT_GRAY);
@@ -172,8 +175,11 @@ public class Renderer
             {
                 long startTime = System.nanoTime();
 
+                deltaTime = (System.nanoTime() - lastTime) / 1000000000.0f;
+                lastTime = System.nanoTime();
+
                 // Update Stuff
-                Level.update();
+                Level.Update();
                 Input.UpdateInput();
 
                 long totalTime = System.nanoTime() - startTime;

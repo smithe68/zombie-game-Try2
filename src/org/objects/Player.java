@@ -18,7 +18,6 @@ public class Player extends GameObject
     public static Inventory inv;
     public static Database data;
 
-    public BufferedImage image;
     public BufferedImage equip;
 
     public ActionBar action;
@@ -67,32 +66,32 @@ public class Player extends GameObject
     public Rectangle getBounds()
     {
         AffineTransform transform = new AffineTransform();
-        Rectangle rect = new Rectangle((int)x,
-                (int)y - image.getHeight(), image.getWidth(), image.getHeight());
+        Rectangle rect = new Rectangle((int) posX,
+                (int) posY - image.getHeight(), image.getWidth(), image.getHeight());
         transform.rotate(Math.toRadians(angle), rect.width / 2, rect.height / 2);
         return rect;
     }
 
     // This Updates Every Frame
-    public void tick(float deltaTime)
+    public void Update()
     {
         // Draw HUD above Player
         if(hudObj != null)
         {
             // Make Health float above Player
-            hudObj.x = player.x;
-            hudObj.y = player.y - 16;
+            hudObj.posX = player.posX;
+            hudObj.posY = player.posY - 16;
         }
 
         // Lock player to Window Bounds
-        x = CustomMath.Clamp(x,0, Renderer.gameWidth +761);
-        y = CustomMath.Clamp(y,0, Renderer.gameHeight +531);
+        posX = CustomMath.Clamp(posX,0, Renderer.gameWidth +761);
+        posY = CustomMath.Clamp(posY,0, Renderer.gameHeight +531);
 
         float horiAxis = Input.Horizontal;
         float vertAxis = Input.Vertical;
 
-        x += horiAxis * speed * deltaTime;
-        y += vertAxis * speed * deltaTime;
+        posX += horiAxis * speed * Renderer.deltaTime;
+        posY += vertAxis * speed * Renderer.deltaTime;
 
         // Use Item
         if(Input.GetKeyDown(KeyEvent.VK_F))
@@ -111,19 +110,19 @@ public class Player extends GameObject
 
         Collision();
 
-        Renderer.camX = x;
-        Renderer.camY = y;
+        Renderer.camX = posX;
+        Renderer.camY = posY;
     }
 
     private void Collision()
     {
         // Check for Collision with Zombies
         // TODO Change how this works
-        for(int i = 0; i < Level.gameObjects.size(); i++)
+        for(int i = 0; i < Level.objects.size(); i++)
         {
-            GameObject tempObject = Level.gameObjects.get(i);
+            GameObject tempObject = Level.objects.get(i);
 
-            if (tempObject.GetID() == ID.BasicZombie)
+            if (tempObject.id == ID.BasicZombie)
             {
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
@@ -150,7 +149,7 @@ public class Player extends GameObject
             if(useItem.weaponInfo.ammo == WeaponInfo.AmmoType.PistolAmmo)
             {
                 Sound.PlaySound("/resources/sounds/Shoot_01.wav", -20, false);
-                Game.Instantiate(new Bullet((int)(x + 10), (int)(y - 10),
+                Game.Instantiate(new Bullet((int)(posX + 10), (int)(posY - 10),
                         ID.Bullet, useItem.weaponInfo, xDiff, yDiff, angle));
             }
         }
@@ -175,7 +174,7 @@ public class Player extends GameObject
 
         if(drop)
         {
-            Game.Instantiate(new Pickup((int)(x + 64), (int)y, ID.Pickup,
+            Game.Instantiate(new Pickup((int)(posX + 64), (int) posY, ID.Pickup,
                     inv.items.get(itemIndex).pickup, amount,
                     inv.items.get(itemIndex).canRotate));
         }
@@ -187,11 +186,11 @@ public class Player extends GameObject
         action.selectedItem = null;
     }
 
-    public void render(Graphics g)
+    public void Render(Graphics g)
     {
         // Set the Transform for the Player
         Graphics2D g2 = (Graphics2D)g;
-        AffineTransform at = AffineTransform.getTranslateInstance(x, y);
+        AffineTransform at = AffineTransform.getTranslateInstance(posX, posY);
         AffineTransform transform = g2.getTransform();
 
         // Get Mouse Position
@@ -199,8 +198,8 @@ public class Player extends GameObject
         mouse.x /= 4.8;
         mouse.y /= 4.4;
 
-        int centerX = (int)x + image.getWidth() / 2;
-        int centerY = (int)y + image.getHeight() / 2;
+        int centerX = (int) posX + image.getWidth() / 2;
+        int centerY = (int) posY + image.getHeight() / 2;
 
         xDiff = mouse.x - Math.abs(centerX);
         yDiff = mouse.y - Math.abs(centerY);
@@ -216,7 +215,7 @@ public class Player extends GameObject
         g2.drawImage(image, at, null);
 
         // Draw the Equipped Item
-        g2.drawImage(equip, (int)(x + 10), (int)(y - 10), null);
+        g2.drawImage(equip, (int)(posX + 10), (int)(posY - 10), null);
 
         // Set Position of Player
         g2.setTransform(transform);

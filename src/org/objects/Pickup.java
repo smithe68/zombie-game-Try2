@@ -72,12 +72,12 @@ public class Pickup extends GameObject
         collision();
     }
 
-    public void render(Graphics g)
+    public void Render(Graphics g)
     {
         Graphics2D g2d = (Graphics2D) g;
 
-        centerX = x - currentImage.getWidth() / 2;
-        centerY = y - currentImage.getHeight() / 2;
+        centerX = posX - currentImage.getWidth() / 2;
+        centerY = posY - currentImage.getHeight() / 2;
 
         int posX = (int)(centerX - Renderer.camPosX);
         int posY = (int)(centerY - Renderer.camPosY);

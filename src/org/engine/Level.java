@@ -5,31 +5,27 @@ import java.util.ArrayList;
 
 public class Level
 {
-    public static Level currentWorld = null;
+    // Current Level
+    public static Level currLevel = null;
 
-    private static long lastTime = System.nanoTime();
+    // Holds all GameObjects in the Level
+    public static ArrayList<GameObject> objects = new ArrayList<>();
 
-    public static ArrayList<GameObject> gameObjects = new ArrayList<>();
-
-    public static void update()
+    public static void Update()
     {
-        float deltaTime = (System.nanoTime() - lastTime) / 1000000000.0f;
-        lastTime = System.nanoTime();
-
-        Renderer.camPosX = ((Renderer.camX ));
-        Renderer.camPosY = ((Renderer.camY ));
-
-        for(int i = 0; i < gameObjects.size(); i++)
+        // Updates Every GameObject
+        for(int i = 0; i < objects.size(); i++)
         {
-            gameObjects.get(i).tick(deltaTime);
+            objects.get(i).Update();
         }
     }
 
-    public static void render(Graphics g)
+    public static void Render(Graphics g)
     {
-        for(int i = 0; i < gameObjects.size(); i++)
+        // Render every GameObject
+        for(int i = 0; i < objects.size(); i++)
         {
-            gameObjects.get(i).render(g);
+            objects.get(i).Render(g);
         }
     }
 }

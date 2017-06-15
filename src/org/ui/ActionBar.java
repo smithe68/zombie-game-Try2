@@ -72,7 +72,7 @@ public class ActionBar extends GameObject
         }
     }
 
-    public void render(Graphics g)
+    public void Render(Graphics g)
     {
         Graphics2D g2 = (Graphics2D)g;
 

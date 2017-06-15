@@ -13,7 +13,6 @@ public class BasicZombie extends GameObject
 {
     public ZombieState state = ZombieState.Standing;
 
-    private BufferedImage image;
     private BufferedImage hit;
 
     private GameObject player = Player.player;
@@ -57,27 +56,27 @@ public class BasicZombie extends GameObject
     public Rectangle getBounds()
     {
         AffineTransform transform = new AffineTransform();
-        Rectangle rect = new Rectangle((int)x,
-                (int)y - image.getHeight(), image.getWidth(), image.getHeight());
+        Rectangle rect = new Rectangle((int) posX,
+                (int) posY - image.getHeight(), image.getWidth(), image.getHeight());
         transform.rotate(rotation, rect.width / 2, rect.height / 2);
         return rect;
     }
 
-    public void tick(float deltaTime)
+    public void Update()
     {
         // UI
 
         if(hudObj != null)
         {
-            hudObj.x = x + 5;
-            hudObj.y = y - 10;
+            hudObj.posX = posX + 5;
+            hudObj.posY = posY - 10;
         }
 
         // Movement
 
-        double distance = x - player.x;
+        double distance = posX - player.posX;
 
-        Point posDiff = (new Point((int)(player.x - x), (int)(player.y - y)));
+        Point posDiff = (new Point((int)(player.posX - posX), (int)(player.posY - posY)));
 
         if(distance < 150 && distance > -150)
         {
@@ -86,8 +85,8 @@ public class BasicZombie extends GameObject
 
             state = ZombieState.Hunting;
 
-            x = CustomMath.Lerp(x, player.x, deltaTime / 2);
-            y = CustomMath.Lerp(y, player.y, deltaTime / 2);
+            posX = CustomMath.Lerp(posX, player.posX, Renderer.deltaTime / 2);
+            posY = CustomMath.Lerp(posY, player.posY, Renderer.deltaTime / 2);
         }
         else
         {
@@ -106,11 +105,11 @@ public class BasicZombie extends GameObject
 
     public void Collision()
     {
-        for(int i = 0; i < Level.gameObjects.size(); i++)
+        for(int i = 0; i < Level.objects.size(); i++)
         {
-            GameObject tempObject = Level.gameObjects.get(i);
+            GameObject tempObject = Level.objects.get(i);
 
-            if (tempObject.GetID() == ID.Bullet)
+            if (tempObject.id == ID.Bullet)
             {
                 if( getBounds().intersects(tempObject.getBounds()))
                 {
@@ -123,16 +122,16 @@ public class BasicZombie extends GameObject
         }
     }
 
-    public void render(Graphics g)
+    public void Render(Graphics g)
     {
-        AffineTransform at = AffineTransform.getTranslateInstance(x, y);
+        AffineTransform at = AffineTransform.getTranslateInstance(posX, posY);
         Graphics2D g2d = (Graphics2D) g;
         AffineTransform transform = g2d.getTransform();
 
-        centerX = (int)x + image.getWidth() / 2;
-        centerY = (int)y + image.getHeight() / 2;
+        centerX = (int) posX + image.getWidth() / 2;
+        centerY = (int) posY + image.getHeight() / 2;
 
-        g2d.drawRect((int)x, (int)y, 32, 32);
+        g2d.drawRect((int) posX, (int) posY, 32, 32);
 
         if(state == ZombieState.Hunting)
         {
