@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/engine/LevelManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/engine/SpriteLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/engine/Updater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/engine/Window.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/LevelGeneration.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/enums/ID.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/enums/PickupTypes.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/objects/BasicZombie.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/objects/Bullet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/objects/Pickup.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/objects/Tile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/ui/ActionBar.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/ui/Database.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/ui/HUD.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/ui/Inventory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/ui/Item.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/ui/WeaponDatabase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/ui/WeaponInfo.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/Game.java" afterPath="$PROJECT_DIR$/src/org/engine/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/GameObject.java" afterPath="$PROJECT_DIR$/src/org/engine/GameObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/Input.java" afterPath="$PROJECT_DIR$/src/org/engine/Input.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/Level.java" afterPath="$PROJECT_DIR$/src/org/engine/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/Renderer.java" afterPath="$PROJECT_DIR$/src/org/engine/Renderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Player.java" afterPath="$PROJECT_DIR$/src/org/objects/Player.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -605,13 +581,6 @@
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
     </task>
-    <task id="LOCAL-00042" summary="Changed Main">
-      <created>1497142673273</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1497142673273</updated>
-    </task>
     <task id="LOCAL-00043" summary="Changed Main">
       <created>1497144014805</created>
       <option name="number" value="00043" />
@@ -948,7 +917,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497485717449</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Changed Main">
+      <created>1509301430027</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1509301430028</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="ToolWindowManager">
