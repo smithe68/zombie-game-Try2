@@ -21,11 +21,14 @@ public class GameObject
         this.x = x;
         this.y = y;
 
+        width = 16;
+        height = 16;
+
         name = getClass().getSimpleName();
         tag = name;
     }
 
-    /* Updates the GameObjects */
+    /* Updates the GameObject */
     public void update() { }
 
     /* Renders the GameObject */
@@ -34,8 +37,8 @@ public class GameObject
     /* Draws GameObject relative to Camera */
     public void renderTransform()
     {
-        posX = (x - width / 2);
-        posY = (y - height / 2);
+        posX = (x - width / 2) - Camera.x + Renderer.getResolution().width / 2;
+        posY = (y - height / 2) - Camera.y + Renderer.getResolution().height / 2;
     }
 
     /* Returns the Collision Bounds */

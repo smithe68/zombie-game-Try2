@@ -39,7 +39,9 @@ public class Window
         canvas.requestFocus();
         canvas.transferFocus();
 
-        canvas.addKeyListener(new Input());
+        Input input = new Input();
+        canvas.addKeyListener(input);
+        input.initialize();
     }
 
     /* Changes the Title of the Window */

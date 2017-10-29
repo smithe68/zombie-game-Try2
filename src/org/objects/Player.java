@@ -25,26 +25,24 @@ public class Player extends GameObject
     public void render(Graphics2D g)
     {
         // Set the Transform for the Player
-        AffineTransform at = AffineTransform.getTranslateInstance(posX, posY);
         AffineTransform transform = g.getTransform();
 
-        // Get Mouse Position
-        Point mouse = MouseInfo.getPointerInfo().getLocation();
-        mouse.x /= Window.getWidth() / Renderer.getResolution().width;
-        mouse.y /= Window.getHeight() / Renderer.getResolution().height;
+        double factorX = Window.getWidth() / Renderer.getResolution().width;
+        double factorY = Window.getHeight() / Renderer.getResolution().height;
 
-        double xDiff = mouse.x - posX;
-        double yDiff = mouse.y - posY;
+        double xDiff = (Input.mousePos.x / factorX) - Renderer.getResolution().width / 2;
+        double yDiff = (Input.mousePos.y / factorY) - Renderer.getResolution().height / 2;
 
         // Get Rotation to Mouse
-        // angle is publicly stored in degrees
-        double angle = Math.toDegrees(Math.atan2(xDiff, yDiff));
+        double angle = Math.toDegrees(Math.atan2(yDiff - y, xDiff - x));
+
+        System.out.println(angle);
 
         // Rotate the Player to Mouse Cursor
-        g.rotate(Math.toRadians(angle), posX, posY);
+        g.rotate(Math.toRadians(angle), posX + width / 2, posY + height / 2);
 
         // Draw the Player Sprite
-        g.drawImage(image, at, null);
+        g.drawImage(image, (int)posX, (int)posY, width, height, null);
 
         // Set Position of Player
         g.setTransform(transform);

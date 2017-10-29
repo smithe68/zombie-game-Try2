@@ -7,7 +7,7 @@ public class Renderer
 {
     private static boolean running = true;
 
-    private static final int RESOLUTION = 384;
+    private static final int RESOLUTION = 256;
     private static final int TARGET_FPS = 60;
 
     private static int resolutionWidth;
