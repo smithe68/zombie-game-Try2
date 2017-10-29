@@ -1,149 +1,61 @@
 package org.engine;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.image.BufferedImage;
 import java.awt.image.VolatileImage;
-import java.io.IOException;
 
 public class Renderer
 {
-    private static Frame frame;
-    private static Canvas canvas;
+    private static boolean running = true;
 
-    private static int canvasWidth = 0;
-    private static int canvasHeight = 0;
+    private static final int RESOLUTION = 384;
+    private static final int TARGET_FPS = 60;
 
-    private static final int GAME_WIDTH = 400;
-    private static final int GAME_HEIGHT = 250;
+    private static int resolutionWidth;
+    private static int resolutionHeight;
 
-    public static int gameWidth = 0;
-    public static int gameHeight = 0;
+    private static int currentFPS;
+    private static long lastFpsCheck;
+    private static int totalFrames;
 
-    private static long lastFpsCheck = 0;
-    private static int currentFPS = 0;
-    private static int totalFrames = 0;
+    private static int targetTime = (int)1E9 / TARGET_FPS;
 
-    private static int targetFPS = 60;
-    private static int targetTime = 1000000000 / targetFPS;
-    private static long lastTime = System.nanoTime();
-
-    public static float deltaTime = 0;
-
-    public static float camX = 0;
-    public static float camY = 0;
-
-    public static float camPosX = 0;
-    public static float camPosY = 0;
-
-    // Find Size of Screen and Scale to it
-    private static void GetBestSize()
+    /* Starts the Rendering Loop */
+    public static void initialize()
     {
-        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        // Scale Resolution to Window Size
+        int factor = Window.getWidth() / RESOLUTION;
+        resolutionWidth = Window.getWidth() / factor;
+        resolutionHeight = Window.getHeight() / factor;
 
-        Dimension screenSize = toolkit.getScreenSize();
-
-        boolean done = false;
-
-        while(!done)
-        {
-            canvasWidth += GAME_WIDTH;
-            canvasHeight += GAME_HEIGHT;
-
-            if(canvasWidth > screenSize.width || canvasHeight > screenSize.height)
-            {
-                canvasWidth -= GAME_WIDTH;
-                canvasHeight -= GAME_HEIGHT;
-                break;
-            }
-        }
-
-        int xDiff = screenSize.width - canvasWidth;
-        int yDiff = screenSize.height - canvasHeight;
-        int factor = canvasWidth / GAME_WIDTH;
-
-        gameWidth = canvasWidth / factor + xDiff / factor;
-        gameHeight = canvasHeight / factor + yDiff / factor;
-
-        canvasWidth = gameWidth * factor;
-        canvasHeight = gameHeight * factor;
-    }
-
-    public static void init()
-    {
-        GetBestSize();
-
-        frame = new Frame();
-        canvas = new Canvas();
-
-        canvas.setPreferredSize(new Dimension(canvasWidth, canvasHeight));
-
-        frame.add(canvas);
-
-        frame.pack();
-        frame.setResizable(false);
-        frame.setLocationRelativeTo(null);
-
-        frame.addWindowListener(new WindowAdapter()
-        {
-            public void windowClosing(WindowEvent e)
-            {
-                Game.quit();
-            }
-        });
-
-        frame.setVisible(true);
-
-        canvas.addKeyListener(new Input());
-
-        StartRendering();
-        StartUpdate();
-    }
-
-    private static void StartRendering()
-    {
         Thread thread = new Thread(() ->
         {
-            GraphicsConfiguration gc = canvas.getGraphicsConfiguration();
-            VolatileImage vImage = gc.createCompatibleVolatileImage(gameWidth, gameHeight);
+            GraphicsConfiguration gc = Window.getCanvas().getGraphicsConfiguration();
+            VolatileImage vImage = gc.createCompatibleVolatileImage(resolutionWidth, resolutionHeight);
 
-            while(true)
+            while(running)
             {
                 long startTime = System.nanoTime();
-
-                // FPS Counter
-                totalFrames++;
-                if(System.nanoTime() > lastFpsCheck + 1000000000)
-                {
-                    lastFpsCheck = System.nanoTime();
-                    currentFPS = totalFrames;
-                    totalFrames = 0;
-                }
+                calculateFPS();
 
                 if(vImage.validate(gc) == VolatileImage.IMAGE_INCOMPATIBLE)
-                {
-                    vImage = gc.createCompatibleVolatileImage(gameWidth, gameHeight);
-                }
+                    vImage = gc.createCompatibleVolatileImage(resolutionWidth, resolutionHeight);
 
                 Graphics g = vImage.getGraphics();
 
                 // Clear the Screen
                 g.setColor(Color.black);
-                g.fillRect(0, 0, gameWidth, gameHeight);
+                g.fillRect(0, 0, resolutionWidth, resolutionHeight);
 
                 // Render Stuff
-                Level.Render(g);
+                LevelManager.render(g);
 
-                // Draw FPS Counter
-                g.setColor(Color.LIGHT_GRAY);
-                g.drawString(String.valueOf(currentFPS), 2, gameHeight - 10);
+                // Display FPS on the Window Title
+                Window.setTitle("Zombie Game - FPS: " + currentFPS);
 
                 g.dispose();
 
-                g = canvas.getGraphics();
-                g.drawImage(vImage, 0, 0, canvasWidth, canvasHeight, null);
+                g = Window.getCanvas().getGraphics();
+                g.drawImage(vImage, 0, 0, Window.getWidth(), Window.getHeight(), null);
 
                 g.dispose();
 
@@ -151,12 +63,10 @@ public class Renderer
 
                 if(totalTime < targetTime)
                 {
-                    try
-                    {
+                    try {
                         Thread.sleep((targetTime - totalTime) / 1000000);
                     }
-                    catch (InterruptedException e)
-                    {
+                    catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
@@ -167,51 +77,27 @@ public class Renderer
         thread.start();
     }
 
-    public static void StartUpdate()
+    /* Calculates the Average FPS */
+    private static void calculateFPS()
     {
-        Thread thread = new Thread(() ->
+        // FPS Counter
+        totalFrames++;
+        if(System.nanoTime() > lastFpsCheck + 1000000000)
         {
-            while(true)
-            {
-                long startTime = System.nanoTime();
-
-                deltaTime = (System.nanoTime() - lastTime) / 1000000000.0f;
-                lastTime = System.nanoTime();
-
-                // Update Stuff
-                Level.Update();
-                Input.UpdateInput();
-
-                long totalTime = System.nanoTime() - startTime;
-
-                if(totalTime < targetTime)
-                {
-                    try
-                    {
-                        Thread.sleep((targetTime - totalTime) / 1000000);
-                    }
-                    catch (InterruptedException e)
-                    {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        });
-
-        thread.setName("Update Thread");
-        thread.start();
+            lastFpsCheck = System.nanoTime();
+            currentFPS = totalFrames;
+            totalFrames = 0;
+        }
     }
 
-    public static BufferedImage LoadImage(String path) throws IOException
-    {
-        BufferedImage rawImage = ImageIO.read(Renderer.class.getResource(path));
-        BufferedImage finalImage = canvas.getGraphicsConfiguration()
-                .createCompatibleImage(rawImage.getWidth(),
-                        rawImage.getHeight(), rawImage.getTransparency());
+    /* Return whether or not the Renderer is Running */
+    public static boolean getRunning() { return running; }
 
-        finalImage.getGraphics().drawImage(rawImage, 0, 0, rawImage.getWidth(),
-                rawImage.getHeight(), null);
+    /* Return the Renderer Target FPS */
+    public static int getTargetFPS() { return TARGET_FPS; }
 
-        return finalImage;
+    /* Return the Game Internal Resolution */
+    public static Dimension getResolution() {
+        return new Dimension(resolutionWidth, resolutionHeight);
     }
 }
