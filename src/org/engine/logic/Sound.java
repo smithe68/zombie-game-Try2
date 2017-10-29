@@ -6,7 +6,7 @@ import java.net.URL;
 public class Sound
 {
     // Player any Sound in Project or URL
-    public static void PlaySound(String path, float volume, boolean loop)
+    public static void playSound(String path, float volume, boolean loop)
     {
         int loopInt;
 
