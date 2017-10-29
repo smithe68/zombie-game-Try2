@@ -1,11 +1,9 @@
 package org.objects;
 
-import org.engine.logic.GameObject;
-import org.engine.logic.Input;
-import org.engine.portation.SpriteLoader;
-import org.engine.rendering.Camera;
-import org.engine.rendering.Renderer;
+import org.engine.logic.*;
+import org.engine.portation.*;
 import org.engine.rendering.Window;
+import org.engine.rendering.*;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;

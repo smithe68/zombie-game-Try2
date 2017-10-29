@@ -10,7 +10,8 @@ public class Level
     public static ArrayList<GameObject> objects = new ArrayList<>();
 
     /* Creates initial objects in the Level */
-    public void loadObjects() {
+    public void loadObjects()
+    {
         instantiate(new Player(0, 0));
         instantiate(new Zombie(10, 10));
     }
@@ -51,6 +52,7 @@ public class Level
         objects.remove(g);
     }
 
+    /* Gets a Reference to an Object with the same Tag */
     public static Object findObject(String tag)
     {
         for(int i = 0; i < objects.size(); i++)
@@ -60,5 +62,10 @@ public class Level
                 return null;
 
         return null;
+    }
+
+    /* Removes all Objects in the Level */
+    public void clearLevel() {
+        objects.clear();
     }
 }

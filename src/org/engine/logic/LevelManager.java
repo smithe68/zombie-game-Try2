@@ -19,6 +19,9 @@ public class LevelManager
     /* Loads the Level at Index */
     public static void loadLevel(int index)
     {
+        if(currentLevel != null)
+            currentLevel.clearLevel();
+
         currentLevel = levels.get(index);
         currentLevel.loadObjects();
     }

@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/logic/CustomMath.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/CustomMath.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/logic/GameObject.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/GameObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/logic/Level.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/Level.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/logic/LevelManager.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/LevelManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Player.java" afterPath="$PROJECT_DIR$/src/org/objects/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Zombie.java" afterPath="$PROJECT_DIR$/src/org/objects/Zombie.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +26,20 @@
       <file leaf-file-name="Level.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            <state relative-caret-position="499">
+              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/engine/logic/LevelManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,8 +50,8 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="43" column="26" lean-forward="false" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+            <state relative-caret-position="289">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,7 +62,7 @@
       <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/engine/logic/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
+            <state relative-caret-position="-215">
               <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,8 +126,8 @@
       <file leaf-file-name="Zombie.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/objects/Zombie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="36" column="43" lean-forward="true" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+            <state relative-caret-position="331">
+              <caret line="39" column="93" lean-forward="true" selection-start-line="39" selection-start-column="93" selection-end-line="39" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -195,12 +206,12 @@
         <option value="$PROJECT_DIR$/src/org/engine/logic/Updater.java" />
         <option value="$PROJECT_DIR$/src/org/engine/portation/SpriteLoader.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/Sound.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/logic/LevelManager.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/logic/Level.java" />
         <option value="$PROJECT_DIR$/src/org/engine/rendering/Camera.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/CustomMath.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/GameObject.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/logic/Level.java" />
         <option value="$PROJECT_DIR$/src/org/objects/Player.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/logic/LevelManager.java" />
         <option value="$PROJECT_DIR$/src/org/objects/Zombie.java" />
       </list>
     </option>
@@ -243,6 +254,21 @@
               <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
@@ -586,13 +612,6 @@
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
     </task>
-    <task id="LOCAL-00051" summary="Changed Main">
-      <created>1497203349810</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1497203349810</updated>
-    </task>
     <task id="LOCAL-00052" summary="Changed Main">
       <created>1497210982167</created>
       <option name="number" value="00052" />
@@ -929,7 +948,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509313952884</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Added a Zombie">
+      <created>1509317034228</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1509317034228</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1004,7 +1030,8 @@
     <MESSAGE value="Changed Main" />
     <MESSAGE value="Organized some Files and Added Comments. Removed non functioning code as well." />
     <MESSAGE value="Removed unecessary directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed unecessary directory" />
+    <MESSAGE value="Added a Zombie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a Zombie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1093,13 +1120,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/LevelManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Updater.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1111,16 +1131,6 @@
     <entry file="file://$PROJECT_DIR$/src/resources/sprites/BasicZombie.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Game.java">
@@ -1149,26 +1159,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="43" column="26" lean-forward="false" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/logic/CustomMath.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1177,10 +1167,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/LevelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-215">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/objects/Zombie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="36" column="43" lean-forward="true" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        <state relative-caret-position="331">
+          <caret line="39" column="93" lean-forward="true" selection-start-line="39" selection-start-column="93" selection-end-line="39" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
