@@ -1,4 +1,4 @@
-package org.engine;
+package org.engine.logic;
 
 import javax.sound.sampled.*;
 import java.net.URL;

@@ -1,4 +1,7 @@
-package org.engine;
+package org.engine.portation;
+
+import org.engine.rendering.Renderer;
+import org.engine.rendering.Window;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

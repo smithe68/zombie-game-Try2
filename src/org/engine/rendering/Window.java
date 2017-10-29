@@ -1,4 +1,6 @@
-package org.engine;
+package org.engine.rendering;
+
+import org.engine.logic.Input;
 
 import java.awt.*;
 import java.awt.event.*;

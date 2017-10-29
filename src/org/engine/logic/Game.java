@@ -1,4 +1,7 @@
-package org.engine;
+package org.engine.logic;
+
+import org.engine.rendering.Renderer;
+import org.engine.rendering.Window;
 
 public class Game
 {

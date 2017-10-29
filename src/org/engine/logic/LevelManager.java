@@ -1,4 +1,6 @@
-package org.engine;
+package org.engine.logic;
+
+import org.engine.logic.Level;
 
 import java.awt.*;
 import java.util.ArrayList;

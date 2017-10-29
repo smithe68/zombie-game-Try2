@@ -1,4 +1,4 @@
-package org.engine;
+package org.engine.rendering;
 
 public class Camera
 {

@@ -1,4 +1,6 @@
-package org.engine;
+package org.engine.logic;
+
+import org.engine.rendering.Window;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;

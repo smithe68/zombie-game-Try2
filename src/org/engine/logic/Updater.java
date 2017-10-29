@@ -1,4 +1,6 @@
-package org.engine;
+package org.engine.logic;
+
+import org.engine.rendering.Renderer;
 
 public class Updater
 {

@@ -1,4 +1,4 @@
-package org.engine;
+package org.engine.logic;
 
 public class CustomMath
 {

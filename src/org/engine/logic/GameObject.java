@@ -1,4 +1,7 @@
-package org.engine;
+package org.engine.logic;
+
+import org.engine.rendering.Camera;
+import org.engine.rendering.Renderer;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

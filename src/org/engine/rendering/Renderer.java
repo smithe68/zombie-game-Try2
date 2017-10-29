@@ -1,4 +1,6 @@
-package org.engine;
+package org.engine.rendering;
+
+import org.engine.logic.LevelManager;
 
 import java.awt.*;
 import java.awt.image.VolatileImage;
@@ -23,13 +25,13 @@ public class Renderer
     public static void initialize()
     {
         // Scale Resolution to Window Size
-        int factor = Window.getWidth() / RESOLUTION;
-        resolutionWidth = Window.getWidth() / factor;
-        resolutionHeight = Window.getHeight() / factor;
+        int factor = org.engine.rendering.Window.getWidth() / RESOLUTION;
+        resolutionWidth = org.engine.rendering.Window.getWidth() / factor;
+        resolutionHeight = org.engine.rendering.Window.getHeight() / factor;
 
         Thread thread = new Thread(() ->
         {
-            GraphicsConfiguration gc = Window.getCanvas().getGraphicsConfiguration();
+            GraphicsConfiguration gc = org.engine.rendering.Window.getCanvas().getGraphicsConfiguration();
             VolatileImage vImage = gc.createCompatibleVolatileImage(resolutionWidth, resolutionHeight);
 
             while(running)
@@ -50,12 +52,12 @@ public class Renderer
                 LevelManager.render(g);
 
                 // Display FPS on the Window Title
-                Window.setTitle("Zombie Game - FPS: " + currentFPS);
+                org.engine.rendering.Window.setTitle("Zombie Game - FPS: " + currentFPS);
 
                 g.dispose();
 
-                g = Window.getCanvas().getGraphics();
-                g.drawImage(vImage, 0, 0, Window.getWidth(), Window.getHeight(), null);
+                g = org.engine.rendering.Window.getCanvas().getGraphics();
+                g.drawImage(vImage, 0, 0, org.engine.rendering.Window.getWidth(), Window.getHeight(), null);
 
                 g.dispose();
 
