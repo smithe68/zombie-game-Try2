@@ -14,6 +14,7 @@ public class GameObject
     public float x, y;
     public float posX, posY;
     public int width, height;
+    public float rotation;
 
     protected boolean hasCollision = true;
 

@@ -19,13 +19,8 @@ public class CustomMath
         return a + t * (b - a);
     }
 
-    public static float moveToward(float a, float b, float maxDelta)
+    public static float moveToward(float a, float b, float t)
     {
-        if(Math.abs(b - a) <= maxDelta)
-        {
-            return b;
-        }
-
-        return (float)(a + Math.sin(b - a) * maxDelta);
+        return (float)(a + Math.signum(b - a) * t);
     }
 }

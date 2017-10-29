@@ -26,8 +26,8 @@ public class Zombie extends GameObject
 
         if(dist < 100)
         {
-            x = CustomMath.lerp(x, player.x, 0.005f);
-            y = CustomMath.lerp(y, player.y, 0.005f);
+            x = CustomMath.moveToward(x, player.x, 0.25f);
+            y = CustomMath.moveToward(y, player.y, 0.25f);
         }
     }
 
@@ -37,10 +37,10 @@ public class Zombie extends GameObject
         // Set the Transform for the Player
         AffineTransform transform = g.getTransform();
 
-        double angle = Math.toDegrees(Math.atan2(player.posY - posY, player.posX - posX));
+        rotation = (float)Math.toDegrees(Math.atan2(player.posY - posY, player.posX - posX));
 
         // Rotate the Player to Mouse Cursor
-        g.rotate(Math.toRadians(angle), posX + width / 2, posY + height / 2);
+        g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
 
         // Draw the Player Sprite
         g.drawImage(image, (int)posX, (int)posY, width, height, null);

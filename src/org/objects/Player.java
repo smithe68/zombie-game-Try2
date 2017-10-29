@@ -41,10 +41,10 @@ public class Player extends GameObject
         double yDiff = (Input.mousePos.y / factorY) - Renderer.getResolution().height / 2;
 
         // Get Rotation to Mouse
-        double angle = Math.toDegrees(Math.atan2(yDiff - y + Camera.y, xDiff - x + Camera.x));
+        rotation = (float)Math.toDegrees(Math.atan2(yDiff - y + Camera.y, xDiff - x + Camera.x));
 
         // Rotate the Player to Mouse Cursor
-        g.rotate(Math.toRadians(angle), posX + width / 2, posY + height / 2);
+        g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
 
         // Draw the Player Sprite
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
