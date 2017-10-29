@@ -3,5 +3,5 @@ package org.engine.rendering;
 public class Camera
 {
     // Camera Position
-    public static int x, y;
+    public static float x, y;
 }

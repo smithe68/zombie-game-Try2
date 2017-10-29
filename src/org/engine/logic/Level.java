@@ -12,6 +12,7 @@ public class Level
     /* Creates initial objects in the Level */
     public void loadObjects() {
         instantiate(new Player(0, 0));
+        instantiate(new Zombie(10, 10));
     }
 
     /* Updates all Logic for GameObjects in the Level */
@@ -48,5 +49,16 @@ public class Level
     {
         System.out.println("[X]: " + g.getClass().getSimpleName());
         objects.remove(g);
+    }
+
+    public static Object findObject(String tag)
+    {
+        for(int i = 0; i < objects.size(); i++)
+            if(objects.get(i).tag.equals(tag))
+                return objects.get(i);
+            else
+                return null;
+
+        return null;
     }
 }

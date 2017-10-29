@@ -18,4 +18,14 @@ public class CustomMath
     {
         return a + t * (b - a);
     }
+
+    public static float moveToward(float a, float b, float maxDelta)
+    {
+        if(Math.abs(b - a) <= maxDelta)
+        {
+            return b;
+        }
+
+        return (float)(a + Math.sin(b - a) * maxDelta);
+    }
 }

@@ -3,6 +3,7 @@ package org.objects;
 import org.engine.logic.GameObject;
 import org.engine.logic.Input;
 import org.engine.portation.SpriteLoader;
+import org.engine.rendering.Camera;
 import org.engine.rendering.Renderer;
 import org.engine.rendering.Window;
 
@@ -20,6 +21,9 @@ public class Player extends GameObject
     @Override
     public void update()
     {
+        Camera.x = x;
+        Camera.y = y;
+
         x += Input.horizontal;
         y += Input.vertical;
     }
@@ -37,9 +41,7 @@ public class Player extends GameObject
         double yDiff = (Input.mousePos.y / factorY) - Renderer.getResolution().height / 2;
 
         // Get Rotation to Mouse
-        double angle = Math.toDegrees(Math.atan2(yDiff - y, xDiff - x));
-
-        System.out.println(angle);
+        double angle = Math.toDegrees(Math.atan2(yDiff - y + Camera.y, xDiff - x + Camera.x));
 
         // Rotate the Player to Mouse Cursor
         g.rotate(Math.toRadians(angle), posX + width / 2, posY + height / 2);
