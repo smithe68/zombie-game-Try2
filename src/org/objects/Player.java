@@ -10,7 +10,7 @@ import java.awt.geom.AffineTransform;
 
 public class Player extends GameObject
 {
-    public Player(int x, int y)
+    public Player(double x, double y)
     {
         super(x, y);
         image = SpriteLoader.getSprite("PlayerDude.png");
@@ -29,7 +29,6 @@ public class Player extends GameObject
     @Override
     public void render(Graphics2D g)
     {
-        // Set the Transform for the Player
         AffineTransform transform = g.getTransform();
 
         double factorX = Window.getWidth() / Renderer.getResolution().width;
@@ -38,16 +37,9 @@ public class Player extends GameObject
         double xDiff = (Input.mousePos.x / factorX) - Renderer.getResolution().width / 2;
         double yDiff = (Input.mousePos.y / factorY) - Renderer.getResolution().height / 2;
 
-        // Get Rotation to Mouse
-        rotation = (float)Math.toDegrees(Math.atan2(yDiff - y + Camera.y, xDiff - x + Camera.x));
-
-        // Rotate the Player to Mouse Cursor
+        rotation = Math.toDegrees(Math.atan2(yDiff - y + Camera.y, xDiff - x + Camera.x));
         g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
-
-        // Draw the Player Sprite
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
-
-        // Set Position of Player
         g.setTransform(transform);
     }
 }

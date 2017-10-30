@@ -9,8 +9,8 @@ public class Renderer
 {
     private static boolean running = true;
 
-    private static final int RESOLUTION = 256;
-    private static final int TARGET_FPS = 60;
+    private static int resolution = 256;
+    private static int targetFPS = 60;
 
     private static int resolutionWidth;
     private static int resolutionHeight;
@@ -19,13 +19,13 @@ public class Renderer
     private static long lastFpsCheck;
     private static int totalFrames;
 
-    private static int targetTime = (int)1E9 / TARGET_FPS;
+    private static int targetTime = (int)1E9 / targetFPS;
 
     /* Starts the Rendering Loop */
     public static void initialize()
     {
         // Scale Resolution to Window Size
-        int factor = org.engine.rendering.Window.getWidth() / RESOLUTION;
+        int factor = org.engine.rendering.Window.getWidth() / resolution;
         resolutionWidth = org.engine.rendering.Window.getWidth() / factor;
         resolutionHeight = org.engine.rendering.Window.getHeight() / factor;
 
@@ -96,10 +96,16 @@ public class Renderer
     public static boolean getRunning() { return running; }
 
     /* Return the Renderer Target FPS */
-    public static int getTargetFPS() { return TARGET_FPS; }
+    public static int getTargetFPS() { return targetFPS; }
 
     /* Return the Game Internal Resolution */
     public static Dimension getResolution() {
         return new Dimension(resolutionWidth, resolutionHeight);
     }
+
+    /* Sets the Internal Resolution */
+    public static void setResolution(int res) { resolution = res; }
+
+    /* Set the Game's Target FPS */
+    public static void setTargetFPS(int fps) { targetFPS = fps; }
 }

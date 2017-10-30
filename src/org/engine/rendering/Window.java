@@ -1,6 +1,7 @@
 package org.engine.rendering;
 
 import org.engine.logic.Input;
+import org.engine.portation.EngineConfig;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -23,6 +24,17 @@ public class Window
 
         canvas = new Canvas();
         canvas.setSize(windowWidth, windowHeight);
+
+        EngineConfig.readConfig();
+
+        if(fullscreen)
+        {
+            Toolkit toolkit = Toolkit.getDefaultToolkit();
+            frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+            windowWidth = toolkit.getScreenSize().width;
+            windowHeight = toolkit.getScreenSize().height;
+            frame.setUndecorated(true);
+        }
 
         frame.add(canvas);
         frame.pack();
@@ -55,4 +67,14 @@ public class Window
     /* Returns the Window's Width or Height */
     public static int getHeight() { return windowHeight; }
     public static int getWidth() { return windowWidth; }
+
+    /* Changes the Window Size */
+    public static void setWindowSize(int width, int height)
+    {
+        windowWidth = width;
+        windowHeight = height;
+    }
+
+    /* Set if Window is Fullscreen */
+    public static void setFullscreen(boolean b) { fullscreen = b; }
 }

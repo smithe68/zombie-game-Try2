@@ -3,7 +3,6 @@ package org.objects;
 import org.engine.logic.*;
 import org.engine.portation.*;
 
-
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 
@@ -11,7 +10,7 @@ public class Zombie extends GameObject
 {
     private GameObject player;
 
-    public Zombie(float x, float y)
+    public Zombie(double x, double y)
     {
         super(x, y);
 
@@ -22,7 +21,8 @@ public class Zombie extends GameObject
     @Override
     public void update()
     {
-        float dist = (float)Math.sqrt(Math.pow((x - player.x), 2) + (Math.pow(y - player.y, 2)));
+        // Get Distance between Player and Zombie
+        double dist = Math.sqrt(((x - player.x) * (x - player.x)) + ((y - player.y) * (y - player.y)));
 
         if(dist < 100)
         {
@@ -34,18 +34,10 @@ public class Zombie extends GameObject
     @Override
     public void render(Graphics2D g)
     {
-        // Set the Transform for the Player
         AffineTransform transform = g.getTransform();
-
-        rotation = (float)Math.toDegrees(Math.atan2(player.posY - posY, player.posX - posX));
-
-        // Rotate the Player to Mouse Cursor
+        rotation = Math.toDegrees(Math.atan2(player.posY - posY, player.posX - posX));
         g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
-
-        // Draw the Player Sprite
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
-
-        // Set Position of Player
         g.setTransform(transform);
     }
 }

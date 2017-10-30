@@ -11,16 +11,17 @@ public class GameObject
     public String name;
     public String tag;
 
-    public float x, y;
-    public float posX, posY;
+    public double x, y;
+    public double posX, posY;
+    public double rotation;
+
     public int width, height;
-    public float rotation;
 
     protected boolean hasCollision = true;
 
     protected BufferedImage image;
 
-    public GameObject(float x, float y)
+    public GameObject(double x, double y)
     {
         this.x = x;
         this.y = y;
