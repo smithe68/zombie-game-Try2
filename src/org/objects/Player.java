@@ -10,6 +10,8 @@ import java.awt.geom.AffineTransform;
 
 public class Player extends GameObject
 {
+    public double health = 100;
+
     public Player(double x, double y)
     {
         super(x, y);
@@ -42,5 +44,13 @@ public class Player extends GameObject
         g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
         g.setTransform(transform);
+    }
+
+    /* Hurt the Player's Health */
+    public void hurt(double amount)
+    {
+        if(health > 0)
+            health -= amount;
+        System.out.println("Health: " + health);
     }
 }

@@ -8,15 +8,23 @@ import java.awt.geom.AffineTransform;
 
 public class Zombie extends GameObject
 {
-    private GameObject player;
+    private Player player;
 
     public Zombie(double x, double y)
     {
         super(x, y);
 
         image = SpriteLoader.getSprite("BasicZombie.png");
-        player = (GameObject)Level.findObject("Player");
+        player = (Player)Level.findObject("Player");
         isDynamic = true;
+        isTrigger = true;
+    }
+
+    @Override
+    public void onCollision(GameObject g)
+    {
+        if(g.tag.equals("Player"))
+            player.hurt(0.5);
     }
 
     @Override
@@ -25,9 +33,13 @@ public class Zombie extends GameObject
         // Get Distance between Player and Zombie
         double dist = Math.sqrt(((x - player.x) * (x - player.x)) + ((y - player.y) * (y - player.y)));
 
+        double dirX = player.x - x;
+        double dirY = player.y - y;
+
         if(dist < 100)
         {
-
+            velX = dirX * 0.025;
+            velY = dirY * 0.025;
         }
     }
 

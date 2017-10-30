@@ -21,6 +21,7 @@ public class GameObject implements Comparable<GameObject>
 
     protected boolean isDynamic;
     protected boolean isPersistant;
+    protected boolean isTrigger;
 
     protected BufferedImage image;
 
@@ -52,7 +53,7 @@ public class GameObject implements Comparable<GameObject>
     /* Do Collision Detection Here */
     public void collision()
     {
-        if(!isDynamic)
+        if(!isDynamic | !isTrigger)
             return;
 
         for(int i = 0; i < Level.objects.size(); i++)
@@ -63,24 +64,32 @@ public class GameObject implements Comparable<GameObject>
 
             if(getBounds().intersects(Level.objects.get(i).getBounds()))
             {
-                // Colliding Right
-                if(x <= curr.x)
-                    if(velX > 0) { velX = 0; }
+                onCollision(curr);
 
-                // Colliding Left
-                if(x >= curr.x)
-                    if(velX < 0) { velX = 0; }
+                if(!isTrigger)
+                {
+                    // Colliding Right
+                    if(x <= curr.x)
+                        if(velX > 0) { velX = 0; }
 
-                // Colliding Up
-                if(y >= curr.y)
-                    if(velY < 0) { velY = 0; }
+                    // Colliding Left
+                    if(x >= curr.x)
+                        if(velX < 0) { velX = 0; }
 
-                // Colliding Down
-                if(y <= curr.y)
-                    if(velY > 0) { velY = 0; }
+                    // Colliding Up
+                    if(y >= curr.y)
+                        if(velY < 0) { velY = 0; }
+
+                    // Colliding Down
+                    if(y <= curr.y)
+                        if(velY > 0) { velY = 0; }
+                }
             }
         }
     }
+
+    /* Returns what the Object is Colliding with */
+    public void onCollision(GameObject g) { }
 
     /* Returns the Collision Bounds */
     public Rectangle getBounds() {
