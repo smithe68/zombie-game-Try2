@@ -12,9 +12,6 @@ public class Player extends GameObject
 {
     public double health = 100;
 
-    private Dimension res;
-    private Dimension window;
-
     private ProgressBar healthBar;
 
     public Player(double x, double y)
@@ -22,10 +19,6 @@ public class Player extends GameObject
         super(x, y);
         image = SpriteLoader.getSprite("PlayerDude.png");
         isDynamic = true;
-
-        // Game Resolution and Window Size
-        res = Renderer.getResolution();
-        window = new Dimension(Window.getWidth(), Window.getHeight());
 
         // Create HUD
         healthBar = (ProgressBar)Level.instantiate(new ProgressBar(5, 5));
@@ -52,13 +45,14 @@ public class Player extends GameObject
     {
         AffineTransform transform = g.getTransform();
 
-        double factorX = window.width / Renderer.getResolution().width;
-        double factorY = window.height / Renderer.getResolution().height;
+        // Get Difference Between Mouse Position and Center of Screen
+        double xDiff = (Input.mousePos.x / Renderer.getResolutionFactor().width) - Renderer.getResolution().width / 2;
+        double yDiff = (Input.mousePos.y / Renderer.getResolutionFactor().height) - Renderer.getResolution().height / 2;
 
-        double xDiff = (Input.mousePos.x / factorX) - res.width / 2;
-        double yDiff = (Input.mousePos.y / factorY) - res.height / 2;
-
+        // Calculate Rotation in Degrees from Player to Mouse Position
         rotation = Math.toDegrees(Math.atan2(yDiff - y + Camera.y, xDiff - x + Camera.x));
+
+        // Draw the Player and Rotate it to Mouse
         g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
         g.setTransform(transform);

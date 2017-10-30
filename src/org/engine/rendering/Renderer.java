@@ -15,6 +15,9 @@ public class Renderer
     private static int resolutionWidth;
     private static int resolutionHeight;
 
+    private static int resFactorX;
+    private static int resFactorY;
+
     private static int currentFPS;
     private static long lastFpsCheck;
     private static int totalFrames;
@@ -24,10 +27,7 @@ public class Renderer
     /* Starts the Rendering Loop */
     public static void initialize()
     {
-        // Scale Resolution to Window Size
-        int factor = Window.getWidth() / resolution;
-        resolutionWidth = Window.getWidth() / factor;
-        resolutionHeight = Window.getHeight() / factor;
+        scaleResolution();
 
         Thread thread = new Thread(() ->
         {
@@ -79,6 +79,19 @@ public class Renderer
         thread.start();
     }
 
+    /* Scales the Resolution to Window Size */
+    private static void scaleResolution()
+    {
+        // Scale Resolution to Window Size
+        int factor = Window.getWidth() / resolution;
+
+        resolutionWidth = Window.getWidth() / factor;
+        resolutionHeight = Window.getHeight() / factor;
+
+        resFactorX = Window.getWidth() / resolutionWidth;
+        resFactorY = Window.getHeight() / resolutionHeight;
+    }
+
     /* Calculates the Average FPS */
     private static void calculateFPS()
     {
@@ -105,6 +118,11 @@ public class Renderer
 
     /* Sets the Default Internal Resolution */
     public static void setDefaultResolution(int res) { resolution = res; }
+
+    /* Returns the Factor at which the Resolution in Scaled */
+    public static Dimension getResolutionFactor() {
+        return new Dimension(resFactorX, resFactorY);
+    }
 
     /* Set the Game's Target FPS */
     public static void setTargetFPS(int fps) { targetFPS = fps; }

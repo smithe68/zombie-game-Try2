@@ -14,7 +14,7 @@ public class Level
     public void loadObjects()
     {
         instantiate(new Player(0, 0));
-        instantiate(new Zombie(10, 10));
+        instantiate(new Zombie(40, 40));
     }
 
     /* Updates all Logic for GameObjects in the Level */
