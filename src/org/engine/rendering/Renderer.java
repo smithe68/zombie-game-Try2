@@ -25,13 +25,13 @@ public class Renderer
     public static void initialize()
     {
         // Scale Resolution to Window Size
-        int factor = org.engine.rendering.Window.getWidth() / resolution;
-        resolutionWidth = org.engine.rendering.Window.getWidth() / factor;
-        resolutionHeight = org.engine.rendering.Window.getHeight() / factor;
+        int factor = Window.getWidth() / resolution;
+        resolutionWidth = Window.getWidth() / factor;
+        resolutionHeight = Window.getHeight() / factor;
 
         Thread thread = new Thread(() ->
         {
-            GraphicsConfiguration gc = org.engine.rendering.Window.getCanvas().getGraphicsConfiguration();
+            GraphicsConfiguration gc = Window.getCanvas().getGraphicsConfiguration();
             VolatileImage vImage = gc.createCompatibleVolatileImage(resolutionWidth, resolutionHeight);
 
             while(running)
@@ -52,12 +52,12 @@ public class Renderer
                 LevelManager.render(g);
 
                 // Display FPS on the Window Title
-                org.engine.rendering.Window.setTitle("Zombie Game - FPS: " + currentFPS);
+                Window.setTitle("Zombie Game - FPS: " + currentFPS);
 
                 g.dispose();
 
-                g = org.engine.rendering.Window.getCanvas().getGraphics();
-                g.drawImage(vImage, 0, 0, org.engine.rendering.Window.getWidth(), Window.getHeight(), null);
+                g = Window.getCanvas().getGraphics();
+                g.drawImage(vImage, 0, 0, Window.getWidth(), Window.getHeight(), null);
 
                 g.dispose();
 
@@ -66,7 +66,7 @@ public class Renderer
                 if(totalTime < targetTime)
                 {
                     try {
-                        Thread.sleep((targetTime - totalTime) / 1000000);
+                        Thread.sleep((targetTime - totalTime) / (int)1E6);
                     }
                     catch (InterruptedException e) {
                         e.printStackTrace();
@@ -84,7 +84,7 @@ public class Renderer
     {
         // FPS Counter
         totalFrames++;
-        if(System.nanoTime() > lastFpsCheck + 1000000000)
+        if(System.nanoTime() > lastFpsCheck + (int)1E9)
         {
             lastFpsCheck = System.nanoTime();
             currentFPS = totalFrames;
@@ -103,8 +103,8 @@ public class Renderer
         return new Dimension(resolutionWidth, resolutionHeight);
     }
 
-    /* Sets the Internal Resolution */
-    public static void setResolution(int res) { resolution = res; }
+    /* Sets the Default Internal Resolution */
+    public static void setDefaultResolution(int res) { resolution = res; }
 
     /* Set the Game's Target FPS */
     public static void setTargetFPS(int fps) { targetFPS = fps; }

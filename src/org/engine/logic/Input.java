@@ -3,17 +3,16 @@ package org.engine.logic;
 import org.engine.rendering.Window;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 
-public class Input implements KeyListener, MouseMotionListener
+public class Input implements KeyListener, MouseMotionListener, MouseWheelListener
 {
     public static Point mousePos = new Point();
 
-    public static float horizontal = 0;
-    public static float vertical = 0;
+    public static float scrollWheel;
+
+    public static float horizontal;
+    public static float vertical;
 
     private static boolean[] lastKeys = new boolean[256];
     private static boolean[] currentKeys = new boolean[256];
@@ -26,8 +25,10 @@ public class Input implements KeyListener, MouseMotionListener
     public void keyReleased(KeyEvent e) { currentKeys[e.getKeyCode()] = false; }
     public void keyTyped(KeyEvent e) { }
 
-    public void initialize() {
+    public void initialize()
+    {
         Window.getCanvas().addMouseMotionListener(this);
+        Window.getCanvas().addMouseWheelListener(this);
     }
 
     public static void updateInput()
@@ -35,6 +36,8 @@ public class Input implements KeyListener, MouseMotionListener
         horizontal = inputAxis(KeyEvent.VK_D, KeyEvent.VK_A);
         vertical = inputAxis(KeyEvent.VK_S, KeyEvent.VK_W);
         lastKeys = currentKeys.clone();
+
+        if(Input.getKey(KeyEvent.VK_ESCAPE)) { System.exit(1); }
     }
 
     public static float inputAxis(int posKey, int negKey)
@@ -53,5 +56,10 @@ public class Input implements KeyListener, MouseMotionListener
     @Override
     public void mouseMoved(MouseEvent e) {
         mousePos = e.getPoint();
+    }
+
+    @Override
+    public void mouseWheelMoved(MouseWheelEvent e) {
+        scrollWheel = e.getWheelRotation();
     }
 }

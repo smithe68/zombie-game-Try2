@@ -1,5 +1,6 @@
 package org.engine.logic;
 
+import org.engine.rendering.Camera;
 import org.engine.rendering.Renderer;
 
 public class Updater
@@ -25,6 +26,7 @@ public class Updater
                 // Update Stuff
                 LevelManager.update();
                 Input.updateInput();
+                Camera.update();
 
                 long totalTime = System.nanoTime() - startTime;
 

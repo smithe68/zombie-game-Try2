@@ -38,7 +38,7 @@ public class EngineConfig
                         break;
 
                     case "Resolution":
-                        Renderer.setResolution(Integer.parseInt(nums[0]));
+                        Renderer.setDefaultResolution(Integer.parseInt(nums[0]));
                         break;
 
                     case "Target-FPS":
