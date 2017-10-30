@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="Game now creates a Config File in Documents Folder">
+    <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/logic/GameObject.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/GameObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/logic/Level.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Player.java" afterPath="$PROJECT_DIR$/src/org/objects/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Zombie.java" afterPath="$PROJECT_DIR$/src/org/objects/Zombie.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,8 +71,8 @@
       <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/engine/logic/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1045">
-              <caret line="90" column="25" lean-forward="true" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+            <state relative-caret-position="415">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -635,13 +631,6 @@
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
     </task>
-    <task id="LOCAL-00055" summary="Changed Main">
-      <created>1497330561790</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1497330561791</updated>
-    </task>
     <task id="LOCAL-00056" summary="Changed Main">
       <created>1497331767329</created>
       <option name="number" value="00056" />
@@ -978,7 +967,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509330636129</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Game now creates a Config File in Documents Folder">
+      <created>1509331972278</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1509331972278</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1244,8 +1240,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/logic/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="90" column="25" lean-forward="true" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+        <state relative-caret-position="415">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
