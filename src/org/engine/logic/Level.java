@@ -4,6 +4,7 @@ import org.objects.*;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Level
 {
@@ -23,6 +24,8 @@ public class Level
         for(int i = 0; i < objects.size(); i++)
         {
             objects.get(i).update();
+            objects.get(i).collision();
+            objects.get(i).physics();
         }
     }
 
@@ -42,6 +45,7 @@ public class Level
     {
         System.out.println("[I]: " + g.getClass().getSimpleName());
         objects.add(g);
+        Collections.sort(objects);
         return g;
     }
 
@@ -50,6 +54,7 @@ public class Level
     {
         System.out.println("[X]: " + g.getClass().getSimpleName());
         objects.remove(g);
+        Collections.sort(objects);
     }
 
     /* Gets a Reference to an Object with the same Tag */

@@ -16,6 +16,7 @@ public class Zombie extends GameObject
 
         image = SpriteLoader.getSprite("BasicZombie.png");
         player = (GameObject)Level.findObject("Player");
+        isDynamic = true;
     }
 
     @Override
@@ -26,8 +27,7 @@ public class Zombie extends GameObject
 
         if(dist < 100)
         {
-            x = CustomMath.moveToward(x, player.x, 0.25f);
-            y = CustomMath.moveToward(y, player.y, 0.25f);
+
         }
     }
 

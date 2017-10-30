@@ -14,6 +14,7 @@ public class Player extends GameObject
     {
         super(x, y);
         image = SpriteLoader.getSprite("PlayerDude.png");
+        isDynamic = true;
     }
 
     @Override
@@ -22,8 +23,8 @@ public class Player extends GameObject
         Camera.x = x;
         Camera.y = y;
 
-        x += Input.horizontal;
-        y += Input.vertical;
+        velX = Input.horizontal * 2;
+        velY = Input.vertical * 2;
     }
 
     @Override
