@@ -10,6 +10,7 @@ public class UIObject extends GameObject implements MouseListener, MouseMotionLi
     {
         super(x, y);
         isPersistant = true;
+        layer = 100;
     }
 
     @Override
