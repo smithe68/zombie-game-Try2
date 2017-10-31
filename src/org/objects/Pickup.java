@@ -4,6 +4,7 @@ import org.engine.logic.*;
 import org.engine.portation.SpriteLoader;
 import org.inventory.InventoryManager;
 import org.inventory.Item;
+import org.inventory.ItemDatabase;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -19,9 +20,6 @@ public class Pickup extends GameObject
         width = 32;
         height = 32;
 
-        if(image != null)
-            image = SpriteLoader.getSprite(item.image);
-
         isDynamic = true;
         isTrigger = true;
     }
@@ -31,8 +29,8 @@ public class Pickup extends GameObject
     {
         if(g.tag.equals("Player"))
         {
-            InventoryManager.addItem(item);
-            Level.destroy(this);
+            if(InventoryManager.addItem(item))
+                Level.destroy(this);
         }
     }
 
@@ -55,5 +53,11 @@ public class Pickup extends GameObject
         g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
         g.setTransform(transform);
+    }
+
+    public void setPickup(int index)
+    {
+        item = ItemDatabase.getItem(index);
+        image = SpriteLoader.getSprite(item.image);
     }
 }

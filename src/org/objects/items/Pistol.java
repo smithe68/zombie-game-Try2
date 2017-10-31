@@ -16,6 +16,6 @@ public class Pistol extends Item
     @Override
     public void use()
     {
-        
+        super.use();
     }
 }

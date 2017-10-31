@@ -15,7 +15,9 @@ public class Level
     {
         instantiate(new Player(0, 0));
         instantiate(new Zombie(40, 40));
-        instantiate(new Pickup(-100, -100));
+
+        Pickup p = (Pickup)instantiate(new Pickup(-100, -100));
+        p.setPickup(1);
     }
 
     /* Updates all Logic for GameObjects in the Level */

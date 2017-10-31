@@ -1,24 +1,46 @@
 package org.inventory;
 
+import org.engine.portation.SpriteLoader;
+
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class InventoryManager
 {
+    public static final int MAX_SIZE = 4;
+
+    public static ArrayList<BufferedImage> itemImages = new ArrayList<>();
+
     private static ArrayList<Item> items = new ArrayList<>();
-    private static int maxSize = 9;
 
     public static void initialize() {
         ItemDatabase.initialize();
     }
 
-    public static void addItem(Item item)
+    public static boolean addItem(Item item)
     {
-        if(items.size() < 9) {
+        if(items.size() < MAX_SIZE)
+        {
             items.add(item);
+            itemImages.add(SpriteLoader.getSprite(item.image));
+            return true;
         }
+        else
+            return false;
     }
 
-    public static void removeItem(Item item) {
-        items.remove(item);
+    public static void removeItem(Item item)
+    {
+        int index = items.indexOf(item);
+        items.remove(index);
+        itemImages.remove(index);
+    }
+
+    public static void useItem(int index) {
+        items.get(index).use();
+    }
+
+    public static boolean indicesOK(int index) {
+        return index < items.size();
     }
 }

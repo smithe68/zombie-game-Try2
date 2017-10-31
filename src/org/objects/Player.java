@@ -15,6 +15,7 @@ public class Player extends GameObject
 {
     public double health = 100;
 
+    private ActionBar actionBar;
     private ProgressBar healthBar;
     private BufferedImage equipped;
     private Item equippedItem;
@@ -32,8 +33,9 @@ public class Player extends GameObject
         healthBar.setAttributes(30, 5);
         healthBar.setShowAmount(false);
 
+        actionBar = (ActionBar)Level.instantiate(new ActionBar(0, 0));
+
         InventoryManager.initialize();
-        setEquippedItem(ItemDatabase.getItem(1));
     }
 
     @Override
