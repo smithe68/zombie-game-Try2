@@ -2,6 +2,7 @@ package org.objects;
 
 import org.engine.logic.*;
 import org.engine.portation.SpriteLoader;
+import org.inventory.InventoryManager;
 import org.inventory.Item;
 
 import java.awt.*;
@@ -18,7 +19,8 @@ public class Pickup extends GameObject
         width = 32;
         height = 32;
 
-        image = SpriteLoader.getSprite(item.image);
+        if(image != null)
+            image = SpriteLoader.getSprite(item.image);
 
         isDynamic = true;
         isTrigger = true;
@@ -28,7 +30,10 @@ public class Pickup extends GameObject
     public void onCollision(GameObject g)
     {
         if(g.tag.equals("Player"))
+        {
+            InventoryManager.addItem(item);
             Level.destroy(this);
+        }
     }
 
     @Override
