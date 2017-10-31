@@ -1,6 +1,8 @@
 package org.objects.items;
 
+import org.engine.logic.Level;
 import org.inventory.Item;
+import org.objects.Zombie;
 
 public class Pistol extends Item
 {
@@ -17,5 +19,7 @@ public class Pistol extends Item
     public void use()
     {
         super.use();
+
+        Level.instantiate(new Zombie(0, 0));
     }
 }

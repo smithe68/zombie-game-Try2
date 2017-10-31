@@ -1,13 +1,11 @@
 package org.engine.portation;
 
+import org.engine.logic.GameObject;
 import org.engine.logic.Level;
 import org.objects.*;
 
 import javax.swing.filechooser.FileSystemView;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class LevelLoader
 {
@@ -46,6 +44,23 @@ public class LevelLoader
             }
         }
         catch(IOException e) { System.out.println("Cannot Read File: " + name); }
+    }
+
+    public static void saveLevel(String name)
+    {
+        try
+        {
+            PrintWriter writer = new PrintWriter(SAVE_PATH + "/" + name);
+
+            for(int i = 0; i < Level.objects.size(); i++)
+            {
+                GameObject object = Level.objects.get(i);
+                writer.println(object.name + ": " + object.x + "," + object.y);
+            }
+
+            writer.close();
+        }
+        catch(IOException e) { e.printStackTrace(); }
     }
 
     private static void createSaveFolder()
