@@ -2,7 +2,6 @@ package org.objects;
 
 import org.engine.logic.*;
 import org.engine.portation.*;
-import org.engine.rendering.Window;
 import org.engine.rendering.*;
 
 import java.awt.*;
