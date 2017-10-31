@@ -7,6 +7,10 @@ public class InventoryManager
     private static ArrayList<Item> items = new ArrayList<>();
     private static int maxSize = 9;
 
+    public static void initialize() {
+        ItemDatabase.initialize();
+    }
+
     public static void addItem(Item item)
     {
         if(items.size() < 9) {

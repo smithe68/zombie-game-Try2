@@ -3,15 +3,21 @@ package org.objects;
 import org.engine.logic.*;
 import org.engine.portation.*;
 import org.engine.rendering.*;
+import org.inventory.InventoryManager;
+import org.inventory.Item;
+import org.inventory.ItemDatabase;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.awt.image.BufferedImage;
 
 public class Player extends GameObject
 {
     public double health = 100;
 
     private ProgressBar healthBar;
+    private BufferedImage equipped;
+    private Item equippedItem;
 
     public Player(double x, double y)
     {
@@ -25,6 +31,9 @@ public class Player extends GameObject
         healthBar.setValues(1, (int)health, 100);
         healthBar.setAttributes(30, 5);
         healthBar.setShowAmount(false);
+
+        InventoryManager.initialize();
+        setEquippedItem(ItemDatabase.getItem(1));
     }
 
     @Override
@@ -54,6 +63,14 @@ public class Player extends GameObject
         // Draw the Player and Rotate it to Mouse
         g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
+
+        // Draw Equipped Items
+        if(equippedItem != null & equipped != null)
+        {
+            g.drawImage(equipped, (int)posX + width / 2 - 2,
+                    (int)posY - height / 2 + 3, width, height, null);
+        }
+
         g.setTransform(transform);
     }
 
@@ -69,5 +86,12 @@ public class Player extends GameObject
     {
         if(health < 100)
             health += amount;
+    }
+
+    /* Sets the Equipped Item of the Player */
+    public void setEquippedItem(Item item)
+    {
+        equippedItem = item;
+        equipped = SpriteLoader.getSprite(equippedItem.image);
     }
 }
