@@ -1,5 +1,7 @@
 package org.inventory;
 
+import org.engine.logic.Level;
+import org.objects.*;
 import org.objects.items.Pistol;
 
 import java.util.ArrayList;
@@ -10,8 +12,11 @@ public class ItemDatabase
 
     public static void initialize()
     {
-        items.add(new Item());
-        items.add(new Pistol());
+        Player player = (Player)Level.findObject("Player");
+        System.out.println(player.health);
+
+        items.add(new Item(player));
+        items.add(new Pistol(player));
     }
 
     public static Item getItem(int index) {

@@ -1,5 +1,6 @@
 package org.engine.logic;
 
+import org.inventory.InventoryManager;
 import org.objects.*;
 
 import java.awt.*;
@@ -15,6 +16,8 @@ public class Level
     {
         instantiate(new Player(0, 0));
         instantiate(new Zombie(40, 40));
+
+        InventoryManager.initialize();
 
         Pickup p = (Pickup)instantiate(new Pickup(-100, -100));
         p.setPickup(1);
@@ -64,11 +67,12 @@ public class Level
     public static Object findObject(String tag)
     {
         for(int i = 0; i < objects.size(); i++)
+        {
             if(objects.get(i).tag.equals(tag))
                 return objects.get(i);
-            else
-                return null;
+        }
 
+        System.out.println("[E]: GameObject with tag [" + tag + "] not Found!");
         return null;
     }
 

@@ -3,9 +3,7 @@ package org.objects;
 import org.engine.logic.*;
 import org.engine.portation.*;
 import org.engine.rendering.*;
-import org.inventory.InventoryManager;
 import org.inventory.Item;
-import org.inventory.ItemDatabase;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -34,8 +32,6 @@ public class Player extends GameObject
         healthBar.setShowAmount(false);
 
         actionBar = (ActionBar)Level.instantiate(new ActionBar(0, 0));
-
-        InventoryManager.initialize();
     }
 
     @Override
@@ -96,4 +92,7 @@ public class Player extends GameObject
         equippedItem = item;
         equipped = SpriteLoader.getSprite(equippedItem.image);
     }
+
+    /* Return the Equipped Item */
+    public Item getEquippedItem() { return equippedItem; }
 }

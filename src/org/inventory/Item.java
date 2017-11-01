@@ -1,5 +1,7 @@
 package org.inventory;
 
+import org.engine.logic.GameObject;
+
 public class Item
 {
     public String name;
@@ -8,8 +10,13 @@ public class Item
 
     public String image;
 
-    public void use()
-    {
+    public GameObject parent;
+
+    public Item(GameObject parent) {
+        this.parent = parent;
+    }
+
+    public void use() {
         System.out.println("Used " + name);
     }
 }
