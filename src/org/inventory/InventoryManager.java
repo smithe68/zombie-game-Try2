@@ -36,8 +36,8 @@ public class InventoryManager
         itemImages.remove(index);
     }
 
-    public static void useItem(int index) {
-        items.get(index).use();
+    public static void equipItem(int index) {
+        items.get(index).equip();
     }
 
     public static boolean indicesOK(int index) {

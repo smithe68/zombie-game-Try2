@@ -3,9 +3,11 @@ package org.objects;
 import org.engine.logic.*;
 import org.engine.portation.*;
 import org.engine.rendering.*;
+import org.inventory.InventoryManager;
 import org.inventory.Item;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
@@ -44,6 +46,9 @@ public class Player extends GameObject
         velY = Input.vertical * 2;
 
         healthBar.setAmount((int)health);
+
+        if(Input.getKeyDown(KeyEvent.VK_SPACE))
+            equippedItem.use();
     }
 
     @Override
@@ -62,7 +67,7 @@ public class Player extends GameObject
         g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
 
-        // Draw Equipped Items
+        // Draw Equipped Items8
         if(equippedItem != null & equipped != null)
         {
             g.drawImage(equipped, (int)posX + width / 2 - 2,

@@ -20,19 +20,19 @@ public class ActionBar extends UIObject
     {
         if(Input.getKeyDown(KeyEvent.VK_1))
             if(InventoryManager.indicesOK(0))
-                InventoryManager.useItem(0);
+                InventoryManager.equipItem(0);
 
         if(Input.getKeyDown(KeyEvent.VK_2))
             if(InventoryManager.indicesOK(1))
-                InventoryManager.useItem(1);
+                InventoryManager.equipItem(1);
 
         if(Input.getKeyDown(KeyEvent.VK_3))
             if(InventoryManager.indicesOK(2))
-                InventoryManager.useItem(2);
+                InventoryManager.equipItem(2);
 
         if(Input.getKeyDown(KeyEvent.VK_4))
             if(InventoryManager.indicesOK(3))
-                InventoryManager.useItem(3);
+                InventoryManager.equipItem(3);
     }
 
     @Override

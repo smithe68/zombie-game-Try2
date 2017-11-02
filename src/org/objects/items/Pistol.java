@@ -5,7 +5,6 @@ import org.engine.logic.Level;
 import org.inventory.Item;
 import org.objects.Bullet;
 import org.objects.Player;
-import org.objects.Zombie;
 
 public class Pistol extends Item
 {
@@ -21,9 +20,9 @@ public class Pistol extends Item
     }
 
     @Override
-    public void use()
+    public void equip()
     {
-        super.use();
+        super.equip();
 
         if(parent.tag.equals("Player"))
         {
@@ -31,7 +30,17 @@ public class Pistol extends Item
 
             if(player.getEquippedItem() == null)
                 player.setEquippedItem(this);
-            else
+        }
+    }
+
+    @Override
+    public void use()
+    {
+        if(parent.tag.equals("Player"))
+        {
+            Player player = (Player)parent;
+
+            if(player.getEquippedItem() == this)
                 Level.instantiate(new Bullet(player.x, player.y));
         }
     }

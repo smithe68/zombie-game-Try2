@@ -16,6 +16,10 @@ public class Item
         this.parent = parent;
     }
 
+    public void equip() {
+        System.out.println("Equipped " + name);
+    }
+
     public void use() {
         System.out.println("Used " + name);
     }

@@ -22,21 +22,20 @@ public class Bullet extends GameObject
 
         width = 2;
         height = 2;
-
         layer = -1;
 
-        double xDiff = (Input.mousePos.x / Renderer.getResolutionFactor().width) - Renderer.getResolution().width / 2;
-        double yDiff = (Input.mousePos.y / Renderer.getResolutionFactor().height) - Renderer.getResolution().height / 2;
+        double xDiff = (Input.mousePos.x / Renderer.getResolutionFactor().width);
+        double yDiff = (Input.mousePos.y / Renderer.getResolutionFactor().height);
 
-        dirX = xDiff - x + Camera.x;
-        dirY = yDiff - y + Camera.y;
+        dirX = xDiff - Renderer.getResolution().width / 2;
+        dirY = yDiff - Renderer.getResolution().height / 2;
     }
 
     @Override
     public void update()
     {
-        velX = dirX * 0.025;
-        velY = dirY * 0.025;
+        velX = dirX * 0.1;
+        velY = dirY * 0.1;
     }
 
     @Override
