@@ -39,7 +39,6 @@ public class Pistol extends Item
         if(parent.tag.equals("Player"))
         {
             Player player = (Player)parent;
-
             if(player.getEquippedItem() == this)
                 Level.instantiate(new Bullet(player.x, player.y));
         }

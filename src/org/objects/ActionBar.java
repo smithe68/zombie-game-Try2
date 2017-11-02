@@ -11,28 +11,36 @@ import java.awt.image.BufferedImage;
 
 public class ActionBar extends UIObject
 {
-    public ActionBar(double x, double y) {
+    private Player player;
+
+    public ActionBar(double x, double y, Player player)
+    {
         super(x, y);
+        this.player = player;
     }
 
     @Override
     public void update()
     {
         if(Input.getKeyDown(KeyEvent.VK_1))
-            if(InventoryManager.indicesOK(0))
+            if(InventoryManager.indicesOK(0)) {
                 InventoryManager.equipItem(0);
+            } else { player.unEquipItem(); }
 
         if(Input.getKeyDown(KeyEvent.VK_2))
-            if(InventoryManager.indicesOK(1))
+            if(InventoryManager.indicesOK(1)) {
                 InventoryManager.equipItem(1);
+            } else { player.unEquipItem(); }
 
         if(Input.getKeyDown(KeyEvent.VK_3))
-            if(InventoryManager.indicesOK(2))
+            if(InventoryManager.indicesOK(2)) {
                 InventoryManager.equipItem(2);
+            } else { player.unEquipItem(); }
 
         if(Input.getKeyDown(KeyEvent.VK_4))
-            if(InventoryManager.indicesOK(3))
+            if(InventoryManager.indicesOK(3)) {
                 InventoryManager.equipItem(3);
+            } else { player.unEquipItem(); }
     }
 
     @Override
