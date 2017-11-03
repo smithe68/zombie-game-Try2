@@ -1,9 +1,6 @@
 package org.objects;
 
-import org.engine.logic.GameObject;
-import org.engine.logic.Input;
-import org.engine.logic.Level;
-import org.engine.rendering.Camera;
+import org.engine.logic.*;
 import org.engine.rendering.Renderer;
 
 import java.awt.*;
