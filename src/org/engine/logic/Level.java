@@ -30,7 +30,7 @@ public class Level
         for(int i = 0; i < objects.size(); i++)
         {
             objects.get(i).update();
-            objects.get(i).collision();
+            objects.get(i).updateComponents();
             objects.get(i).physics();
         }
     }
@@ -41,8 +41,9 @@ public class Level
         // Render every GameObject
         for(int i = 0; i < objects.size(); i++)
         {
-            objects.get(i).renderTransform();
             objects.get(i).render((Graphics2D)g);
+            objects.get(i).renderComponents((Graphics2D)g);
+            objects.get(i).renderTransform();
         }
     }
 

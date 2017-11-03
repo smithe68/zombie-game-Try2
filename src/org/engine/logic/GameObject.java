@@ -2,9 +2,11 @@ package org.engine.logic;
 
 import org.engine.rendering.Camera;
 import org.engine.rendering.Renderer;
+import org.engine.components.Component;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 public class GameObject implements Comparable<GameObject>
 {
@@ -19,11 +21,11 @@ public class GameObject implements Comparable<GameObject>
     public int width, height;
     public int layer;
 
-    protected boolean isDynamic;
     protected boolean isPersistant;
-    protected boolean isTrigger;
-
     protected BufferedImage image;
+
+    // Contains all the Components in a GameObject
+    protected ArrayList<Component> components = new ArrayList<>();
 
     public GameObject(double x, double y)
     {
@@ -35,6 +37,18 @@ public class GameObject implements Comparable<GameObject>
 
         name = getClass().getSimpleName();
         tag = name;
+    }
+
+    public void updateComponents()
+    {
+        for(int i = 0; i < components.size(); i++)
+            components.get(i).update();
+    }
+
+    public void renderComponents(Graphics2D g)
+    {
+        for(int i = 0; i < components.size(); i++)
+            components.get(i).render(g);
     }
 
     /* Updates the GameObject */
@@ -50,44 +64,6 @@ public class GameObject implements Comparable<GameObject>
         posY = (y - height / 2) - Camera.y + Renderer.getResolution().height / 2;
     }
 
-    /* Do Collision Detection Here */
-    public void collision()
-    {
-        if(!isDynamic | !isTrigger)
-            return;
-
-        for(int i = 0; i < Level.objects.size(); i++)
-        {
-            if(Level.objects.get(i) == this) continue;
-
-            GameObject curr = Level.objects.get(i);
-
-            if(getBounds().intersects(Level.objects.get(i).getBounds()))
-            {
-                onCollision(curr);
-
-                if(!isTrigger)
-                {
-                    // Colliding Right
-                    if(x <= curr.x)
-                        if(velX > 0) { velX = 0; }
-
-                    // Colliding Left
-                    if(x >= curr.x)
-                        if(velX < 0) { velX = 0; }
-
-                    // Colliding Up
-                    if(y >= curr.y)
-                        if(velY < 0) { velY = 0; }
-
-                    // Colliding Down
-                    if(y <= curr.y)
-                        if(velY > 0) { velY = 0; }
-                }
-            }
-        }
-    }
-
     /* Returns what the Object is Colliding with */
     public void onCollision(GameObject g) { }
 
@@ -99,9 +75,6 @@ public class GameObject implements Comparable<GameObject>
     /* Do Physics Calculations */
     public void physics()
     {
-        if(!isDynamic)
-            return;
-
         velX *= 1.0 - ((1.0 - 0.9) * 0.025);
         velY *= 1.0 - ((1.0 - 0.9) * 0.025);
 

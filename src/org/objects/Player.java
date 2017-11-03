@@ -1,5 +1,6 @@
 package org.objects;
 
+import org.engine.components.BoxCollider;
 import org.engine.logic.*;
 import org.engine.portation.*;
 import org.engine.rendering.*;
@@ -24,7 +25,6 @@ public class Player extends GameObject
     {
         super(x, y);
         image = SpriteLoader.getSprite("PlayerDude.png");
-        isDynamic = true;
 
         // Create HUD
         healthBar = (ProgressBar)Level.instantiate(new ProgressBar(5, 5));
@@ -34,6 +34,8 @@ public class Player extends GameObject
         healthBar.setShowAmount(false);
 
         actionBar = (ActionBar)Level.instantiate(new ActionBar(0, 0, this));
+
+        components.add(new BoxCollider(this));
     }
 
     @Override
@@ -67,6 +69,8 @@ public class Player extends GameObject
         // Draw the Player and Rotate it to Mouse
         g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
+
+        System.out.println("Rotation: " + rotation);
 
         // Draw Equipped Items8
         if(equippedItem != null & equipped != null)
