@@ -33,7 +33,7 @@ public class Player extends GameObject
         healthBar.setAttributes(30, 5);
         healthBar.setShowAmount(false);
 
-        actionBar = (ActionBar)Level.instantiate(new ActionBar(0, 0));
+        actionBar = (ActionBar)Level.instantiate(new ActionBar(0, 0, this));
     }
 
     @Override
@@ -42,13 +42,14 @@ public class Player extends GameObject
         Camera.x = x;
         Camera.y = y;
 
-        velX = Input.horizontal * 2;
-        velY = Input.vertical * 2;
+        velX = Input.horizontal;
+        velY = Input.vertical;
 
         healthBar.setAmount((int)health);
 
         if(Input.getKeyDown(KeyEvent.VK_SPACE))
-            equippedItem.use();
+            if(getEquippedItem() != null)
+                equippedItem.use();
     }
 
     @Override
@@ -96,6 +97,13 @@ public class Player extends GameObject
     {
         equippedItem = item;
         equipped = SpriteLoader.getSprite(equippedItem.image);
+    }
+
+    /* UnEquip Item */
+    public void unEquipItem()
+    {
+        equippedItem = null;
+        equipped = null;
     }
 
     /* Return the Equipped Item */
