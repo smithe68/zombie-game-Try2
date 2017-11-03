@@ -20,8 +20,6 @@ public class Pickup extends GameObject
         width = 32;
         height = 32;
 
-        isDynamic = true;
-        isTrigger = true;
     }
 
     @Override

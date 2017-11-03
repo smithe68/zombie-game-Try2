@@ -18,8 +18,6 @@ public class Bullet extends GameObject
     {
         super(x, y);
 
-        isDynamic = true;
-        isTrigger = true;
 
         width = 2;
         height = 2;

@@ -1,10 +1,8 @@
 package org.objects.items;
 
-import org.engine.logic.GameObject;
-import org.engine.logic.Level;
+import org.engine.logic.*;
 import org.inventory.Item;
-import org.objects.Bullet;
-import org.objects.Player;
+import org.objects.*;
 
 public class Pistol extends Item
 {
@@ -39,8 +37,9 @@ public class Pistol extends Item
         if(parent.tag.equals("Player"))
         {
             Player player = (Player)parent;
-            if(player.getEquippedItem() == this)
+            if(player.getEquippedItem() == this) {
                 Level.instantiate(new Bullet(player.x, player.y));
+            }
         }
     }
 }
