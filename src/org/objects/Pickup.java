@@ -1,10 +1,9 @@
 package org.objects;
 
+import org.engine.components.BoxCollider;
 import org.engine.logic.*;
 import org.engine.portation.SpriteLoader;
-import org.inventory.InventoryManager;
-import org.inventory.Item;
-import org.inventory.ItemDatabase;
+import org.inventory.*;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -20,6 +19,8 @@ public class Pickup extends GameObject
         width = 32;
         height = 32;
 
+        BoxCollider coll = addComponent(new BoxCollider(this));
+        coll.setTrigger(true);
     }
 
     @Override

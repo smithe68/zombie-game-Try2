@@ -1,10 +1,9 @@
 package org.objects;
 
-import org.engine.components.BoxCollider;
+import org.engine.components.*;
 import org.engine.logic.*;
 import org.engine.portation.*;
 import org.engine.rendering.*;
-import org.inventory.InventoryManager;
 import org.inventory.Item;
 
 import java.awt.*;
@@ -16,7 +15,6 @@ public class Player extends GameObject
 {
     public double health = 100;
 
-    private ActionBar actionBar;
     private ProgressBar healthBar;
     private BufferedImage equipped;
     private Item equippedItem;
@@ -33,9 +31,13 @@ public class Player extends GameObject
         healthBar.setAttributes(30, 5);
         healthBar.setShowAmount(false);
 
-        actionBar = (ActionBar)Level.instantiate(new ActionBar(0, 0, this));
+        Level.instantiate(new ActionBar(0, 0, this));
 
-        components.add(new BoxCollider(this));
+        BoxCollider coll = addComponent(new BoxCollider(this));
+        Rigidbody rb = addComponent(new Rigidbody(this));
+
+        coll.setDebugView(true);
+        rb.setDebugView(true);
     }
 
     @Override
@@ -69,8 +71,6 @@ public class Player extends GameObject
         // Draw the Player and Rotate it to Mouse
         g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
-
-        System.out.println("Rotation: " + rotation);
 
         // Draw Equipped Items8
         if(equippedItem != null & equipped != null)

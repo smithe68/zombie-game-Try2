@@ -1,6 +1,7 @@
 package org.objects;
 
 import org.engine.components.BoxCollider;
+import org.engine.components.Rigidbody;
 import org.engine.logic.*;
 import org.engine.portation.*;
 
@@ -17,9 +18,9 @@ public class Zombie extends GameObject
 
         image = SpriteLoader.getSprite("BasicZombie.png");
         player = (Player)Level.findObject("Player");
-        isTrigger = true;
 
-        components.add(new BoxCollider(this));
+        Rigidbody rb = addComponent(new Rigidbody(this));
+        rb.setDebugView(true);
     }
 
     @Override

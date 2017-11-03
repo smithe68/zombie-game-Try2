@@ -31,7 +31,6 @@ public class Level
         {
             objects.get(i).update();
             objects.get(i).updateComponents();
-            objects.get(i).physics();
         }
     }
 

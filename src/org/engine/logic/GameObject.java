@@ -5,6 +5,7 @@ import org.engine.rendering.Renderer;
 import org.engine.components.Component;
 
 import java.awt.*;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
@@ -68,18 +69,24 @@ public class GameObject implements Comparable<GameObject>
     public void onCollision(GameObject g) { }
 
     /* Returns the Collision Bounds */
-    public Rectangle getBounds() {
-        return new Rectangle((int)posX, (int)posY, width, height);
+    public Rectangle2D.Double getBounds() {
+        return new Rectangle2D.Double(posX, posY, width, height);
     }
 
-    /* Do Physics Calculations */
-    public void physics()
+    public <T extends Component> T addComponent(T c)
     {
-        velX *= 1.0 - ((1.0 - 0.9) * 0.025);
-        velY *= 1.0 - ((1.0 - 0.9) * 0.025);
+        components.add(c);
+        return c;
+    }
 
-        x += velX;
-        y += velY;
+    public Object getComponent(Class<? extends Component> c)
+    {
+        if(components.contains(c))
+        {
+            int index = components.indexOf(c);
+            return components.get(index);
+        }
+        else { return null; }
     }
 
     @Override

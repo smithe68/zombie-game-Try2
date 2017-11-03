@@ -1,5 +1,7 @@
 package org.objects;
 
+import org.engine.components.BoxCollider;
+import org.engine.components.Rigidbody;
 import org.engine.logic.GameObject;
 import org.engine.logic.Input;
 import org.engine.logic.Level;
@@ -28,6 +30,11 @@ public class Bullet extends GameObject
 
         dirX = (xDiff - Renderer.getResolution().width / 2) / Renderer.getResolution().width;
         dirY = (yDiff - Renderer.getResolution().height / 2) / Renderer.getResolution().height;
+
+        BoxCollider coll = addComponent(new BoxCollider(this));
+        addComponent(new Rigidbody(this));
+
+        coll.setTrigger(true);
     }
 
     @Override
