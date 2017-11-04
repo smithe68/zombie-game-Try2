@@ -1,14 +1,11 @@
 package org.engine.components;
 
-import org.engine.logic.GameObject;
-
 import java.awt.*;
 
-public interface Component
+public abstract class Component
 {
-    void update();
+    protected boolean debug;
 
-    default void render(Graphics2D g) {
-
-    }
+    public abstract void update();
+    public abstract void render(Graphics2D g);
 }

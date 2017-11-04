@@ -6,9 +6,8 @@ import org.engine.logic.Level;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
-public class BoxCollider implements Component
+public class BoxCollider extends Component
 {
-    private boolean debugView;
     private boolean isTrigger;
     private GameObject parent;
 
@@ -53,7 +52,7 @@ public class BoxCollider implements Component
     @Override
     public void render(Graphics2D g)
     {
-        if(debugView)
+        if(debug)
         {
             g.setColor(Color.red);
             g.draw(new Rectangle2D.Double(parent.posX, parent.posY, parent.width, parent.height));
@@ -67,6 +66,6 @@ public class BoxCollider implements Component
 
     /* Set if Debug Rendering is Active */
     public void enableDebug() {
-        this.debugView = true;
+        this.debug = true;
     }
 }

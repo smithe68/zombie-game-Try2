@@ -38,7 +38,7 @@ public class Zombie extends GameObject
     public void update()
     {
         if(Mathf.distance(x, y, player.x, player.y) < 100)
-            rb.moveTo(player, 0.5);
+            rb.moveTo(player, 0.25);
     }
 
     @Override

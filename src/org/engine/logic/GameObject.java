@@ -61,8 +61,12 @@ public class GameObject implements Comparable<GameObject>
     /* Draws GameObject relative to Camera */
     public void renderTransform()
     {
-        posX = (x - width / 2) - Camera.x + Renderer.getResolution().width / 2;
-        posY = (y - height / 2) - Camera.y + Renderer.getResolution().height / 2;
+        // Center of the Rendered Screen
+        double centerX = Renderer.getResolution().width / 2;
+        double centerY = Renderer.getResolution().height / 2;
+
+        posX = (x - width / 2) - Camera.x + centerX;
+        posY = (y - height / 2) - Camera.y + centerY;
     }
 
     /* Returns what the Object is Colliding with */
@@ -82,10 +86,8 @@ public class GameObject implements Comparable<GameObject>
     public Component getComponent(Class<? extends Component> c)
     {
         for(Component component : components)
-        {
             if(component.getClass() == c)
                 return component;
-        }
 
         throw new NullPointerException("Component " + c.getSimpleName()
         + " Not Found in " + name);

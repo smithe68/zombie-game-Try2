@@ -6,9 +6,8 @@ import org.engine.logic.Updater;
 import java.awt.*;
 import java.awt.geom.Line2D;
 
-public class Rigidbody implements Component
+public class Rigidbody extends Component
 {
-    private boolean debug;
     private GameObject parent;
 
     public Rigidbody(GameObject parent) {
@@ -18,8 +17,8 @@ public class Rigidbody implements Component
     @Override
     public void update()
     {
-        parent.velX *= 1.0 - ((1.0 - 0.9) * 0.025);
-        parent.velY *= 1.0 - ((1.0 - 0.9) * 0.025);
+        parent.velX *= 1.0 - ((1.0 - 0.9) * Updater.DELTA_TIME);
+        parent.velY *= 1.0 - ((1.0 - 0.9) * Updater.DELTA_TIME);
 
         parent.x += parent.velX;
         parent.y += parent.velY;
