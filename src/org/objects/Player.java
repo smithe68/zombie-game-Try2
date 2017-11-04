@@ -42,11 +42,8 @@ public class Player extends GameObject
     @Override
     public void update()
     {
-        Camera.x = x;
-        Camera.y = y;
-
+        Camera.setPosition(x, y);
         rb.setVelocity(Input.horizontal, Input.vertical);
-
         healthBar.setAmount((int)health);
 
         if(Input.getKeyDown(KeyEvent.VK_SPACE))

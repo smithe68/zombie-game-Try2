@@ -25,4 +25,10 @@ public class Camera
                 zoom -= 1;
         }
     }
+
+    public static void setPosition(double newX, double newY)
+    {
+        x = newX;
+        y = newY;
+    }
 }
