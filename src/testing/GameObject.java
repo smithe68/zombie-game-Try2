@@ -1,25 +1,58 @@
 package testing;
 
+import org.engine.components.Component;
 import org.engine.rendering.Camera;
 import org.engine.rendering.Renderer;
 
 import java.awt.*;
-import java.awt.geom.*;
+import java.util.ArrayList;
 
-public interface GameObject
+public class GameObject
 {
-    void update();
-    void render(Graphics2D g);
+    protected int x, y;
+    protected int posX, posY;
 
-    /* Returns the GameObject's Bounds */
-    default Rectangle2D.Double getBounds(Entity e) {
-        return new Rectangle2D.Double(e.x, e.y, e.width, e.height);
+    protected int height = 16;
+    protected int width = 16;
+
+    protected double rotation;
+
+    private ArrayList<Component> components = new ArrayList<>();
+
+    public GameObject(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
     }
 
-    /* Renders the GameObject relative to Camera */
-    default void renderTransform(Entity e)
+    protected void update() { }
+
+    protected void render(Graphics2D g) {
+        renderTransform();
+    }
+
+    private void renderTransform()
     {
-        e.posX = (e.x - e.width / 2) - (Camera.x + Renderer.getResolution().width / 2);
-        e.posY = (e.y - e.height / 2) - (Camera.y + Renderer.getResolution().height / 2);
+        // Get Game's Internal Resolution
+        int resWidth = Renderer.getResolution().width;
+        int resHeight = Renderer.getResolution().height;
+
+        // Set the Rendering Position
+        posX = (x - width / 2) - (int)Camera.x + resWidth / 2;
+        posY = (y - height / 2) - (int)Camera.y + resHeight / 2;
+    }
+
+    protected <T extends Component> T addComponent(T c)
+    {
+        components.add(c);
+        return c;
+    }
+
+    protected void setWidth(int width) {
+        this.width = width;
+    }
+
+    protected void setHeight(int height) {
+        this.height = height;
     }
 }
