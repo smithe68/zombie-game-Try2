@@ -66,7 +66,7 @@ public class BoxCollider implements Component
     }
 
     /* Set if Debug Rendering is Active */
-    public void setDebugView(boolean debug) {
-        this.debugView = debug;
+    public void enableDebug() {
+        this.debugView = true;
     }
 }

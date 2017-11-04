@@ -19,6 +19,8 @@ public class Player extends GameObject
     private BufferedImage equipped;
     private Item equippedItem;
 
+    private Rigidbody rb;
+
     public Player(double x, double y)
     {
         super(x, y);
@@ -33,11 +35,8 @@ public class Player extends GameObject
 
         Level.instantiate(new ActionBar(0, 0, this));
 
-        BoxCollider coll = addComponent(new BoxCollider(this));
-        Rigidbody rb = addComponent(new Rigidbody(this));
-
-        coll.setDebugView(true);
-        rb.setDebugView(true);
+        addComponent(new BoxCollider(this));
+        rb = addComponent(new Rigidbody(this));
     }
 
     @Override
@@ -46,8 +45,7 @@ public class Player extends GameObject
         Camera.x = x;
         Camera.y = y;
 
-        velX = Input.horizontal;
-        velY = Input.vertical;
+        rb.setVelocity(Input.horizontal, Input.vertical);
 
         healthBar.setAmount((int)health);
 
@@ -61,22 +59,20 @@ public class Player extends GameObject
     {
         AffineTransform transform = g.getTransform();
 
-        // Get Difference Between Mouse Position and Center of Screen
-        double xDiff = (Input.mousePos.x / Renderer.getResolutionFactor().width) - Renderer.getResolution().width / 2;
-        double yDiff = (Input.mousePos.y / Renderer.getResolutionFactor().height) - Renderer.getResolution().height / 2;
-
-        // Calculate Rotation in Degrees from Player to Mouse Position
-        rotation = Math.toDegrees(Math.atan2(yDiff - y + Camera.y, xDiff - x + Camera.x));
+        // Get Rotation to Mouse Position
+        rotation = Mathf.lookAtMouse(x, y);
 
         // Draw the Player and Rotate it to Mouse
-        g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
+        g.rotate(rotation, posX + width / 2, posY + height / 2);
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
 
-        // Draw Equipped Items8
+        // Draw Equipped Items
         if(equippedItem != null & equipped != null)
         {
-            g.drawImage(equipped, (int)posX + width / 2 - 2,
-                    (int)posY - height / 2 + 3, width, height, null);
+            int equipX = (int)posX + width / 2 - 2;
+            int equipY = (int)posY - height / 2 + 3;
+
+            g.drawImage(equipped, equipX, equipY, width, height, null);
         }
 
         g.setTransform(transform);

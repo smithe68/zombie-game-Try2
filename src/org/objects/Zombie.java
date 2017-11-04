@@ -1,7 +1,6 @@
 package org.objects;
 
-import org.engine.components.BoxCollider;
-import org.engine.components.Rigidbody;
+import org.engine.components.*;
 import org.engine.logic.*;
 import org.engine.portation.*;
 
@@ -10,6 +9,9 @@ import java.awt.geom.AffineTransform;
 
 public class Zombie extends GameObject
 {
+    private Rigidbody rb;
+    private BoxCollider coll;
+
     private Player player;
 
     public Zombie(double x, double y)
@@ -17,10 +19,12 @@ public class Zombie extends GameObject
         super(x, y);
 
         image = SpriteLoader.getSprite("BasicZombie.png");
+
         player = (Player)Level.findObject("Player");
 
-        Rigidbody rb = addComponent(new Rigidbody(this));
-        rb.setDebugView(true);
+        rb = addComponent(new Rigidbody(this));
+        coll = addComponent(new BoxCollider(this));
+        coll.setTrigger(true);
     }
 
     @Override
@@ -33,25 +37,16 @@ public class Zombie extends GameObject
     @Override
     public void update()
     {
-        // Get Distance between Player and Zombie
-        double dist = Math.sqrt(((x - player.x) * (x - player.x)) + ((y - player.y) * (y - player.y)));
-
-        double dirX = player.x - x;
-        double dirY = player.y - y;
-
-        if(dist < 100)
-        {
-            velX = dirX * 0.025;
-            velY = dirY * 0.025;
-        }
+        if(Mathf.distance(x, y, player.x, player.y) < 100)
+            rb.moveTo(player, 0.5);
     }
 
     @Override
     public void render(Graphics2D g)
     {
+        rotation = Mathf.lookAt(this, player);
         AffineTransform transform = g.getTransform();
-        rotation = Math.toDegrees(Math.atan2(player.posY - posY, player.posX - posX));
-        g.rotate(Math.toRadians(rotation), posX + width / 2, posY + height / 2);
+        g.rotate(rotation, posX + width / 2, posY + height / 2);
         g.drawImage(image, (int)posX, (int)posY, width, height, null);
         g.setTransform(transform);
     }

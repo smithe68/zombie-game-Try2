@@ -5,7 +5,7 @@ import org.engine.rendering.Renderer;
 
 public class Updater
 {
-    public static float deltaTime;
+    public static final double DELTA_TIME = 0.025;
 
     private static int targetTime = (int)1E9 / Renderer.getTargetFPS();
     private static long lastTime = System.nanoTime();
@@ -20,7 +20,6 @@ public class Updater
                 long startTime = System.nanoTime();
 
                 // Calculate a Delta Time
-                deltaTime = (System.nanoTime() - lastTime) / (int)1E9;
                 lastTime = System.nanoTime();
 
                 // Update Stuff

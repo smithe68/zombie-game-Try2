@@ -1,6 +1,7 @@
 package org.engine.components;
 
 import org.engine.logic.GameObject;
+import org.engine.logic.Updater;
 
 import java.awt.*;
 import java.awt.geom.Line2D;
@@ -41,7 +42,32 @@ public class Rigidbody implements Component
         }
     }
 
-    public void setDebugView(boolean debug) {
-        this.debug = debug;
+    /* Move the Parent GameObjec toward the Target */
+    public void moveTo(GameObject target, double speed)
+    {
+        double dirX = target.x - parent.x;
+        double dirY = target.y - parent.y;
+
+        parent.velX = dirX * (speed * Updater.DELTA_TIME);
+        parent.velY = dirY * (speed * Updater.DELTA_TIME);
+    }
+
+    /* Adds to current Velocity of the Parent GameObject */
+    public void addVelocity(double dx, double dy)
+    {
+        parent.velX += dx;
+        parent.velY += dy;
+    }
+
+    /* Sets the Velocity of the Parent GameObject */
+    public void setVelocity(double x, double y)
+    {
+        parent.velX = x;
+        parent.velY = y;
+    }
+
+    /* Set if Debug Rendering is Active */
+    public void enableDebug() {
+        this.debug = true;
     }
 }

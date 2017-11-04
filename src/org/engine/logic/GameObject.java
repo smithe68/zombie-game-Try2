@@ -79,14 +79,16 @@ public class GameObject implements Comparable<GameObject>
         return c;
     }
 
-    public Object getComponent(Class<? extends Component> c)
+    public Component getComponent(Class<? extends Component> c)
     {
-        if(components.contains(c))
+        for(Component component : components)
         {
-            int index = components.indexOf(c);
-            return components.get(index);
+            if(component.getClass() == c)
+                return component;
         }
-        else { return null; }
+
+        throw new NullPointerException("Component " + c.getSimpleName()
+        + " Not Found in " + name);
     }
 
     @Override
