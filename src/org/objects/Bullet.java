@@ -14,7 +14,7 @@ public class Bullet extends GameObject
     private double dirX;
     private double dirY;
 
-    private double timer = 100000;
+    private double timer = 3;
 
     public Bullet(double x, double y)
     {
@@ -59,8 +59,9 @@ public class Bullet extends GameObject
     @Override
     public void onCollision(GameObject g)
     {
-        if(g.tag.equals("Zombie") | g.tag.equals("Bullet")) {
-            Level.destroy(g);
+        if(!g.tag.equals("Player"))
+        {
+            Level.destroy(this);
         }
     }
 }

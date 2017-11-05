@@ -20,8 +20,8 @@ public class BoxCollider extends Component
     {
         for(int i = 0; i < Level.objects.size(); i++)
         {
-            if(Level.objects.get(i) == parent) continue;
             GameObject curr = Level.objects.get(i);
+            if(curr == parent | !curr.containsBounds) continue;
 
             if(parent.getBounds().intersects(Level.objects.get(i).getBounds()))
             {

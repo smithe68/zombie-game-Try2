@@ -22,7 +22,9 @@ public class GameObject implements Comparable<GameObject>
     public int width, height;
     public int layer;
 
-    protected boolean isPersistant;
+    public boolean isPersistant;
+    public boolean containsBounds = true;
+
     protected BufferedImage image;
 
     // Contains all the Components in a GameObject
@@ -73,8 +75,12 @@ public class GameObject implements Comparable<GameObject>
     public void onCollision(GameObject g) { }
 
     /* Returns the Collision Bounds */
-    public Rectangle2D.Double getBounds() {
-        return new Rectangle2D.Double(posX, posY, width, height);
+    public Rectangle2D.Double getBounds()
+    {
+        if(containsBounds)
+            return new Rectangle2D.Double(posX, posY, width, height);
+        else
+            return null;
     }
 
     public <T extends Component> T addComponent(T c)
