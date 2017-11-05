@@ -2,6 +2,7 @@ package org.objects;
 
 import org.engine.components.*;
 import org.engine.logic.*;
+import org.engine.math.Mathf;
 import org.engine.portation.*;
 
 import java.awt.*;
@@ -9,8 +10,11 @@ import java.awt.geom.AffineTransform;
 
 public class Zombie extends GameObject
 {
+    public double health = 100;
+
     private Rigidbody rb;
     private BoxCollider coll;
+    private ProgressBar healthBar;
 
     private Player player;
 
@@ -25,6 +29,13 @@ public class Zombie extends GameObject
         rb = addComponent(new Rigidbody(this));
         coll = addComponent(new BoxCollider(this));
         coll.setTrigger(true);
+
+        // Create HUD
+        healthBar = (ProgressBar)Level.instantiate(new ProgressBar(5, 5));
+        healthBar.setColors(Color.white, Color.red, Color.white);
+        healthBar.setValues(1, (int)health, 100);
+        healthBar.setAttributes(15, 2);
+        healthBar.setShowAmount(false);
     }
 
     @Override
@@ -32,13 +43,24 @@ public class Zombie extends GameObject
     {
         if(g.tag.equals("Player"))
             player.hurt(0.5);
+
+        if(g.tag.equals("Bullet"))
+        {
+            health -= 20;
+            Level.destroy(g);
+        }
     }
 
     @Override
     public void update()
     {
         if(Mathf.distance(x, y, player.x, player.y) < 100)
-            rb.moveTo(player, 0.25);
+            rb.moveTo(player, 5);
+
+        healthBar.x = posX;
+        healthBar.y = posY - 2.5;
+
+        healthBar.setAmount((int)health);
     }
 
     @Override

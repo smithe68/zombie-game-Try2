@@ -1,7 +1,6 @@
 package org.engine.components;
 
-import org.engine.logic.GameObject;
-import org.engine.logic.Level;
+import org.engine.logic.*;
 
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
@@ -23,7 +22,7 @@ public class BoxCollider extends Component
             GameObject curr = Level.objects.get(i);
             if(curr == parent | !curr.containsBounds) continue;
 
-            if(parent.getBounds().intersects(Level.objects.get(i).getBounds()))
+            if(parent.getBounds().intersects(curr.getBounds()))
             {
                 parent.onCollision(curr);
 

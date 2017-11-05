@@ -1,5 +1,7 @@
-package org.engine.logic;
+package org.engine.math;
 
+import org.engine.logic.GameObject;
+import org.engine.logic.Input;
 import org.engine.rendering.Camera;
 import org.engine.rendering.Renderer;
 

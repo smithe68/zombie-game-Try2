@@ -55,13 +55,4 @@ public class Bullet extends GameObject
         g.setColor(Color.yellow);
         g.fillRect((int)posX, (int)posY, width, height);
     }
-
-    @Override
-    public void onCollision(GameObject g)
-    {
-        if(!g.tag.equals("Player"))
-        {
-            Level.destroy(this);
-        }
-    }
 }

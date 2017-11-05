@@ -2,6 +2,7 @@ package org.engine.components;
 
 import org.engine.logic.GameObject;
 import org.engine.logic.Updater;
+import org.engine.math.Vector;
 
 import java.awt.*;
 import java.awt.geom.Line2D;
@@ -44,11 +45,11 @@ public class Rigidbody extends Component
     /* Move the Parent GameObjec toward the Target */
     public void moveTo(GameObject target, double speed)
     {
-        double dirX = target.x - parent.x;
-        double dirY = target.y - parent.y;
+        Vector dir = new Vector(target.x - parent.x, target.y - parent.y);
+        dir.normalize();
 
-        parent.velX = dirX * (speed * Updater.DELTA_TIME);
-        parent.velY = dirY * (speed * Updater.DELTA_TIME);
+        parent.velX = dir.x * (speed * 0.1);
+        parent.velY = dir.y * (speed * 0.1);
     }
 
     /* Adds to current Velocity of the Parent GameObject */

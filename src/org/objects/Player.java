@@ -2,6 +2,7 @@ package org.objects;
 
 import org.engine.components.*;
 import org.engine.logic.*;
+import org.engine.math.Mathf;
 import org.engine.portation.*;
 import org.engine.rendering.*;
 import org.inventory.Item;
@@ -46,9 +47,14 @@ public class Player extends GameObject
         rb.setVelocity(Input.horizontal, Input.vertical);
         healthBar.setAmount((int)health);
 
-        if(Input.getKeyDown(KeyEvent.VK_SPACE))
-            if(getEquippedItem() != null)
+        if(Input.getKeyDown(KeyEvent.VK_SPACE)) {
+            if(getEquippedItem() != null) {
                 equippedItem.use();
+            }
+        }
+
+        if(Input.getKeyDown(KeyEvent.VK_E))
+            System.out.println("Test");
     }
 
     @Override

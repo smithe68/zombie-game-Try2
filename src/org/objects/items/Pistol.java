@@ -34,6 +34,8 @@ public class Pistol extends Item
     @Override
     public void use()
     {
+        System.out.println("SHOOTING");
+
         if(parent.tag.equals("Player"))
         {
             Player player = (Player)parent;
