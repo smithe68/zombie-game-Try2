@@ -13,7 +13,7 @@ import java.awt.image.VolatileImage;
  */
 public class Renderer
 {
-    /* The default internal rendering resolution */
+    /* The default internal resolution */
     private static final int RESOLUTION = 256;
 
     /* The target framerate the engine runs at */
@@ -27,16 +27,17 @@ public class Renderer
     private static long lastFPSCheck;
     private static int totalFrames;
 
-    /* For rendering loop's timing */
+    /* For rendering loop's timing based on target fps */
     private static int targetTime = (int)1E9 / TARGET_FPS;
 
     /* Starts the main rendering loop */
-    public static void startRendering(Canvas canvas)
+    public static void startRenderer(Canvas canvas)
     {
         scaleResolution(canvas);
 
         Thread thread = new Thread(() ->
         {
+            // Get graphics card configuration and create a frame
             GraphicsConfiguration gc = canvas.getGraphicsConfiguration();
             VolatileImage vImage = gc.createCompatibleVolatileImage(res.width, res.height);
 
@@ -80,9 +81,7 @@ public class Renderer
                     try {
                         Thread.sleep((targetTime - totalTime) / (int)1E6);
                     }
-                    catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    catch (InterruptedException e) { e.printStackTrace(); }
                 }
             }
         });

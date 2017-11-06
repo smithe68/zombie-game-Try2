@@ -1,6 +1,7 @@
 package org;
 
 import org.engine.rendering.Renderer;
+import org.engine.rendering.Updater;
 import org.engine.rendering.Window;
 
 import java.awt.*;
@@ -27,7 +28,8 @@ public class Main
         Canvas mainCanvas = Window.createWindow();
 
         // Start the rendering thread and the logic thread
-        Renderer.startRendering(mainCanvas);
+        Renderer.startRenderer(mainCanvas);
+        Updater.startUpdater();
 
         // Initialize everything else
     }
