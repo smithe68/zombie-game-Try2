@@ -1,66 +1,78 @@
 package org.engine.rendering;
 
-import org.engine.logic.LevelManager;
+import org.Main;
 
 import java.awt.*;
 import java.awt.image.VolatileImage;
 
+/**
+ * This class deals with rendering everything
+ * onto the main window's canvas.
+ *
+ * @author Jakub P. Szarkowicz
+ */
 public class Renderer
 {
-    private static boolean running = true;
+    /* The default internal rendering resolution */
+    private static final int RESOLUTION = 256;
 
-    private static int resolution = 256;
-    private static int targetFPS = 60;
+    /* The target framerate the engine runs at */
+    private static final int TARGET_FPS = 60;
 
-    private static int resolutionWidth;
-    private static int resolutionHeight;
+    /* Scaled resolution to window size */
+    private static Dimension res;
 
-    private static int resFactorX;
-    private static int resFactorY;
-
+    /* Variables for calculating framerate */
     private static int currentFPS;
-    private static long lastFpsCheck;
+    private static long lastFPSCheck;
     private static int totalFrames;
 
-    private static int targetTime = (int)1E9 / targetFPS;
+    /* For rendering loop's timing */
+    private static int targetTime = (int)1E9 / TARGET_FPS;
 
-    /* Starts the Rendering Loop */
-    public static void initialize()
+    /* Starts the main rendering loop */
+    public static void startRendering(Canvas canvas)
     {
-        scaleResolution();
+        scaleResolution(canvas);
 
         Thread thread = new Thread(() ->
         {
-            GraphicsConfiguration gc = Window.getCanvas().getGraphicsConfiguration();
-            VolatileImage vImage = gc.createCompatibleVolatileImage(resolutionWidth, resolutionHeight);
+            GraphicsConfiguration gc = canvas.getGraphicsConfiguration();
+            VolatileImage vImage = gc.createCompatibleVolatileImage(res.width, res.height);
 
-            while(running)
+            while(Main.isRunning())
             {
                 long startTime = System.nanoTime();
+
                 calculateFPS();
 
-                if(vImage.validate(gc) == VolatileImage.IMAGE_INCOMPATIBLE)
-                    vImage = gc.createCompatibleVolatileImage(resolutionWidth, resolutionHeight);
+                // Check and validate created frames
+                if(vImage.validate(gc) == VolatileImage.IMAGE_INCOMPATIBLE) {
+                    vImage = gc.createCompatibleVolatileImage(res.width, res.height);
+                }
 
+                // Let GPU draw graphics in the canvas
                 Graphics g = vImage.getGraphics();
 
-                // Clear the Screen
+                // Clear canvas with a flat color
                 g.setColor(Color.black);
-                g.fillRect(0, 0, resolutionWidth, resolutionHeight);
+                g.fillRect(0, 0, res.width, res.height);
 
-                // Render Stuff
-                LevelManager.render(g);
+                // TODO - Render everything here
+                g.setColor(Color.red);
+                g.fillRect(0, 0, 128, 128);
 
-                // Display FPS on the Window Title
-                Window.setTitle("Zombie Game - FPS: " + currentFPS);
-
-                g.dispose();
-
-                g = Window.getCanvas().getGraphics();
-                g.drawImage(vImage, 0, 0, Window.getWidth(), Window.getHeight(), null);
+                // Display framerate in the window title
+                Window.setTitle("Game - FPS: " + currentFPS);
 
                 g.dispose();
 
+                // Cleanup volatile frames
+                g = canvas.getGraphics();
+                g.drawImage(vImage, 0, 0, canvas.getWidth(), canvas.getHeight(), null);
+                g.dispose();
+
+                // Calculate frame timing
                 long totalTime = System.nanoTime() - startTime;
 
                 if(totalTime < targetTime)
@@ -79,51 +91,30 @@ public class Renderer
         thread.start();
     }
 
-    /* Scales the Resolution to Window Size */
-    private static void scaleResolution()
+    /* Scales the resolution to the window size */
+    private static void scaleResolution(Canvas canvas)
     {
-        // Scale Resolution to Window Size
-        int factor = Window.getWidth() / resolution;
+        // Scale by window's width and height average
+        double factor = (canvas.getWidth() + canvas.getHeight()) / 2;
+        double width = canvas.getWidth() / (factor / RESOLUTION);
+        double height = canvas.getHeight() / (factor / RESOLUTION);
 
-        resolutionWidth = Window.getWidth() / factor;
-        resolutionHeight = Window.getHeight() / factor;
-
-        resFactorX = Window.getWidth() / resolutionWidth;
-        resFactorY = Window.getHeight() / resolutionHeight;
+        // Set internal resolution to new scaled resolution
+        res = new Dimension((int)width, (int)height);
     }
 
-    /* Calculates the Average FPS */
+    /* Calculates the framerate */
     private static void calculateFPS()
     {
-        // FPS Counter
         totalFrames++;
-        if(System.nanoTime() > lastFpsCheck + (int)1E9)
+        if(System.nanoTime() > lastFPSCheck + (int)1E9)
         {
-            lastFpsCheck = System.nanoTime();
+            lastFPSCheck = System.nanoTime();
             currentFPS = totalFrames;
             totalFrames = 0;
         }
     }
 
-    /* Return whether or not the Renderer is Running */
-    public static boolean getRunning() { return running; }
-
-    /* Return the Renderer Target FPS */
-    public static int getTargetFPS() { return targetFPS; }
-
-    /* Return the Game Internal Resolution */
-    public static Dimension getResolution() {
-        return new Dimension(resolutionWidth, resolutionHeight);
-    }
-
-    /* Sets the Default Internal Resolution */
-    public static void setDefaultResolution(int res) { resolution = res; }
-
-    /* Returns the Factor at which the Resolution in Scaled */
-    public static Dimension getResolutionFactor() {
-        return new Dimension(resFactorX, resFactorY);
-    }
-
-    /* Set the Game's Target FPS */
-    public static void setTargetFPS(int fps) { targetFPS = fps; }
+    /* Returns the scaled rendering resolution */
+    public static Dimension getResolution() { return res; }
 }

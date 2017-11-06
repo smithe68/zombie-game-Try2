@@ -2,15 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/engine/math/Vector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/engine/logic/Mathf.java" afterPath="$PROJECT_DIR$/src/org/engine/math/Mathf.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/Main.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/components/BoxCollider.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/components/Component.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/components/Rigidbody.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/logic/Game.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/logic/GameObject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/logic/Input.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/logic/Level.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/logic/LevelManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/logic/Sound.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/logic/UIObject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/logic/Updater.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/math/Mathf.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/math/Vector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/portation/EngineConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/portation/LevelLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/portation/SpriteLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/engine/rendering/Camera.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/inventory/InventoryManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/inventory/Item.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/inventory/ItemDatabase.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/objects/ActionBar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/objects/Bullet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/objects/Pickup.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/objects/Player.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/objects/ProgressBar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/objects/Zombie.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/objects/items/Pistol.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Climb_Rope_Loop_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Collect_Point_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Collect_Point_01.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Collect_Point_02.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Craft_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Explosion_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Explosion_01.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Explosion_02.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Explosion_03.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Explosion_04.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Hero_Death_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Hit_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Hit_01.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Hit_02.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Hit_03.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Jingle_Achievement_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Jingle_Achievement_01.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Jingle_Lose_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Jingle_Lose_01.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Jingle_Win_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Jingle_Win_01.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Jump_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Jump_01.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Jump_02.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Jump_03.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Menu_Navigate_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Menu_Navigate_01.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Menu_Navigate_02.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Menu_Navigate_03.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Open_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Open_01.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Pickup_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Pickup_01.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Pickup_02.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Pickup_03.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Pickup_04.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Shoot_00.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Shoot_01.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Shoot_02.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/Shoot_03.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/bg.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sounds/bg.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/BasicZombie.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/BasicZombie_Hit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/Blank.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/Game Over Screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/GrassTile.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/Pistol.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/Pistol_Side.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/PlayerDude.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/SaucerTurret.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/SmallShadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/StoneTile.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/healthPack.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sprites/zombie.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/testing/GameObject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/testing/Player.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/components/BoxCollider.java" afterPath="$PROJECT_DIR$/src/org/engine/components/BoxCollider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/components/Rigidbody.java" afterPath="$PROJECT_DIR$/src/org/engine/components/Rigidbody.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Bullet.java" afterPath="$PROJECT_DIR$/src/org/objects/Bullet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Player.java" afterPath="$PROJECT_DIR$/src/org/objects/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Zombie.java" afterPath="$PROJECT_DIR$/src/org/objects/Zombie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/items/Pistol.java" afterPath="$PROJECT_DIR$/src/org/objects/items/Pistol.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/rendering/Renderer.java" afterPath="$PROJECT_DIR$/src/org/engine/rendering/Renderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/rendering/Window.java" afterPath="$PROJECT_DIR$/src/org/engine/rendering/Window.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +107,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/engine/logic/GameObject.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-546">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="484">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,31 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/engine/math/Vector.java">
+      <file leaf-file-name="Renderer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Renderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Zombie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/objects/Zombie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rigidbody.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/engine/components/Rigidbody.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="48" column="24" lean-forward="true" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+            <state relative-caret-position="2059">
+              <caret line="102" column="53" lean-forward="true" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,64 +131,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pistol.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/objects/items/Pistol.java">
+      <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InventoryManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/inventory/InventoryManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemDatabase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/inventory/ItemDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActionBar.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/objects/ActionBar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+            <state relative-caret-position="-209">
+              <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/inventory/Item.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -162,8 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/engine/CustomMath.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/Sound.java" />
         <option value="$PROJECT_DIR$/src/org/objects/Tile.java" />
         <option value="$PROJECT_DIR$/src/org/ui/Database.java" />
         <option value="$PROJECT_DIR$/src/org/engine/SpriteLoader.java" />
@@ -185,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/org/engine/logic/Sound.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/LevelManager.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/CustomMath.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/rendering/Window.java" />
         <option value="$PROJECT_DIR$/src/org/engine/portation/EngineConfig.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/Input.java" />
         <option value="$PROJECT_DIR$/src/org/objects/ProgressBar.java" />
@@ -200,7 +206,6 @@
         <option value="$PROJECT_DIR$/src/org/engine/logic/Updater.java" />
         <option value="$PROJECT_DIR$/src/org/engine/rendering/Camera.java" />
         <option value="$PROJECT_DIR$/src/org/engine/components/Component.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/rendering/Renderer.java" />
         <option value="$PROJECT_DIR$/src/testing/GameObject.java" />
         <option value="$PROJECT_DIR$/src/testing/Player.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/UIObject.java" />
@@ -213,6 +218,10 @@
         <option value="$PROJECT_DIR$/src/org/objects/Bullet.java" />
         <option value="$PROJECT_DIR$/src/org/objects/items/Pistol.java" />
         <option value="$PROJECT_DIR$/src/org/objects/Player.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/logging/Debug.java" />
+        <option value="$PROJECT_DIR$/src/org/Main.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/rendering/Window.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/rendering/Renderer.java" />
       </list>
     </option>
   </component>
@@ -261,8 +270,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -286,74 +293,16 @@
               <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-              <item name="math" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
               <item name="rendering" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="objects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="objects" type="462c0819:PsiDirectoryNode" />
-              <item name="items" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="testing" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -389,7 +338,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Game">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -398,6 +347,25 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="org.engine.logic.Game" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="IdleGame" />
+      <envs />
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.Main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -635,17 +603,19 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Screen" />
       <item index="1" class="java.lang.String" itemvalue="Application.Main" />
       <item index="2" class="java.lang.String" itemvalue="Application.Game" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Game" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Game" />
         <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Screen" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Screen" />
       </list>
     </recent_temporary>
   </component>
@@ -667,13 +637,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Changed Main">
-      <created>1497391926784</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1497391926785</updated>
     </task>
     <task id="LOCAL-00070" summary="Changed Main">
       <created>1497392000841</created>
@@ -1011,7 +974,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509905774694</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Created a Component System.">
+      <created>1509916665103</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1509916665103</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1026,7 +996,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1648707" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4698276" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17780173" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1100,7 +1070,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="41" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1109,8 +1079,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/GitHub/PixelGame/src/org/object/Platform.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/engine/Spawn.java" />
     <entry file="file://$PROJECT_DIR$/src/org/engine/Vector2D.java" />
     <entry file="file://$PROJECT_DIR$/src/org/enums/ID.java" />
     <entry file="file://$PROJECT_DIR$/src/org/enums/PickupTypes.java" />
@@ -1122,288 +1090,73 @@
     <entry file="file://$PROJECT_DIR$/src/org/ui/ActionBar.java" />
     <entry file="file://$PROJECT_DIR$/src/org/ui/HUD.java" />
     <entry file="file://$PROJECT_DIR$/src/org/engine/LevelGeneration.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/engine/portation/SpriteLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Sound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/sprites/BasicZombie.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/LevelManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="67" column="55" lean-forward="false" selection-start-line="67" selection-start-column="55" selection-end-line="67" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/portation/SpriteLoader.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Sound.java" />
+    <entry file="file://$PROJECT_DIR$/src/resources/sprites/BasicZombie.png" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Game.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/LevelManager.java" />
     <entry file="file://$PROJECT_DIR$/src/org/ui.java" />
-    <entry file="file://$PROJECT_DIR$/src/resources/sprites/Blank.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/sprites/Game Over Screen.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/sprites/Blank.png" />
+    <entry file="file://$PROJECT_DIR$/src/resources/sprites/Game Over Screen.png" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/engine/portation/LevelLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/portation/EngineConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/portation/LevelLoader.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/portation/EngineConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Input.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="110" column="7" lean-forward="true" selection-start-line="110" selection-start-column="7" selection-end-line="110" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Pickup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Updater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Level.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/objects/Pickup.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Camera.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Updater.java" />
     <entry file="file://$PROJECT_DIR$/src/testing/Entity.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/engine/components/Component.java">
+    <entry file="file://$PROJECT_DIR$/src/org/engine/components/Component.java" />
+    <entry file="file://$PROJECT_DIR$/src/testing/GameObject.java" />
+    <entry file="file://$PROJECT_DIR$/src/testing/Player.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/UIObject.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/objects/ProgressBar.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/components/BoxCollider.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/math/Mathf.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/objects/Bullet.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/components/Rigidbody.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/objects/Zombie.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/math/Vector.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/GameObject.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/objects/items/Pistol.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/inventory/InventoryManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/inventory/ItemDatabase.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/objects/ActionBar.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/inventory/Item.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logging/Debug.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-209">
+          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testing/GameObject.java">
+    <entry file="file://$PROJECT_DIR$/src/org/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="484">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Renderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testing/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/UIObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/ProgressBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="38" column="9" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/components/BoxCollider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/math/Mathf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/components/Rigidbody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="48" column="24" lean-forward="true" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Zombie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/math/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-546">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/inventory/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/items/Pistol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/inventory/InventoryManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/inventory/ItemDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/ActionBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+        <state relative-caret-position="2059">
+          <caret line="102" column="53" lean-forward="true" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

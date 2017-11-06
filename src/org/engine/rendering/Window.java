@@ -1,80 +1,68 @@
 package org.engine.rendering;
 
-import org.engine.logic.Input;
-import org.engine.portation.EngineConfig;
-
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * This class creates the main window for the program.
+ * It also creates a canvas where the Renderer will
+ * draw graphics.
+ *
+ * @author Jakub P. Szarkowicz
+ */
 public class Window
 {
-    private static boolean fullscreen;
+    /* The window size */
+    private static Dimension size;
 
-    private static int windowWidth = 1280;
-    private static int windowHeight = 720;
-
+    /* The window's frame */
     private static Frame frame;
-    private static Canvas canvas;
 
-    /* Creates the Main Game Window */
-    public static void initialize()
+    /* Creates the main window */
+    public static Canvas createWindow()
     {
+        // Set the size of the window
+        size = new Dimension(800, 600);
+
+        // Create the window frame
         frame = new Frame();
-        frame.setPreferredSize(new Dimension(windowWidth, windowHeight));
+        frame.setPreferredSize(size);
 
-        canvas = new Canvas();
-        canvas.setSize(windowWidth, windowHeight);
+        // Create the window canvas
+        Canvas canvas = new Canvas();
+        canvas.setSize(size);
 
-        EngineConfig.readConfig();
-
-        if(fullscreen)
+        // Close window when 'X' is pressed
+        frame.addWindowListener(new WindowAdapter()
         {
-            Toolkit toolkit = Toolkit.getDefaultToolkit();
-            frame.setExtendedState(Frame.MAXIMIZED_BOTH);
-            windowWidth = toolkit.getScreenSize().width;
-            windowHeight = toolkit.getScreenSize().height;
-            frame.setUndecorated(true);
-        }
-
-        frame.add(canvas);
-        frame.pack();
-
-        // Close the Game with the 'X' Button
-        frame.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
+            public void windowClosing(WindowEvent we) {
                 System.exit(1);
             }
         });
 
+        frame.add(canvas);
+        frame.pack();
+
+        // Set frame attributes
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
 
+        // Make OS focus on window
         canvas.requestFocus();
         canvas.transferFocus();
 
-        Input input = new Input();
-        canvas.addKeyListener(input);
-        input.initialize();
+        return canvas;
     }
 
-    /* Changes the Title of the Window */
-    public static void setTitle(String title) { frame.setTitle(title); }
-
-    /* Returns the Main Canvas */
-    public static Canvas getCanvas() { return canvas; }
-
-    /* Returns the Window's Width or Height */
-    public static int getHeight() { return windowHeight; }
-    public static int getWidth() { return windowWidth; }
-
-    /* Changes the Window Size */
-    public static void setWindowSize(int width, int height)
+    /* Set the window's title */
+    static void setTitle(String title)
     {
-        windowWidth = width;
-        windowHeight = height;
+        if(frame != null) {
+            frame.setTitle(title);
+        }
     }
 
-    /* Set if Window is Fullscreen */
-    public static void setFullscreen(boolean b) { fullscreen = b; }
+    /* Return window's size */
+    static Dimension getSize() { return size; }
 }
