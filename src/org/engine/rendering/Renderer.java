@@ -90,6 +90,8 @@ public class Renderer
 
         thread.setName("Rendering Thread");
         thread.start();
+
+        System.out.println("[E]: Renderer Active");
     }
 
     /* Scales the resolution to the window size */

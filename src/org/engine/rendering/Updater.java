@@ -47,5 +47,7 @@ public class Updater
 
         thread.setName("Update Thread");
         thread.start();
+
+        System.out.println("[E]: Updater Active");
     }
 }

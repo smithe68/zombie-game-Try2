@@ -21,7 +21,7 @@ public class SceneManager
     /* Starts the scene manager */
     public static void initialize()
     {
-        scenes.add(new Scene());
+        scenes.add(new Scene("Test Scene"));
         changeScene(0);
     }
 
@@ -29,6 +29,7 @@ public class SceneManager
     public static void changeScene(int index)
     {
         currentScene = scenes.get(index);
+        System.out.println("[E]: Switching to '" + scenes.get(index).sceneName + "'");
         currentScene.loadEntities();
     }
 

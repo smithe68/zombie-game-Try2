@@ -13,7 +13,13 @@ import java.util.LinkedList;
  */
 public class Scene
 {
+    public String sceneName;
+
     private static LinkedList<Entity> entities = new LinkedList<>();
+
+    public Scene(String name) {
+        this.sceneName = name;
+    }
 
     /* Loads required entities */
     public void loadEntities()
@@ -24,19 +30,18 @@ public class Scene
     /* Update all entities in the scene */
     public void update()
     {
-        for(Entity entity : entities)
-        {
-            entity.update();
+        for(int i = 0; i < entities.size(); i++) {
+            entities.get(i).update();
         }
     }
 
     /* Render all entities in the scene */
     public void render(Graphics2D g)
     {
-        for(Entity entity : entities)
+        for(int i = 0; i < entities.size(); i++)
         {
-            entity.renderTransform();
-            entity.render(g);
+            entities.get(i).renderTransform();
+            entities.get(i).render(g);
         }
     }
 
@@ -66,7 +71,7 @@ public class Scene
         }
 
         // Throw error if entity is not found
-        System.err.println("[E]: Could not find " +
+        System.err.println("[ERROR]: Could not find " +
                 "entity with tag " + tag);
 
         return null;

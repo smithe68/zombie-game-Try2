@@ -48,6 +48,9 @@ public class Window
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
 
+        // Frame Buffering
+        canvas.createBufferStrategy(3);
+
         // Make OS focus on window
         canvas.requestFocus();
         canvas.transferFocus();
