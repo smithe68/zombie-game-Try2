@@ -1,6 +1,7 @@
 package org.engine.rendering;
 
 import org.Main;
+import org.engine.logic.SceneManager;
 
 /**
  * This class deals with the update / logic
@@ -27,6 +28,9 @@ public class Updater
                 long startTime = System.nanoTime();
 
                 // TODO - Do all updating / logic here
+                if(SceneManager.getActive() != null) {
+                    SceneManager.update();
+                }
 
                 // Calculate update timing
                 long totalTime = System.nanoTime() - startTime;

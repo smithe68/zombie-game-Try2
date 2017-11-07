@@ -1,5 +1,6 @@
 package org;
 
+import org.engine.logic.SceneManager;
 import org.engine.rendering.Renderer;
 import org.engine.rendering.Updater;
 import org.engine.rendering.Window;
@@ -32,6 +33,7 @@ public class Main
         Updater.startUpdater();
 
         // Initialize everything else
+        SceneManager.initialize();
     }
 
     /* Returns if the main loops are running */

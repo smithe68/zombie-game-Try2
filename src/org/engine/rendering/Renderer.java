@@ -1,6 +1,7 @@
 package org.engine.rendering;
 
 import org.Main;
+import org.engine.logic.SceneManager;
 
 import java.awt.*;
 import java.awt.image.VolatileImage;
@@ -60,8 +61,9 @@ public class Renderer
                 g.fillRect(0, 0, res.width, res.height);
 
                 // TODO - Render everything here
-                g.setColor(Color.red);
-                g.fillRect(0, 0, 128, 128);
+                if(SceneManager.getActive() != null) {
+                    SceneManager.render((Graphics2D)g);
+                }
 
                 // Display framerate in the window title
                 Window.setTitle("Game - FPS: " + currentFPS);
