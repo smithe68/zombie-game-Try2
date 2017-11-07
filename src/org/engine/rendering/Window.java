@@ -1,5 +1,7 @@
 package org.engine.rendering;
 
+import org.engine.input.Input;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -54,6 +56,9 @@ public class Window
         // Make OS focus on window
         canvas.requestFocus();
         canvas.transferFocus();
+
+        // Adds a key listener to the canvas
+        canvas.addKeyListener(new Input());
 
         return canvas;
     }

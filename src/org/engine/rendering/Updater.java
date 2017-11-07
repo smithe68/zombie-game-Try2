@@ -1,6 +1,7 @@
 package org.engine.rendering;
 
 import org.Main;
+import org.engine.input.Input;
 import org.engine.logic.SceneManager;
 
 /**
@@ -27,10 +28,11 @@ public class Updater
             {
                 long startTime = System.nanoTime();
 
-                // TODO - Do all updating / logic here
                 if(SceneManager.getActive() != null) {
                     SceneManager.update();
                 }
+
+                Input.finishInput();
 
                 // Calculate update timing
                 long totalTime = System.nanoTime() - startTime;

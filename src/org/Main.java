@@ -1,5 +1,6 @@
 package org;
 
+import org.engine.input.Input;
 import org.engine.logic.SceneManager;
 import org.engine.rendering.Renderer;
 import org.engine.rendering.Updater;
@@ -33,6 +34,7 @@ public class Main
         Updater.startUpdater();
 
         // Initialize everything else
+        Input.initialize();
         SceneManager.initialize();
     }
 
