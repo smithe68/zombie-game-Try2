@@ -11,8 +11,9 @@ public class Player extends Entity
     }
 
     @Override
-    public void update() {
-        x += 1;
+    public void update()
+    {
+
     }
 
     @Override
