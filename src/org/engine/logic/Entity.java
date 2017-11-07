@@ -1,5 +1,7 @@
 package org.engine.logic;
 
+import org.engine.rendering.Renderer;
+
 import java.awt.*;
 
 /**
@@ -21,6 +23,8 @@ public abstract class Entity
     protected int height = 16;
     protected int width = 16;
 
+    private Dimension res;
+
     public Entity(final double x, final double y)
     {
         this.x = x;
@@ -28,6 +32,9 @@ public abstract class Entity
 
         name = getClass().getSimpleName();
         tag = name;
+
+        // Retrieve Rendering Resolution
+        res = Renderer.getResolution();
     }
 
     /** Used for doing game logic */
@@ -35,4 +42,10 @@ public abstract class Entity
 
     /** Used for rendering this entity */
     public abstract void render(Graphics2D g);
+
+    public void renderTransform()
+    {
+        posX = ((int)x - width / 2) + res.width / 2;
+        posY = ((int)(y * -1) - height / 2) + res.height / 2;
+    }
 }
