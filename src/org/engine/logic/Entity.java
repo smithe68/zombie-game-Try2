@@ -53,8 +53,8 @@ public abstract class Entity
     /* Calculates the rendering position */
     public void renderTransform()
     {
-        posX = ((int)x - width / 2) + res.width / 2;
-        posY = ((int)(y * -1) - height / 2) + res.height / 2;
+        posX = ((int)x - rWidth / 2) + res.width / 2;
+        posY = ((int)(y * -1) - rHeight / 2) + res.height / 2;
     }
 
     /* Returns the scaled width of the entity */
