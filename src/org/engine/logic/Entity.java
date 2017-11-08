@@ -21,11 +21,8 @@ public abstract class Entity
     protected double rotation;
     protected int posX, posY;
 
-    private int height = 8;
-    private int width = 8;
-
-    private int rWidth;
-    private int rHeight;
+    protected int height = 16;
+    protected int width = 16;
 
     private Dimension res;
 
@@ -33,9 +30,6 @@ public abstract class Entity
     {
         this.x = x;
         this.y = y;
-
-        rWidth = width + (Renderer.RESOLUTION / 4);
-        rHeight = height + (Renderer.RESOLUTION / 4);
 
         name = getClass().getSimpleName();
         tag = name;
@@ -53,17 +47,17 @@ public abstract class Entity
     /* Calculates the rendering position */
     public void renderTransform()
     {
-        posX = ((int)x - rWidth / 2) + res.width / 2;
-        posY = ((int)(y * -1) - rHeight / 2) + res.height / 2;
+        posX = ((int)x - width / 2) + res.width / 2;
+        posY = ((int)(y * -1) - height / 2) + res.height / 2;
     }
 
     /* Returns the scaled width of the entity */
     protected int getWidth() {
-        return rWidth;
+        return width;
     }
 
     /* Returns the scaled height of the entity */
     protected int getHeight() {
-        return rHeight;
+        return height;
     }
 }

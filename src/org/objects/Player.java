@@ -8,8 +8,11 @@ import java.awt.geom.AffineTransform;
 
 public class Player extends Entity
 {
-    public Player(double x, double y) {
+    public Player(double x, double y)
+    {
         super(x, y);
+        width = 64;
+        height = 64;
     }
 
     @Override
@@ -25,6 +28,10 @@ public class Player extends Entity
         AffineTransform at = AffineTransform.getTranslateInstance(posX, posY);
         g.setColor(Color.red);
 
+        RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+        g.setRenderingHints(rh);
+
         rotation += 1;
 
         if(rotation > 360)
@@ -32,6 +39,7 @@ public class Player extends Entity
 
         g.rotate(Math.toRadians(rotation), posX + getWidth() / 2, posY + getHeight() / 2);
         g.fillRect(posX, posY, getWidth(), getHeight());
+
         g.setTransform(at);
     }
 }
