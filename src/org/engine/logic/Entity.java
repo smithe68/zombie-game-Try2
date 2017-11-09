@@ -18,8 +18,8 @@ public abstract class Entity
     public String tag;
 
     protected double x, y;
-    protected double rotation;
     protected int posX, posY;
+    protected int rotation;
 
     protected int height = 16;
     protected int width = 16;

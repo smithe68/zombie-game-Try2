@@ -15,7 +15,7 @@ import java.awt.image.VolatileImage;
 public class Renderer
 {
     /* The default internal resolution */
-    public static final int RESOLUTION = 512;
+    public static final int RESOLUTION = 256;
 
     /* The target framerate the engine runs at */
     private static final int TARGET_FPS = 60;

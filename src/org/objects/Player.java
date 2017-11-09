@@ -11,8 +11,6 @@ public class Player extends Entity
     public Player(double x, double y)
     {
         super(x, y);
-        width = 64;
-        height = 64;
     }
 
     @Override
@@ -25,12 +23,8 @@ public class Player extends Entity
     @Override
     public void render(Graphics2D g)
     {
-        AffineTransform at = AffineTransform.getTranslateInstance(posX, posY);
+        AffineTransform at = new AffineTransform();
         g.setColor(Color.red);
-
-        RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING,
-                RenderingHints.VALUE_ANTIALIAS_ON);
-        g.setRenderingHints(rh);
 
         rotation += 1;
 
