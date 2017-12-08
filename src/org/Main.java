@@ -13,7 +13,6 @@ import java.awt.*;
  * All game / engine functionality is initialized here
  * and anything else that needs to happen at the start
  * goes here as well.
- *
  * @author Jakub P. Szarkowicz
  */
 public class Main

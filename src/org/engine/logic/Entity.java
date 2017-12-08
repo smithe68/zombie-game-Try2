@@ -1,8 +1,10 @@
 package org.engine.logic;
 
+import org.engine.components.ShapeRenderer;
 import org.engine.rendering.Renderer;
 
 import java.awt.*;
+import java.util.LinkedList;
 
 /**
  * This class is a basic object that resides
@@ -17,53 +19,69 @@ public abstract class Entity
     public String name;
     public String tag;
 
-    protected double x, y;
-    protected double rotation;
-    protected int posX, posY;
+    public double x, y;
+    public int posX, posY;
 
-    private int height = 8;
-    private int width = 8;
+    public int height = 16;
+    public int width = 16;
 
-    private int rWidth;
-    private int rHeight;
+    public Color color;
 
     private Dimension res;
+
+    private LinkedList<Component> components;
 
     public Entity(final double x, final double y)
     {
         this.x = x;
         this.y = y;
 
-        rWidth = width + (Renderer.RESOLUTION / 4);
-        rHeight = height + (Renderer.RESOLUTION / 4);
-
         name = getClass().getSimpleName();
         tag = name;
 
         // Retrieve Rendering Resolution
         res = Renderer.getResolution();
+
+        start();
     }
+
+    public Entity() { this(0, 0); }
+
+    /* Used when the object is spawned */
+    public abstract void start();
 
     /* Used for doing game logic */
     public abstract void update();
 
+    /* Updates the Entities Components */
+    final void updateComponent()
+    {
+        for(Component comp : components) {
+            comp.update();
+        }
+    }
+
     /* Used for rendering this entity */
-    public abstract void render(Graphics2D g);
+    final void render(Graphics2D g)
+    {
+        g.setColor(color);
+        g.fillRect(posX, posY, width, height);
+
+        for(Component comp : components) {
+            comp.render(g);
+        }
+    }
 
     /* Calculates the rendering position */
-    public void renderTransform()
+    final void renderTransform()
     {
-        posX = ((int)x - rWidth / 2) + res.width / 2;
-        posY = ((int)(y * -1) - rHeight / 2) + res.height / 2;
+        posX = ((int)x - width / 2) + res.width / 2;
+        posY = ((int)(y * -1) - height / 2) + res.height / 2;
     }
 
-    /* Returns the scaled width of the entity */
-    protected int getWidth() {
-        return rWidth;
-    }
-
-    /* Returns the scaled height of the entity */
-    protected int getHeight() {
-        return rHeight;
+    protected final Component addComponent(Component comp)
+    {
+        components.add(comp);
+        return comp;
     }
 }

@@ -8,7 +8,6 @@ import java.util.LinkedList;
 /**
  * This class is the main object that holds
  * all entities that are in the game, e.g. a Level
- *
  * @author Jakub P. Szarkowicz
  */
 public class Scene
@@ -24,7 +23,7 @@ public class Scene
     /* Loads required entities */
     public void loadEntities()
     {
-        createEntity(new Player(0, 0));
+        createEntity(new Player());
     }
 
     /* Update all entities in the scene */

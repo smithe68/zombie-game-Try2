@@ -6,7 +6,6 @@ import java.util.HashMap;
 /**
  * This class deals with detecting and registering
  * keyboard and mouse input from the user.
- *
  * @author Jakub P. Szarkowicz
  */
 public class Input implements KeyListener

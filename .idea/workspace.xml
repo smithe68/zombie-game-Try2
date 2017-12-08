@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/org/engine/rendering/Updater.java" line="5" />
+    <bookmark url="file://$PROJECT_DIR$/src/org/engine/rendering/Updater.java" line="9" />
+    <bookmark url="file://$PROJECT_DIR$/src/org/engine/rendering/Updater.java" line="11" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/engine/components/ShapeRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/engine/logic/Component.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/Main.java" afterPath="$PROJECT_DIR$/src/org/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/input/Input.java" afterPath="$PROJECT_DIR$/src/org/engine/input/Input.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/logic/Entity.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/logic/Scene.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/Scene.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/rendering/Renderer.java" afterPath="$PROJECT_DIR$/src/org/engine/rendering/Renderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/rendering/Updater.java" afterPath="$PROJECT_DIR$/src/org/engine/rendering/Updater.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/engine/rendering/Window.java" afterPath="$PROJECT_DIR$/src/org/engine/rendering/Window.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/objects/Player.java" afterPath="$PROJECT_DIR$/src/org/objects/Player.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,86 +34,14 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java">
+    <leaf>
+      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="true">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="125">
+              <caret line="634" column="34" lean-forward="false" selection-start-line="634" selection-start-column="34" selection-end-line="634" selection-end-column="34" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Renderer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Renderer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-220">
-              <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Entity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Entity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Input.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/engine/input/Input.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Window.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Updater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Updater.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#54151#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,9 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/engine/Game.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/LevelManager.java" />
-        <option value="$PROJECT_DIR$/src/org/ui/ActionBar.java" />
         <option value="$PROJECT_DIR$/src/org/engine/LevelGeneration.java" />
         <option value="$PROJECT_DIR$/src/org/engine/Updater.java" />
         <option value="$PROJECT_DIR$/src/org/engine/Level.java" />
@@ -175,19 +114,22 @@
         <option value="$PROJECT_DIR$/src/org/objects/Bullet.java" />
         <option value="$PROJECT_DIR$/src/org/objects/items/Pistol.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logging/Debug.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/logic/Scene.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/SceneManager.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/rendering/Updater.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/rendering/Window.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/logic/ShapeRenderer.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/rendering/Renderer.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/logic/Scene.java" />
         <option value="$PROJECT_DIR$/src/org/engine/input/Input.java" />
         <option value="$PROJECT_DIR$/src/org/Main.java" />
-        <option value="$PROJECT_DIR$/src/org/objects/Player.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/rendering/Renderer.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/rendering/Window.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/rendering/Updater.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/components/ShapeRenderer.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/logic/Component.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/Entity.java" />
+        <option value="$PROJECT_DIR$/src/org/objects/Player.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="-8" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
@@ -229,10 +171,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,6 +195,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ZombieGame" type="b2602c69:ProjectViewProjectNode" />
@@ -293,12 +239,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
-    <property name="SearchEverywhereHistoryKey" value="Updater&#9;FILE&#9;file://C:/Users/Jakub/Documents/Idea Projects/ZombieGame/src/org/engine/logic/Updater.java&#10;ArrayList&#9;PSI&#9;JAVA://java.util.ArrayList" />
+    <property name="SearchEverywhereHistoryKey" value="List&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java&#10;Pla&#9;FILE&#9;file://C:/Users/Jakub/IdeaProjects/ZombieGame/src/org/objects/Player.java&#10;Entit&#9;PSI&#9;JAVA://org.engine.logic.Entity&#10;Com&#9;FILE&#9;file://C:/Users/Jakub/IdeaProjects/ZombieGame/src/org/engine/logic/Component.java&#10;Entity&#9;FILE&#9;file://C:/Users/Jakub/IdeaProjects/ZombieGame/src/org/engine/logic/Entity.java&#10;Comp&#9;FILE&#9;file://C:/Users/Jakub/IdeaProjects/ZombieGame/src/org/engine/logic/Component.java&#10;S&#9;FILE&#9;file://C:/Users/Jakub/IdeaProjects/ZombieGame/src/org/engine/components/ShapeRenderer.java&#10;Updater&#9;FILE&#9;file://C:/Users/Jakub/Documents/Idea Projects/ZombieGame/src/org/engine/logic/Updater.java&#10;ArrayList&#9;PSI&#9;JAVA://java.util.ArrayList" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -315,203 +265,6 @@
       <recent name="C:\Users\evan\IdeaProjects\IdleGame\src\org\engine" />
       <recent name="C:\Users\evan\IdeaProjects\IdleGame\src\resources\sprites" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/rendering/Renderer.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/rendering/Window.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/objects/Player.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/Main.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/Entity.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/Scene.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/SceneManager.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/rendering/Updater.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/components/BoxCollider.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/components/Component.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/CustomMath.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/Game.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/GameObject.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/Input.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/Level.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/LevelManager.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/Sound.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/UIObject.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/logic/Updater.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/portation/EngineConfig.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/portation/LevelLoader.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/portation/SpriteLoader.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/engine/rendering/Camera.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/inventory/InventoryManager.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/inventory/Item.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/inventory/ItemDatabase.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/objects/ActionBar.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/objects/Bullet.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/objects/Pickup.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/objects/ProgressBar.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/objects/Zombie.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/org/objects/items/Pistol.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Climb_Rope_Loop_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Collect_Point_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Collect_Point_01.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Collect_Point_02.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Craft_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Explosion_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Explosion_01.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Explosion_02.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Explosion_03.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Explosion_04.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Hero_Death_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Hit_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Hit_01.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Hit_02.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Hit_03.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Jingle_Achievement_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Jingle_Achievement_01.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Jingle_Lose_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Jingle_Lose_01.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Jingle_Win_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Jingle_Win_01.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Jump_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Jump_01.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Jump_02.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Jump_03.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Menu_Navigate_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Menu_Navigate_01.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Menu_Navigate_02.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Menu_Navigate_03.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Open_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Open_01.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Pickup_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Pickup_01.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Pickup_02.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Pickup_03.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Pickup_04.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Shoot_00.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Shoot_01.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Shoot_02.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/Shoot_03.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/bg.mp3</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sounds/bg.wav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/BasicZombie.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/BasicZombie_Hit.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/Blank.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/Game Over Screen.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/GrassTile.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/Pistol.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/Pistol_Side.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/PlayerDude.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/SaucerTurret.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/SmallShadow.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/StoneTile.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/healthPack.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/resources/sprites/zombie.png</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -824,13 +577,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Changed Main">
-      <created>1497396475999</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1497396475999</updated>
     </task>
     <task id="LOCAL-00077" summary="Changed Main">
       <created>1497396972326</created>
@@ -1168,27 +914,33 @@
       <option name="project" value="LOCAL" />
       <updated>1510076990492</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Complete redo of everything">
+      <created>1510078096413</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1510078096413</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10816543" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1648707" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46909493" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17685185" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14635417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1196,34 +948,16 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1648707" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.106481485" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17709439" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21551724" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1286,8 +1020,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Tile.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/objects/BasicZombie.java" />
     <entry file="file://$PROJECT_DIR$/src/org/ui/Inventory.java" />
     <entry file="file://$PROJECT_DIR$/src/org/ui/ActionBar.java" />
     <entry file="file://$PROJECT_DIR$/src/org/ui/HUD.java" />
@@ -1300,7 +1032,6 @@
     <entry file="file://$PROJECT_DIR$/src/org/ui.java" />
     <entry file="file://$PROJECT_DIR$/src/resources/sprites/Blank.png" />
     <entry file="file://$PROJECT_DIR$/src/resources/sprites/Game Over Screen.png" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/org/engine/portation/LevelLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/org/engine/portation/EngineConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Input.java" />
@@ -1328,92 +1059,89 @@
     <entry file="file://$PROJECT_DIR$/src/org/objects/ActionBar.java" />
     <entry file="file://$PROJECT_DIR$/src/org/inventory/Item.java" />
     <entry file="file://$PROJECT_DIR$/src/org/engine/logging/Debug.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/logic/SceneManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Updater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/input/Input.java">
+    <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Updater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="275">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Renderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="200">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/components/ShapeRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="24" column="74" lean-forward="true" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/input/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+        <state relative-caret-position="688">
+          <caret line="84" column="20" lean-forward="true" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/objects/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="634" column="34" lean-forward="false" selection-start-line="634" selection-start-column="34" selection-end-line="634" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#54151#0" expanded="true" />
           </folding>
         </state>
       </provider>

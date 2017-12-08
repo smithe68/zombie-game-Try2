@@ -8,7 +8,6 @@ import org.engine.logic.SceneManager;
  * This class deals with the update / logic
  * loop for the game. No graphics are included
  * with this loop.
- *
  * @author Jakub P. Szarkowicz
  */
 public class Updater

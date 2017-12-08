@@ -9,7 +9,6 @@ import java.awt.event.*;
  * This class creates the main window for the program.
  * It also creates a canvas where the Renderer will
  * draw graphics.
- *
  * @author Jakub P. Szarkowicz
  */
 public class Window
