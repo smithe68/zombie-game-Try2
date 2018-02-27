@@ -49,9 +49,6 @@ public class Window
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
 
-        // Frame Buffering
-        canvas.createBufferStrategy(3);
-
         // Make OS focus on window
         canvas.requestFocus();
         canvas.transferFocus();
@@ -72,4 +69,24 @@ public class Window
 
     /* Return window's size */
     static Dimension getSize() { return size; }
+
+    public static void setFullscreen(boolean fullscreen)
+    {
+        frame.dispose();
+        frame.setUndecorated(fullscreen);
+
+        if(fullscreen)
+        {
+            Toolkit toolkit = Toolkit.getDefaultToolkit();
+            Dimension wSize = toolkit.getScreenSize();
+            frame.setSize(wSize.width, wSize.height);
+        }
+        else {
+            frame.setSize(size);
+        }
+
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
+    }
 }

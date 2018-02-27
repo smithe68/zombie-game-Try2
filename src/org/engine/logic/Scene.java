@@ -1,8 +1,7 @@
 package org.engine.logic;
 
-import org.objects.Player;
-
 import java.awt.*;
+import java.util.Collections;
 import java.util.LinkedList;
 
 /**
@@ -14,7 +13,7 @@ public class Scene
 {
     public String sceneName;
 
-    private static LinkedList<Entity> entities = new LinkedList<>();
+    public LinkedList<Entity> entities = new LinkedList<>();
 
     public Scene(String name) {
         this.sceneName = name;
@@ -23,7 +22,7 @@ public class Scene
     /* Loads required entities */
     public void loadEntities()
     {
-        createEntity(new Player());
+
     }
 
     /* Update all entities in the scene */
@@ -45,22 +44,23 @@ public class Scene
     }
 
     /* Spawns an entity into the scene */
-    public static Entity createEntity(Entity e)
+    public Entity createEntity(Entity e)
     {
         System.out.println("[I]: " + e.name);
         entities.add(e);
+        Collections.sort(entities);
         return e;
     }
 
     /* Removed an entity from the scene */
-    public static void destroyEntity(Entity e)
+    public void destroyEntity(Entity e)
     {
         System.out.println("[X]: " + e.name);
         entities.remove(e);
     }
 
     /* Finds an entity thats in the scene */
-    public static Entity findEntity(String tag)
+    public Entity findEntity(String tag)
     {
         for(Entity entity : entities)
         {

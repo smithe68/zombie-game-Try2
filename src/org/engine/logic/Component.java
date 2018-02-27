@@ -11,9 +11,14 @@ public class Component
     protected Entity parent;
     protected boolean debugMode;
 
-    public Component(Entity parent) {
+    public Component(Entity parent)
+    {
         this.parent = parent;
+        start();
     }
+
+    /* Starts the Component Logic */
+    public void start() {}
 
     /* Updates the Component's Logic */
     public void update() {}

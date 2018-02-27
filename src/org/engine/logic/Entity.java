@@ -1,6 +1,5 @@
 package org.engine.logic;
 
-import org.engine.components.ShapeRenderer;
 import org.engine.rendering.Renderer;
 
 import java.awt.*;
@@ -14,7 +13,7 @@ import java.util.LinkedList;
  *
  * @author Jakub P. Szarkowicz
  */
-public abstract class Entity
+public class Entity implements Comparable<Entity>
 {
     public String name;
     public String tag;
@@ -25,7 +24,7 @@ public abstract class Entity
     public int height = 16;
     public int width = 16;
 
-    public Color color;
+    public int layer = 0;
 
     private Dimension res;
 
@@ -42,19 +41,13 @@ public abstract class Entity
         // Retrieve Rendering Resolution
         res = Renderer.getResolution();
 
-        start();
+        components = new LinkedList<>();
     }
 
     public Entity() { this(0, 0); }
 
-    /* Used when the object is spawned */
-    public abstract void start();
-
-    /* Used for doing game logic */
-    public abstract void update();
-
     /* Updates the Entities Components */
-    final void updateComponent()
+    final void update()
     {
         for(Component comp : components) {
             comp.update();
@@ -64,9 +57,6 @@ public abstract class Entity
     /* Used for rendering this entity */
     final void render(Graphics2D g)
     {
-        g.setColor(color);
-        g.fillRect(posX, posY, width, height);
-
         for(Component comp : components) {
             comp.render(g);
         }
@@ -79,9 +69,14 @@ public abstract class Entity
         posY = ((int)(y * -1) - height / 2) + res.height / 2;
     }
 
-    protected final Component addComponent(Component comp)
+    public final Component addComponent(Component comp)
     {
         components.add(comp);
         return comp;
+    }
+
+    @Override
+    public int compareTo(Entity e) {
+        return layer - e.layer;
     }
 }
