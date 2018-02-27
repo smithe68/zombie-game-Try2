@@ -1,6 +1,7 @@
 package org;
 
 import org.engine.input.Input;
+import org.engine.logic.EngineConfig;
 import org.engine.logic.SceneManager;
 import org.engine.rendering.Renderer;
 import org.engine.rendering.Updater;
@@ -23,7 +24,10 @@ public class Main
     /** Starts the program */
     public static void main(String[] theArgs)
     {
-        System.out.println("Starting Program...");
+        System.out.println("Starting...");
+
+        // Load Configs
+        EngineConfig.loadConfig();
 
         // Create the main window
         Canvas mainCanvas = Window.createWindow();

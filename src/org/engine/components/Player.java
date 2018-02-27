@@ -19,8 +19,8 @@ public class Player extends Component
     @Override
     public void start()
     {
-        BufferedImage walk = SpriteRenderer.getImageFromFile("Player-Walk-Sheet.png");
-        walkCycle = SpriteRenderer.splitSpritesheet(walk, 11, 25, 3);
+        BufferedImage walk = SpriteRenderer.getImageFromFile("Player-Sheet.png");
+        walkCycle = SpriteRenderer.splitSpritesheet(walk, 0, 0, 11, 25, 3);
 
         renderer = (SpriteRenderer)parent.addComponent(new SpriteRenderer(parent));
         renderer.setSize(parent.width, parent.height);

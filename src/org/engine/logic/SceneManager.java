@@ -102,6 +102,12 @@ public class SceneManager
         return scene;
     }
 
+    /* Saves current scene to a file */
+    public static void saveSceneToFile(String name)
+    {
+
+    }
+
     /* Updates the current scene */
     public static void update() {
         if(currentScene != null) currentScene.update();

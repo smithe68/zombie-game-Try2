@@ -59,12 +59,12 @@ public class SpriteRenderer extends Component
         return image;
     }
 
-    public static BufferedImage[] splitSpritesheet(BufferedImage image, int cellWidth, int cellHeight, int cells)
+    public static BufferedImage[] splitSpritesheet(BufferedImage image, int x, int y, int cellWidth, int cellHeight, int cells)
     {
         BufferedImage[] result = new BufferedImage[cells];
 
         for(int i = 0; i < cells; i++) {
-           result[i] = image.getSubimage(i * cellWidth, 0, cellWidth, cellHeight);
+           result[i] = image.getSubimage(x + i * cellWidth, y, cellWidth, cellHeight);
         }
 
         return result;

@@ -19,11 +19,17 @@ public class Window
     /* The window's frame */
     private static Frame frame;
 
+    /* If window is Fullscreen */
+    public static boolean startFullscreen;
+
     /* Creates the main window */
     public static Canvas createWindow()
     {
-        // Set the size of the window
-        size = new Dimension(800, 600);
+        if(size == null)
+        {
+            // Set the size of the window
+            size = new Dimension(800, 600);
+        }
 
         // Create the window frame
         frame = new Frame();
@@ -32,6 +38,8 @@ public class Window
         // Create the window canvas
         Canvas canvas = new Canvas();
         canvas.setSize(size);
+
+        setFullscreen(startFullscreen);
 
         // Close window when 'X' is pressed
         frame.addWindowListener(new WindowAdapter()
@@ -68,25 +76,27 @@ public class Window
     }
 
     /* Return window's size */
-    static Dimension getSize() { return size; }
+    public static Dimension getSize() { return size; }
+
+    /* Sets the Size of the Window */
+    public static void setSize(int width, int height) {
+        size = new Dimension(width, height);
+    }
 
     public static void setFullscreen(boolean fullscreen)
     {
-        frame.dispose();
         frame.setUndecorated(fullscreen);
 
         if(fullscreen)
         {
             Toolkit toolkit = Toolkit.getDefaultToolkit();
-            Dimension wSize = toolkit.getScreenSize();
-            frame.setSize(wSize.width, wSize.height);
+            frame.setSize(toolkit.getScreenSize());
+            frame.setExtendedState(Frame.MAXIMIZED_BOTH);
         }
-        else {
+        else
+        {
             frame.setSize(size);
+            frame.setExtendedState(Frame.NORMAL);
         }
-
-        frame.setVisible(true);
-        frame.setLocationRelativeTo(null);
-        frame.setResizable(false);
     }
 }

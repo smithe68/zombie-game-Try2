@@ -14,10 +14,10 @@ import java.awt.image.VolatileImage;
 public class Renderer
 {
     /* The default internal resolution */
-    public static final int RESOLUTION = 384;
+    private static int resolution = 384;
 
     /* The target framerate the engine runs at */
-    private static final int TARGET_FPS = 60;
+    private static int targetFPS = 60;
 
     /* Scaled resolution to window size */
     private static Dimension res;
@@ -28,7 +28,7 @@ public class Renderer
     private static int totalFrames;
 
     /* For rendering loop's timing based on target fps */
-    private static int targetTime = (int)1E9 / TARGET_FPS;
+    private static int targetTime = (int)1E9 / targetFPS;
 
     /* Starts the main rendering loop */
     public static void startRenderer(Canvas canvas)
@@ -98,8 +98,8 @@ public class Renderer
     {
         // Scale by window's width and height average
         double factor = (canvas.getWidth() + canvas.getHeight()) / 2;
-        double width = canvas.getWidth() / (factor / RESOLUTION);
-        double height = canvas.getHeight() / (factor / RESOLUTION);
+        double width = canvas.getWidth() / (factor / resolution);
+        double height = canvas.getHeight() / (factor / resolution);
 
         // Set internal resolution to new scaled resolution
         res = new Dimension((int)width, (int)height);
@@ -119,4 +119,14 @@ public class Renderer
 
     /* Returns the scaled rendering resolution */
     public static Dimension getResolution() { return res; }
+
+    /* Sets the Internal Resolution */
+    public static void setResolution(int res) {
+        resolution = res;
+    }
+
+    /* Sets the Target FPS */
+    public static void setTargetFPS(int target) {
+        targetFPS = target;
+    }
 }
