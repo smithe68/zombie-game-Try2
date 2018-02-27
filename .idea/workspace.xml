@@ -8,11 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/org/engine/components/Player.java" afterPath="$PROJECT_DIR$/src/org/engine/components/Player.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/engine/components/SpriteRenderer.java" afterPath="$PROJECT_DIR$/src/org/engine/components/SpriteRenderer.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/engine/logic/Scene.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/Scene.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/engine/logic/SceneManager.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/SceneManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/resources/scenes/Scene01.level" afterPath="$PROJECT_DIR$/src/resources/scenes/Scene01.level" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -694,13 +689,6 @@
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
     </task>
-    <task id="LOCAL-00079" summary="Changed Main">
-      <created>1497397710034</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1497397710034</updated>
-    </task>
     <task id="LOCAL-00080" summary="Changed Main">
       <created>1497399393367</created>
       <option name="number" value="00080" />
@@ -1037,7 +1025,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519713613769</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Added Animation and Spritesheet Seperation">
+      <created>1519717119276</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1519717119276</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1094,7 +1089,8 @@
     <MESSAGE value="Created a Component System." />
     <MESSAGE value="Complete redo of everything" />
     <MESSAGE value="Complete redo of Component system and how entities are spawned" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete redo of Component system and how entities are spawned" />
+    <MESSAGE value="Added Animation and Spritesheet Seperation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Animation and Spritesheet Seperation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
