@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class EngineConfig
 {
-    private static String getEngineFolder()
+    public static String getEngineFolder()
     {
         FileSystemView view = FileSystemView.getFileSystemView();
         String documents = view.getDefaultDirectory().toString();
@@ -72,7 +72,7 @@ public class EngineConfig
 
             writer.println("[Window]");
             writer.println("Fullscreen: false");
-            writer.println("Size: 1920,1080");
+            writer.println("Size: 1280,720");
             writer.println("");
             writer.println("[Renderer]");
             writer.println("Resolution: 384");

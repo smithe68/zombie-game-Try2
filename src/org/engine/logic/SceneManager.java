@@ -3,9 +3,12 @@ package org.engine.logic;
 import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
@@ -29,8 +32,9 @@ public class SceneManager
     /* Starts the scene manager */
     public static void initialize()
     {
-        scenes.add(readFromFile("Scene01.level"));
+        scenes.add(readFromFile("SceneSaveTest.level"));
         changeScene(0);
+        saveSceneToFile("SceneSaveTest.level");
     }
 
     /* Changes the main scene / level */
@@ -41,6 +45,19 @@ public class SceneManager
         currentScene.loadEntities();
     }
 
+    /* Updates the current scene */
+    public static void update() {
+        if(currentScene != null) currentScene.update();
+    }
+
+    /* Renders the current scene */
+    public static void render(Graphics2D g) {
+        if(currentScene != null) currentScene.render(g);
+    }
+
+    /* Returns the active scene */
+    public static Scene getActive() { return currentScene; }
+
     /* Reads a .Level file as a Scene */
     public static Scene readFromFile(String name)
     {
@@ -48,7 +65,8 @@ public class SceneManager
 
         try
         {
-            Scanner scanner = new Scanner(new File(sceneFolder + "/" + name));
+            String folder = EngineConfig.getEngineFolder() + "/Levels";
+            Scanner scanner = new Scanner(new File(folder + "/" + name));
 
             while(scanner.hasNext())
             {
@@ -97,7 +115,9 @@ public class SceneManager
                 scene.createEntity(ent);
             }
         }
-        catch(FileNotFoundException e) { e.printStackTrace(); }
+        catch(FileNotFoundException e) {
+            System.err.println("Level \"" + name + "\" does not exist!");
+        }
 
         return scene;
     }
@@ -105,19 +125,41 @@ public class SceneManager
     /* Saves current scene to a file */
     public static void saveSceneToFile(String name)
     {
+        String folder = EngineConfig.getEngineFolder() + "/Levels";
+        File file = new File(folder);
+        file.mkdirs();
 
+        File saveFile = new File(file + "/" + name);
+
+        try
+        {
+            PrintWriter writer = new PrintWriter(saveFile);
+
+            for(Entity ent : currentScene.entities)
+            {
+                writer.print(ent.name + ":");
+                writer.print(ent.tag + ":");
+                writer.print(ent.x + "," + ent.y + ":");
+                writer.print(ent.width + ":");
+                writer.print(ent.height + ":");
+                writer.print(ent.layer + ":");
+
+                LinkedList<Component> comps = ent.getComponents();
+
+                for(int i = 0; i < comps.size(); i++)
+                {
+                    Component comp = comps.get(i);
+                    String ending = i == comps.size() - 1 ? "" : ":";
+                    writer.print(comp.getClass().getSimpleName() + ending);
+                }
+
+                writer.println("");
+            }
+
+            writer.close();
+        }
+        catch(IOException e) {
+            System.err.println("Cannot create \"" + name + "\" file!");
+        }
     }
-
-    /* Updates the current scene */
-    public static void update() {
-        if(currentScene != null) currentScene.update();
-    }
-
-    /* Renders the current scene */
-    public static void render(Graphics2D g) {
-        if(currentScene != null) currentScene.render(g);
-    }
-
-    /* Returns the active scene */
-    public static Scene getActive() { return currentScene; }
 }

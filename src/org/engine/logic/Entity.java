@@ -71,8 +71,20 @@ public class Entity implements Comparable<Entity>
 
     public final Component addComponent(Component comp)
     {
-        components.add(comp);
+        if(components.contains(comp))
+        {
+            int index = components.indexOf(comp);
+            return components.get(index);
+        }
+        else {
+            components.add(comp);
+        }
+
         return comp;
+    }
+
+    public final LinkedList<Component> getComponents() {
+        return components;
     }
 
     @Override
