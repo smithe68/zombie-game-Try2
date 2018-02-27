@@ -1,7 +1,5 @@
 package org.engine.logic;
 
-import org.engine.components.*;
-
 import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -43,6 +41,7 @@ public class SceneManager
         currentScene.loadEntities();
     }
 
+    /* Reads a .Level file as a Scene */
     public static Scene readFromFile(String name)
     {
         Scene scene = new Scene(name);
@@ -59,23 +58,24 @@ public class SceneManager
 
                 String[] object = line.split(":");
 
-                String[] position = object[1].split(",");
+                String[] position = object[2].split(",");
                 double posX = Double.parseDouble(position[0]);
                 double posY = Double.parseDouble(position[1]);
 
-                int width = Integer.parseInt(object[2]);
-                int height = Integer.parseInt(object[3]);
-                int layer = Integer.parseInt(object[4]);
+                int width = Integer.parseInt(object[3]);
+                int height = Integer.parseInt(object[4]);
+                int layer = Integer.parseInt(object[5]);
 
                 Entity ent = new Entity(posX, posY);
 
                 ent.name = object[0];
+                ent.tag = object[1];
 
                 ent.width = width;
                 ent.height = height;
                 ent.layer = layer;
 
-                for(int i = 5; i < object.length; i++)
+                for(int i = 6; i < object.length; i++)
                 {
                     try
                     {

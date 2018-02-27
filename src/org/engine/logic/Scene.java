@@ -20,10 +20,7 @@ public class Scene
     }
 
     /* Loads required entities */
-    public void loadEntities()
-    {
-
-    }
+    public void loadEntities() { }
 
     /* Update all entities in the scene */
     public void update()

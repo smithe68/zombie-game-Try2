@@ -1,7 +1,7 @@
-// Name:Pos:Size:Layer:Components
+// Name:Tag:Pos:Size:Layer:Components
 
 // Important Stuff
-Player:0,0:32:64:1:Player
+Player:Player:0,0:32:64:1:Player
 
 // Ground Tiles
-Tile:0,0:32:32:0:Tile
+Tile:Tile:0,0:32:32:0:Tile
