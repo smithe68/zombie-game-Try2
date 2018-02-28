@@ -1,5 +1,6 @@
 package org.engine.rendering;
 
+import com.sun.xml.internal.ws.api.pipe.Engine;
 import org.engine.input.Input;
 import org.engine.logic.EngineValues;
 
@@ -16,10 +17,10 @@ import java.awt.event.WindowEvent;
 public class Window
 {
     /* The window size */
-    private Dimension size;
+    public Dimension size;
 
     /* The window's frame */
-    private Frame frame;
+    public Frame frame;
 
     /* The window's canvas */
     public Canvas canvas;

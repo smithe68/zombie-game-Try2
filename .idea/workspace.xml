@@ -7,13 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21c4b584-2bef-44cc-a6e9-3ae8bedd7aff" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/org/engine/logic/EngineValues.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/org/Main.java" afterPath="$PROJECT_DIR$/src/org/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/engine/components/SpriteRenderer.java" afterPath="$PROJECT_DIR$/src/org/engine/components/SpriteRenderer.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/engine/logic/EngineConfig.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/EngineConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/engine/logic/SceneManager.java" afterPath="$PROJECT_DIR$/src/org/engine/logic/SceneManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/engine/rendering/Renderer.java" afterPath="$PROJECT_DIR$/src/org/engine/rendering/Renderer.java" />
       <change beforePath="$PROJECT_DIR$/src/org/engine/rendering/Window.java" afterPath="$PROJECT_DIR$/src/org/engine/rendering/Window.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -98,22 +93,27 @@
       <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="105">
+              <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
               <folding>
-                <element signature="e#1978#1979#0" expanded="true" />
-                <element signature="e#2029#2030#0" expanded="true" />
+                <element signature="e#2024#2025#0" expanded="true" />
+                <element signature="e#2075#2076#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="105">
+              <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+              <folding>
+                <element signature="e#1210#1351#0" expanded="true" />
+                <element signature="e#1350#1351#0" expanded="true" />
+                <element signature="e#2701#2702#0" expanded="true" />
+                <element signature="e#2748#2749#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,7 +138,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Entity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Entity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-134">
@@ -228,11 +228,11 @@
         <option value="$PROJECT_DIR$/src/org/engine/components/SpriteRenderer.java" />
         <option value="$PROJECT_DIR$/src/org/engine/components/Player.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/EngineValues.java" />
-        <option value="$PROJECT_DIR$/src/org/engine/rendering/Window.java" />
         <option value="$PROJECT_DIR$/src/org/engine/rendering/Renderer.java" />
-        <option value="$PROJECT_DIR$/src/org/Main.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/EngineConfig.java" />
         <option value="$PROJECT_DIR$/src/org/engine/logic/SceneManager.java" />
+        <option value="$PROJECT_DIR$/src/org/engine/rendering/Window.java" />
+        <option value="$PROJECT_DIR$/src/org/Main.java" />
       </list>
     </option>
   </component>
@@ -702,13 +702,6 @@
       <option name="presentableId" value="Default" />
       <updated>1496976352390</updated>
     </task>
-    <task id="LOCAL-00084" summary="Changed Main">
-      <created>1497417239891</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1497417239891</updated>
-    </task>
     <task id="LOCAL-00085" summary="Changed Main">
       <created>1497417547394</created>
       <option name="number" value="00085" />
@@ -1045,7 +1038,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519783691061</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="Made Window class more Accessible and less static">
+      <created>1519796921565</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1519796921565</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1103,7 +1103,8 @@
     <MESSAGE value="Complete redo of everything" />
     <MESSAGE value="Complete redo of Component system and how entities are spawned" />
     <MESSAGE value="Added Animation and Spritesheet Seperation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Animation and Spritesheet Seperation" />
+    <MESSAGE value="Made Window class more Accessible and less static" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Window class more Accessible and less static" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1224,29 +1225,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="e#2029#2030#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/logic/EngineValues.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1273,14 +1255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Renderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/engine/logic/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-134">
@@ -1290,6 +1264,38 @@
             <element signature="e#1948#1949#0" expanded="true" />
             <element signature="e#2000#2001#0" expanded="true" />
             <element signature="e#2038#2039#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Renderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/engine/rendering/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding>
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+          <folding>
+            <element signature="e#1210#1351#0" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
+            <element signature="e#2748#2749#0" expanded="true" />
           </folding>
         </state>
       </provider>
