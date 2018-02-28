@@ -26,9 +26,6 @@ public class SceneManager
     /* Stores all the scenes */
     private static ArrayList<Scene> scenes = new ArrayList<>();
 
-    /* Folder where all scenes are */
-    public static final String sceneFolder = "C:\\Users\\Jakub\\IdeaProjects\\RPGame\\src\\resources\\scenes";
-
     /* Starts the scene manager */
     public static void initialize()
     {

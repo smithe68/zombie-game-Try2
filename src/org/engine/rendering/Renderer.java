@@ -1,6 +1,7 @@
 package org.engine.rendering;
 
 import org.Main;
+import org.engine.logic.EngineValues;
 import org.engine.logic.SceneManager;
 
 import java.awt.*;
@@ -31,8 +32,13 @@ public class Renderer
     private static int targetTime = (int)1E9 / targetFPS;
 
     /* Starts the main rendering loop */
-    public static void startRenderer(Canvas canvas)
+    public static void startRenderer(Window window, EngineValues vals)
     {
+        // Set Starting Values
+        resolution = vals.resolution;
+        targetFPS = vals.targetFPS;
+
+        Canvas canvas = window.canvas;
         scaleResolution(canvas);
 
         Thread thread = new Thread(() ->
@@ -65,7 +71,7 @@ public class Renderer
                 }
 
                 // Display framerate in the window title
-                Window.setTitle("Game - FPS: " + currentFPS);
+                window.setTitle("Game - FPS: " + currentFPS);
 
                 g.dispose();
 
@@ -119,14 +125,4 @@ public class Renderer
 
     /* Returns the scaled rendering resolution */
     public static Dimension getResolution() { return res; }
-
-    /* Sets the Internal Resolution */
-    public static void setResolution(int res) {
-        resolution = res;
-    }
-
-    /* Sets the Target FPS */
-    public static void setTargetFPS(int target) {
-        targetFPS = target;
-    }
 }

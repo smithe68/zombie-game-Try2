@@ -1,6 +1,7 @@
 package org.engine.rendering;
 
 import org.engine.input.Input;
+import org.engine.logic.EngineValues;
 
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -15,29 +16,30 @@ import java.awt.event.WindowEvent;
 public class Window
 {
     /* The window size */
-    private static Dimension size;
+    private Dimension size;
 
     /* The window's frame */
-    private static Frame frame;
+    private Frame frame;
+
+    /* The window's canvas */
+    public Canvas canvas;
 
     /* If window is Fullscreen */
-    public static boolean startFullscreen;
+    public boolean startFullscreen;
 
     /* Creates the main window */
-    public static Canvas createWindow()
+    public Window(EngineValues vals)
     {
-        if(size == null)
-        {
-            // Set the size of the window
-            size = new Dimension(800, 600);
-        }
+        // Set Starting Values
+        this.size = vals.windowSize;
+        this.startFullscreen = vals.fullscreen;
 
         // Create the window frame
         frame = new Frame();
         frame.setPreferredSize(size);
 
         // Create the window canvas
-        Canvas canvas = new Canvas();
+        canvas = new Canvas();
         canvas.setSize(size);
 
         setFullscreen(startFullscreen);
@@ -64,12 +66,10 @@ public class Window
 
         // Adds a key listener to the canvas
         canvas.addKeyListener(new Input());
-
-        return canvas;
     }
 
     /* Set the window's title */
-    static void setTitle(String title)
+    void setTitle(String title)
     {
         if(frame != null) {
             frame.setTitle(title);
@@ -77,14 +77,15 @@ public class Window
     }
 
     /* Return window's size */
-    public static Dimension getSize() { return size; }
+    public Dimension getSize() { return size; }
 
     /* Sets the Size of the Window */
-    public static void setSize(int width, int height) {
+    public void setSize(int width, int height) {
         size = new Dimension(width, height);
     }
 
-    public static void setFullscreen(boolean fullscreen)
+    /* Sets if Window is Fullscreen */
+    public void setFullscreen(boolean fullscreen)
     {
         frame.setUndecorated(fullscreen);
 

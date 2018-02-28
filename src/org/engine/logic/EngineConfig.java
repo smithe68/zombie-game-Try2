@@ -1,9 +1,7 @@
 package org.engine.logic;
 
-import org.engine.rendering.Renderer;
-import org.engine.rendering.Window;
-
 import javax.swing.filechooser.FileSystemView;
+import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -19,8 +17,9 @@ public class EngineConfig
         return documents + "/RPGame";
     }
 
-    public static void loadConfig()
+    public static EngineValues loadConfig()
     {
+        EngineValues vals = new EngineValues();
         String configFolder = getEngineFolder();
         File file = new File(configFolder);
         file.mkdirs();
@@ -40,22 +39,22 @@ public class EngineConfig
                 switch(setting[0])
                 {
                     case "Fullscreen":
-                        Window.startFullscreen = Boolean.parseBoolean(setting[1]);
+                        vals.fullscreen = Boolean.parseBoolean(setting[1]);
                         break;
 
                     case "Size":
                         String[] size = setting[1].split(",");
                         int width = Integer.parseInt(size[0]);
                         int height = Integer.parseInt(size[1]);
-                        Window.setSize(width, height);
+                        vals.windowSize = new Dimension(width, height);
                         break;
 
                     case "Resolution":
-                        Renderer.setResolution(Integer.parseInt(setting[1]));
+                        vals.resolution = Integer.parseInt(setting[1]);
                         break;
 
                     case "Target FPS":
-                        Renderer.setTargetFPS(Integer.parseInt(setting[1]));
+                        vals.targetFPS = Integer.parseInt(setting[1]);
                         break;
                 }
             }
@@ -63,6 +62,8 @@ public class EngineConfig
         catch(FileNotFoundException f) {
             writeConfig(configFolder);
         }
+
+        return vals;
     }
 
     private static void writeConfig(String path)
