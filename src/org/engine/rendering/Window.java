@@ -3,7 +3,8 @@ package org.engine.rendering;
 import org.engine.input.Input;
 
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 /**
  * This class creates the main window for the program.

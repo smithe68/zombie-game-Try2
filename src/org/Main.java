@@ -1,5 +1,6 @@
 package org;
 
+import org.engine.components.SpriteRenderer;
 import org.engine.input.Input;
 import org.engine.logic.EngineConfig;
 import org.engine.logic.SceneManager;
@@ -31,6 +32,9 @@ public class Main
 
         // Create the main window
         Canvas mainCanvas = Window.createWindow();
+
+        // Setup Sprite Renderer
+        SpriteRenderer.setGraphicsConfiguration(mainCanvas);
 
         // Start the rendering thread and the logic thread
         Renderer.startRenderer(mainCanvas);

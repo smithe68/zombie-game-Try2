@@ -20,17 +20,13 @@ public class SpriteRenderer extends Component
     private double currentFrame;
     private int currentAnimIndex;
 
+    private static GraphicsConfiguration gfx;
+
     public SpriteRenderer(Entity parent)
     {
         super(parent);
-
-        width = parent.width;
         height = parent.height;
-    }
-
-    @Override
-    public void update() {
-
+        width = parent.width;
     }
 
     @Override
@@ -46,20 +42,26 @@ public class SpriteRenderer extends Component
         this.height = height;
     }
 
-    public static BufferedImage getImageFromFile(String name)
+    public static BufferedImage getImage(String name)
     {
-        String dir = "C:\\Users\\Jakub\\IdeaProjects\\RPGame\\src\\resources\\sprites";
-        BufferedImage image = null;
+        String path = "/resources/sprites/" + name;
+        BufferedImage finalImage = null;
+        BufferedImage raw;
 
-        try {
-            image = ImageIO.read(new File(dir + "/" + name));
+        try
+        {
+            raw = ImageIO.read(SpriteRenderer.class.getResource(path));
+            finalImage = gfx.createCompatibleImage(raw.getWidth(), raw.getHeight(), raw.getTransparency());
+            finalImage.getGraphics().drawImage(raw, 0, 0, raw.getWidth(), raw.getHeight(), null);
         }
-        catch(IOException e) { e.printStackTrace(); }
+        catch(IOException e) {
+            System.err.println("Image with name \"" + name + "\" not found!");
+        }
 
-        return image;
+        return finalImage;
     }
 
-    public static BufferedImage[] splitSpritesheet(BufferedImage image, int x, int y, int cellWidth, int cellHeight, int cells)
+    public static BufferedImage[] splitSheet(BufferedImage image, int x, int y, int cellWidth, int cellHeight, int cells)
     {
         BufferedImage[] result = new BufferedImage[cells];
 
@@ -70,11 +72,11 @@ public class SpriteRenderer extends Component
         return result;
     }
 
-    public BufferedImage animateSheet(BufferedImage[] sheet, double fps)
+    public BufferedImage animateSheet(BufferedImage[] sheet, double time)
     {
         currentFrame += 0.5f;
 
-        if(currentFrame >= fps)
+        if(currentFrame >= time)
         {
             currentAnimIndex += 1;
             if(currentAnimIndex > sheet.length - 1) { currentAnimIndex = 0; }
@@ -82,5 +84,9 @@ public class SpriteRenderer extends Component
         }
 
         return sheet[currentAnimIndex];
+    }
+
+    public static void setGraphicsConfiguration(Canvas canvas) {
+        gfx = canvas.getGraphicsConfiguration();
     }
 }

@@ -69,20 +69,22 @@ public class Entity implements Comparable<Entity>
         posY = ((int)(y * -1) - height / 2) + res.height / 2;
     }
 
+    /* Adds a component to this entity */
     public final Component addComponent(Component comp)
     {
-        if(components.contains(comp))
+        for (Component component : components)
         {
-            int index = components.indexOf(comp);
-            return components.get(index);
+            if (component.getClass().isInstance(comp)) {
+                return component;
+            }
         }
-        else {
-            components.add(comp);
-        }
+
+        components.add(comp);
 
         return comp;
     }
 
+    /* Returns all the components attached */
     public final LinkedList<Component> getComponents() {
         return components;
     }

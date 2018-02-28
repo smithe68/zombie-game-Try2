@@ -15,7 +15,7 @@ public class Tile extends Component
     public void start()
     {
         renderer = (SpriteRenderer)parent.addComponent(new SpriteRenderer(parent));
-        renderer.sprite = SpriteRenderer.getImageFromFile("Dev.png");
+        renderer.sprite = SpriteRenderer.getImage("Dev.png");
         renderer.setSize(32, 32);
     }
 

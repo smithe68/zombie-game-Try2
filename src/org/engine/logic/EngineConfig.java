@@ -4,7 +4,10 @@ import org.engine.rendering.Renderer;
 import org.engine.rendering.Window;
 
 import javax.swing.filechooser.FileSystemView;
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class EngineConfig
